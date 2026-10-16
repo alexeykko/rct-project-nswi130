@@ -95,6 +95,7 @@
 ## Real time data for driver
 - role: driver
 - action: real time data for driver about current car condition to detect critical situations
+- why: so he can react to the car's conditions
 
 ## Real time data for maintanance technician - core
 - role: maintanance technician
