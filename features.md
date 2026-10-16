@@ -21,11 +21,25 @@
     - what part sensor monitors
     - in wich unit
     - how often
-1) system saves sensor staff to database and show confirmation, or before saving show some error if occured
+1) system saves sensor stuff to database and show confirmation, or before saving show some error if occured
 
 ### Responsibilities
-1) Open web application
-    - jajks
+1) UI interaction responsibilities 
+    - Open web application
+    - Show a form for entering the unique car identifier
+    - Show a form for adding new sensor configurations
+    - Display success confirmations or error messages to the user
+    - Handle user redirection to specific pages
+1) Car Identification and validation responsibilities
+    - Validate the provided unique car identifier.
+    - Verify that the car ID doesn't already exist in the system
+1) External data downloading responsibilities
+    - Connect to the manufacturer's database
+    - Download basic car information based on the unique identifier
+1) Data processing and storing responsibilities
+    - Clean the downloaded car data into our internal format
+    - Store the new car record
+    - Store the sensor configurations linked to the specific car
 
 ## Register new technician - core
 - role: admin / race manager
