@@ -31,7 +31,7 @@
     - Display success confirmations or error messages to the user
     - Handle user redirection to specific pages
 1) Car Identification and validation responsibilities
-    - Validate the provided unique car identifier.
+    - Validate the provided unique car identifier
     - Verify that the car ID doesn't already exist in the system
 1) External data downloading responsibilities
     - Connect to the manufacturer's database
@@ -47,16 +47,38 @@
 - why: to know how to maintain the car at pitstop
 
 ## Breakdown
-1) manager opens web app and select to add new technician
+1) Manager opens web app and select to add new technician
 1) In form, manager must fill basic identification info (ID, Bank account,)
 1) System checks if the id is correct and not present in system (else show error message to user)
-1) Download data about the person from some government system
+1) Download and process data about the technician from some government system using the technician id
 1) Upload technicians CV
 1) System (Using OCR and LLM) uploads basic data about new technician available in CV (contact, specialisation, ...)
 1) Present the extracted data from CV to the manager for review
-1) Assign a technician to a specialized group
+1) Assign the technician to a specialized group
 1) Assign roles for the technician
-1) Store data these data about the technician to the database
+1) Store these data about the technician to the database
+
+### Responsibilities
+1) UI interaction responsibilities 
+    - Serve web application
+    - Show a form for entering identification info
+    - Show a file picker for uploading a CV
+    - Display success confirmations or error messages to the user
+    - Show a form for manager's review
+    - Show a form for group and roles assignment
+1) Identification and validation responsibilities
+    - Validate the provided technician identification
+    - Verify that technician doesn't already exist in the system
+1) External data downloading responsibilities
+    - Connect to the government system
+    - Download information about the person
+    - Access some interface with an LLM
+    - Retrieve processed data from LLM
+1) Data processing and storing responsibilities
+    - Store data about the technician (id, CV data, specialization, ...)
+    - Clean the downloaded data about the person into our internal format
+    - Store the technician group relation
+    - Store the technician roles relation
 
 ## Register new driver
 - role: admin / race manager
