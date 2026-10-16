@@ -25,7 +25,7 @@
 
 ### Responsibilities
 1) UI interaction responsibilities 
-    - Open web application
+    - Serve web application
     - Show a form for entering the unique car identifier
     - Show a form for adding new sensor configurations
     - Display success confirmations or error messages to the user
@@ -49,9 +49,14 @@
 ## Breakdown
 1) manager opens web app and select to add new technician
 1) In form, manager must fill basic identification info (ID, Bank account,)
+1) System checks if the id is correct and not present in system (else show error message to user)
+1) Download data about the person from some government system
 1) Upload technicians CV
 1) System (Using OCR and LLM) uploads basic data about new technician available in CV (contact, specialisation, ...)
-1) TODO
+1) Present the extracted data from CV to the manager for review
+1) Assign a technician to a specialized group
+1) Assign roles for the technician
+1) Store data these data about the technician to the database
 
 ## Register new driver
 - role: admin / race manager
