@@ -102,6 +102,49 @@
 - action: show data specific to detect what maintanance will be needed at next pit stop
 - why: to maintain the car in good condition during the race
 
+### Breakdown
+
+1) The technician opens the web application
+1) The technician selects an active race and a car
+1) The system checks if the technician can access the selected car
+1) The system loads the car sensors and their latest measurements
+1) The system receives new measurements from the sensors
+1) The system checks if the measurements are valid and recent
+1) The system selects data relevant to car maintenance
+1) The system displays the sensor values, units, and timestamps on a dashboard
+1) The system compares the values with configured limits
+1) If a value is outside its limit, the system displays a warning and identifies the related car part
+1) If data is missing the system informs the technician
+1) The technician reviews the data and warnings to decide what maintenance needed
+
+### Responsibilities
+
+1) UI interaction responsibilities
+   - Display available races and cars
+   - Display sensor measurements, units, and timestamps
+   - Display warnings and data error messages
+
+1) Access control responsibilities
+   - Check if the technician has permission to view the selected car data
+
+1) Data collection responsibilities
+   - Load the sensors registered for the selected car
+   - Receive new measurements from the sensors
+   - Link each measurement to the correct car and sensor
+
+1) Data validation responsibilities
+   - Check if measurements contain valid values
+   - Check if measurements are recent
+   - Inform the technician when data is missing
+
+1) Data processing and storing responsibilities
+   - Select measurements relevant to maintenance
+   - Compare measurements with configured limits
+   - Detect values outside the configured limits
+   - Identify the car part related to a warning
+   - Retrieve the latest stored measurements when needed
+   - Record processing errors
+
 ## Result race data
 - role: team
 - action: show final results about the preformance in the race
