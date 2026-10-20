@@ -1,16 +1,13 @@
-# RCT Features
+# RCT System
 
-### Maybe
-- health tracking of driver
-- sensors management (now hidden under cars)
+## Core features and responsibilities
 
-
-## Register new car - core
+### Register new car
 - role: admin / race manager
 - action: register new car with sensors to system
 - why: the entity to be tracked
 
-### Breakdown
+#### Feature breakdown
 1) race manager opens dashboard (web application)
 1) Manager uploads unique car identifier from the original manufacturer
 1) System checks if the id is correct and not present in system (else show error message to user)
@@ -23,7 +20,7 @@
     - how often
 1) system saves sensor stuff to database and show confirmation, or before saving show some error if occured
 
-### Responsibilities
+#### Responsibilities
 1) UI interaction responsibilities 
     - Serve web application
     - Show a form for entering the unique car identifier
@@ -41,12 +38,12 @@
     - Store the new car record
     - Store the sensor configurations linked to the specific car
 
-## Register new technician - core
+### Register new technician
 - role: admin / race manager
 - action: register new techician with specialisation
 - why: to know how to maintain the car at pitstop
 
-## Breakdown
+#### Feature breakdown
 1) Manager opens web app and select to add new technician
 1) In form, manager must fill basic identification info (ID, Bank account,)
 1) System checks if the id is correct and not present in system (else show error message to user)
@@ -58,7 +55,7 @@
 1) Assign roles for the technician
 1) Store these data about the technician to the database
 
-### Responsibilities
+#### Responsibilities
 1) UI interaction responsibilities 
     - Serve web application
     - Show a form for entering identification info
@@ -80,29 +77,17 @@
     - Store the technician group relation
     - Store the technician roles relation
 
-## Register new driver
-- role: admin / race manager
-- action: register new driver for system
-- why: to see real data of the race car during race and can react to it
-
-
-
-## Show data for track techician - core
+### Show data for track techician
 - role: track techician
 - action: show data for track techician to state the track condition
 - why: to now track conditions before race starts
 
-## Real time data for driver
-- role: driver
-- action: real time data for driver about current car condition to detect critical situations
-- why: so he can react to the car's conditions
-
-## Real time data for maintanance technician - core
+### Real time data for maintanance technician
 - role: maintanance technician
 - action: show data specific to detect what maintanance will be needed at next pit stop
 - why: to maintain the car in good condition during the race
 
-### Breakdown
+#### Feature breakdown
 
 1) The technician opens the web application
 1) The technician selects an active race and a car
@@ -117,7 +102,7 @@
 1) If data is missing the system informs the technician
 1) The technician reviews the data and warnings to decide what maintenance needed
 
-### Responsibilities
+#### Responsibilities
 
 1) UI interaction responsibilities
    - Display available races and cars
@@ -145,7 +130,23 @@
    - Retrieve the latest stored measurements when needed
    - Record processing errors
 
-## Result race data
+## Auxiliary features
+
+### Register new driver
+- role: admin / race manager
+- action: register new driver for system
+- why: to see real data of the race car during race and can react to it
+
+### Real time data for driver
+- role: driver
+- action: real time data for driver about current car condition to detect critical situations
+- why: so he can react to the car's conditions
+
+### Result race data
 - role: team
 - action: show final results about the preformance in the race
 - why: to know what updates do before next race
+
+### Maybe
+- health tracking of driver
+- sensors management (now hidden under cars)
