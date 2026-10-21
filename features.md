@@ -77,10 +77,43 @@
     - Store the technician group relation
     - Store the technician roles relation
 
-### Show data for track techician
-- role: track techician
-- action: show data for track techician to state the track condition
+### Show data for track technician
+- role: track technician
+- action: show data for track technician to state the track condition
 - why: to now track conditions before race starts
+
+#### Feature breakdown
+
+1) The technician opens the web application and selects an upcoming race
+1) The system checks if the technician can access the selected race
+1) The system loads basic track information (track name, length, surface type, ...)
+1) The system downloads track measurements (surface temperature, humidity, ...) and weather forecast from external services
+1) The system checks if the data are valid and recent (else informs the technician)
+1) The system displays the data on a dashboard and warns about values outside configured limits
+1) The technician reviews the data and states the track condition (dry, wet, ...)
+1) The system stores the track condition and shows confirmation
+
+#### Responsibilities
+
+1) UI interaction responsibilities
+   - Display available races
+   - Display basic track information
+   - Display track measurements, weather forecast and warnings
+   - Show a form for stating the track condition
+   - Display success confirmations or error messages to the user
+
+1) Access control responsibilities
+   - Check if the technician has permission to view the selected race data
+
+1) External data downloading responsibilities
+   - Connect to the track and weather services
+   - Download track measurements and weather forecast
+
+1) Data processing and storing responsibilities
+   - Retrieve basic track information
+   - Validate the downloaded data and clean them into our internal format
+   - Compare measurements with configured limits
+   - Store the track condition linked to the specific race
 
 ### Real time data for maintanance technician
 - role: maintanance technician
