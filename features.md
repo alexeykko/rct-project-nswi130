@@ -155,11 +155,13 @@
    - Check if measurements are recent
    - Inform the technician when data is missing
 
-1) Data processing and storing responsibilities
+1) Data processing responsibilities
    - Select measurements relevant to maintenance
    - Compare measurements with configured limits
    - Detect values outside the configured limits
    - Identify the car part related to a warning
+
+1) Data storing responsibilities
    - Retrieve the latest stored measurements when needed
    - Record processing errors
 
@@ -188,3 +190,29 @@
 ### Maybe
 - health tracking of driver
 - sensors management (now hidden under cars)
+
+## System
+
+### Architecture
+
+#### 1. Presentation
+
+#### 2. Business/application
+
+#### 3. Persistance/infrastructure
+
+
+### Columns
+
+#### Capturing car measurements
+    3. - Data collection
+       - 
+
+#### Capturing track measurements
+    3. 
+
+#### Technician Registry
+
+#### Car Registry
+
+#### Data assessment/Main/Everything Else
