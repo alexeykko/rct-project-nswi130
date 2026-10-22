@@ -180,6 +180,11 @@
 - action: show final results about the preformance in the race
 - why: to know what updates do before next race
 
+### Manage sensors configuration
+- role: admin / race manager
+- action: manage sensors configuration for registered cars
+- why: to keep sensor settings correct when sensors are added or changed
+
 ### Maybe
 - health tracking of driver
 - sensors management (now hidden under cars)
