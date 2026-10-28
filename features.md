@@ -214,5 +214,22 @@
 #### Technician Registry
 
 #### Car Registry
+    1. - Dashboard
+            - Show form for entering car id
+            - Show form for new sensor config
+            - Display success confirmations
+            - Handle user redirection
+            - Serve application
+            - Display error messages
+    2. - Car data validation
+            - Validate the provided car id
+            - Verify car id doesn't already exist
+            - Clean downloaded car data
+    3. - Car and sensor repository
+            - Store a new car record
+            - Store the sensor configurations linked to the specific car
+       - External car data provider
+            - Connect to the manufacturer's database
+            - Download car information
 
 #### Data assessment/Main/Everything Else
