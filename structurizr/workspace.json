@@ -1,0 +1,131 @@
+{
+  "configuration" : {
+    "scope" : "SoftwareSystem"
+  },
+  "description" : "RCT System",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedDate" : "2026-11-01T12:34:08Z",
+  "model" : {
+    "people" : [ {
+      "description" : "Registers cars and technicians, manages the race",
+      "id" : "1",
+      "name" : "Race manager",
+      "properties" : {
+        "structurizr.dsl.identifier" : "manager"
+      },
+      "relationships" : [ {
+        "description" : "Registers cars and technicians",
+        "destinationId" : "5",
+        "id" : "8",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Monitors realtime data to prepare for pitstops",
+      "id" : "2",
+      "name" : "Maintenance technician",
+      "properties" : {
+        "structurizr.dsl.identifier" : "maintenanceTech"
+      },
+      "relationships" : [ {
+        "description" : "Views realtime data",
+        "destinationId" : "5",
+        "id" : "6",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Assesses track conditions",
+      "id" : "3",
+      "name" : "Track technician",
+      "properties" : {
+        "structurizr.dsl.identifier" : "trackTech"
+      },
+      "relationships" : [ {
+        "description" : "Views track data",
+        "destinationId" : "5",
+        "id" : "7",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Drives a race car ",
+      "id" : "4",
+      "name" : "Deiver",
+      "properties" : {
+        "structurizr.dsl.identifier" : "driver"
+      },
+      "tags" : "Element,Person"
+    } ],
+    "softwareSystems" : [ {
+      "description" : "Tracks cars maintenance",
+      "documentation" : { },
+      "id" : "5",
+      "name" : "RCT Tracker",
+      "properties" : {
+        "structurizr.dsl.identifier" : "rctTracker"
+      },
+      "tags" : "Element,Software System,{}"
+    } ]
+  },
+  "name" : "RCT",
+  "properties" : {
+    "structurizr.inspection.error" : "5",
+    "structurizr.dsl" : "d29ya3NwYWNlICJSQ1QiICJSQ1QgU3lzdGVtIiB7CgogICAgbW9kZWwgewogICAgICAgIG1hbmFnZXIgPSBwZXJzb24gIlJhY2UgbWFuYWdlciIgIlJlZ2lzdGVycyBjYXJzIGFuZCB0ZWNobmljaWFucywgbWFuYWdlcyB0aGUgcmFjZSIKICAgICAgICBtYWludGVuYW5jZVRlY2ggPSBwZXJzb24gIk1haW50ZW5hbmNlIHRlY2huaWNpYW4iICJNb25pdG9ycyByZWFsdGltZSBkYXRhIHRvIHByZXBhcmUgZm9yIHBpdHN0b3BzIgogICAgICAgIHRyYWNrVGVjaCA9IHBlcnNvbiAiVHJhY2sgdGVjaG5pY2lhbiIgIkFzc2Vzc2VzIHRyYWNrIGNvbmRpdGlvbnMiCiAgICAgICAgZHJpdmVyID0gcGVyc29uICJEZWl2ZXIiICJEcml2ZXMgYSByYWNlIGNhciAiCgogICAgICAgIHJjdFRyYWNrZXIgPSBzb2Z0d2FyZVN5c3RlbSAiUkNUIFRyYWNrZXIiICJUcmFja3MgY2FycyBtYWludGVuYW5jZSIge30KCiAgICAgICAgbWFpbnRlbmFuY2VUZWNoIC0+IHJjdFRyYWNrZXIgIlZpZXdzIHJlYWx0aW1lIGRhdGEiCiAgICAgICAgdHJhY2tUZWNoIC0+IHJjdFRyYWNrZXIgIlZpZXdzIHRyYWNrIGRhdGEiCiAgICAgICAgbWFuYWdlciAtPiByY3RUcmFja2VyICJSZWdpc3RlcnMgY2FycyBhbmQgdGVjaG5pY2lhbnMiCiAgICB9CgogICAgdmlld3MgewogICAgICAgIHN5c3RlbUNvbnRleHQgcmN0VHJhY2tlciAiRGlhZ3JhbTEiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsKICAgICAgICAgICAgICAgIHNoYXBlIFBlcnNvbgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMGMyMzcwCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiU29mdHdhcmUgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMyMTU4YjgKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCiAgICBjb25maWd1cmF0aW9uIHsKICAgICAgICBzY29wZSBzb2Z0d2FyZXN5c3RlbQogICAgfQoKfQ==",
+    "structurizr.inspection.info" : "0",
+    "structurizr.inspection.ignore" : "0",
+    "structurizr.inspection.warning" : "0"
+  },
+  "views" : {
+    "configuration" : {
+      "styles" : {
+        "elements" : [ {
+          "background" : "#0c2370",
+          "color" : "#ffffff",
+          "shape" : "Person",
+          "tag" : "Person"
+        }, {
+          "background" : "#2158b8",
+          "color" : "#ffffff",
+          "tag" : "Software System"
+        } ]
+      },
+      "terminology" : { }
+    },
+    "systemContextViews" : [ {
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "key" : "Diagram1",
+      "name" : "System Context View: RCT Tracker",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "6"
+      }, {
+        "id" : "7"
+      }, {
+        "id" : "8"
+      } ],
+      "softwareSystemId" : "5"
+    } ]
+  }
+}
