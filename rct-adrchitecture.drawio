@@ -1,38 +1,38 @@
-<mxfile host="Electron">
-  <diagram name="Страница-1" id="pv_Wk1gMSYR_sdxfQnsB">
-    <mxGraphModel dx="4482" dy="-514" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="pv_Wk1gMSYR_sdxfQnsB">
+    <mxGraphModel dx="6789" dy="420" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="zOGvDR2fQ1psqFmyCW56-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelPerimeter=1;" value="Data collection" vertex="1">
-          <mxGeometry height="180" width="177.5" x="310" y="3355.3533740234375" as="geometry" />
+          <mxGeometry height="180" width="177.5" x="-210" y="3375.3533740234375" as="geometry" />
         </mxCell>
         <mxCell id="zOGvDR2fQ1psqFmyCW56-10" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Load sensors" vertex="1">
-          <mxGeometry height="40" width="70" x="325.62" y="3382.5733740234373" as="geometry" />
+          <mxGeometry height="40" width="70" x="-194.38" y="3402.5733740234373" as="geometry" />
         </mxCell>
         <mxCell id="zOGvDR2fQ1psqFmyCW56-11" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Receive data from sensors" vertex="1">
-          <mxGeometry height="50" width="95" x="414" y="3377.5733740234373" as="geometry" />
+          <mxGeometry height="50" width="95" x="-106" y="3397.5733740234373" as="geometry" />
         </mxCell>
         <mxCell id="zOGvDR2fQ1psqFmyCW56-12" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Link sensors to data" vertex="1">
-          <mxGeometry height="50" width="78.75" x="321.25" y="3447.003374023437" as="geometry" />
+          <mxGeometry height="50" width="78.75" x="-198.75" y="3467.003374023437" as="geometry" />
         </mxCell>
         <mxCell id="zOGvDR2fQ1psqFmyCW56-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=default;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;labelPerimeter=1;" value="..." vertex="1">
-          <mxGeometry height="180" width="177.5" x="827" y="3362.4833740234376" as="geometry" />
+          <mxGeometry height="180" width="177.5" x="307" y="3382.4833740234376" as="geometry" />
         </mxCell>
         <mxCell id="zOGvDR2fQ1psqFmyCW56-15" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Car" vertex="1">
-          <mxGeometry height="70" width="50" x="422.79" y="3449.7833740234373" as="geometry" />
+          <mxGeometry height="70" width="50" x="-97.20999999999998" y="3469.7833740234373" as="geometry" />
         </mxCell>
         <mxCell id="zOGvDR2fQ1psqFmyCW56-20" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-size: 15px;&quot;&gt;Infrastructure&lt;/span&gt;" vertex="1">
-          <mxGeometry height="30" width="325" x="1472" y="3460.3333740234375" as="geometry" />
+          <mxGeometry height="30" width="325" x="952" y="3480.3333740234375" as="geometry" />
         </mxCell>
         <mxCell id="zOGvDR2fQ1psqFmyCW56-35" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
-          <mxGeometry height="776.52" width="1025.43" x="2420" y="2871.89" as="geometry" />
+          <mxGeometry height="776.52" width="1025.43" x="1900" y="2891.89" as="geometry" />
         </mxCell>
         <mxCell id="ZwzSwjjIeR9cFMFZii0b-47" connectable="0" parent="1" style="group" value="" vertex="1">
           <mxGeometry height="1804.2588636363637" width="2559.2148672566373" x="-1120" y="2750" as="geometry" />
         </mxCell>
         <mxCell id="ZwzSwjjIeR9cFMFZii0b-1" connectable="0" parent="ZwzSwjjIeR9cFMFZii0b-47" style="group;fontSize=13;" value="" vertex="1">
-          <mxGeometry height="789.5809090909091" width="1270.3539823008853" y="119.55545454545435" as="geometry" />
+          <mxGeometry height="789.5809090909091" width="1270.3539823008853" x="-520" y="139.55545454545435" as="geometry" />
         </mxCell>
         <mxCell id="ZwzSwjjIeR9cFMFZii0b-2" parent="ZwzSwjjIeR9cFMFZii0b-1" style="rounded=0;whiteSpace=wrap;html=1;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontSize=19;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;labelPerimeter=1;" value="&lt;b&gt;Car Registry&lt;/b&gt;" vertex="1">
           <mxGeometry height="776.5240641711232" width="1270.3539823008853" y="2.329572192513457" as="geometry" />
@@ -116,21 +116,21 @@
           <mxGeometry height="80.17888275803247" width="141.15044247787614" x="595.656278761062" y="117.85250000000002" as="geometry" />
         </mxCell>
         <mxCell id="ZwzSwjjIeR9cFMFZii0b-27" parent="ZwzSwjjIeR9cFMFZii0b-47" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 22px;&quot;&gt;Decomposition table&lt;/font&gt;" vertex="1">
-          <mxGeometry height="40.227272727272734" width="1174.1150442477876" x="19.247787610619472" as="geometry" />
+          <mxGeometry height="40.227272727272734" width="1174.1150442477876" x="-500.75221238938053" y="20" as="geometry" />
         </mxCell>
         <mxCell id="ZwzSwjjIeR9cFMFZii0b-28" parent="ZwzSwjjIeR9cFMFZii0b-47" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Dependency diagram&lt;/font&gt;" vertex="1">
           <mxGeometry height="40.227272727272734" width="1174.1150442477876" x="18.875663716814206" y="1059.3181818181818" as="geometry" />
         </mxCell>
-        <mxCell id="ZwzSwjjIeR9cFMFZii0b-29" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="ZwzSwjjIeR9cFMFZii0b-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;endArrow=classic;endFill=1;" target="ZwzSwjjIeR9cFMFZii0b-36">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="ZwzSwjjIeR9cFMFZii0b-29" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="ZwzSwjjIeR9cFMFZii0b-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;endArrow=classic;endFill=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="ZwzSwjjIeR9cFMFZii0b-36">
+          <mxGeometry relative="1" x="-0.2992" as="geometry" />
         </mxCell>
         <mxCell id="ZwzSwjjIeR9cFMFZii0b-30" connectable="0" parent="ZwzSwjjIeR9cFMFZii0b-29" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;Sends data to&lt;/font&gt;" vertex="1">
-          <mxGeometry relative="1" x="-0.1486" y="2" as="geometry">
+          <mxGeometry relative="1" x="-0.4004" y="2" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ZwzSwjjIeR9cFMFZii0b-31" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Dashboard&lt;/font&gt;" vertex="1">
-          <mxGeometry height="80.17295454545454" width="153.14823008849555" x="630.0034513274337" y="1149.999090909091" as="geometry" />
+          <mxGeometry height="80.17295454545454" width="153.14823008849555" x="836.8534513274336" y="1169.999090909091" as="geometry" />
         </mxCell>
         <mxCell id="ZwzSwjjIeR9cFMFZii0b-32" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="ZwzSwjjIeR9cFMFZii0b-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="ZwzSwjjIeR9cFMFZii0b-42">
           <mxGeometry relative="1" as="geometry" />
@@ -140,9 +140,10 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZwzSwjjIeR9cFMFZii0b-34" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="ZwzSwjjIeR9cFMFZii0b-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="ZwzSwjjIeR9cFMFZii0b-31">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="770" y="1310" as="targetPoint" />
+        <mxCell id="ZwzSwjjIeR9cFMFZii0b-34" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="ZwzSwjjIeR9cFMFZii0b-31">
+          <mxGeometry relative="1" x="0.0701" as="geometry">
+            <mxPoint x="952.8607525000002" y="1330.000227" as="sourcePoint" />
+            <mxPoint x="950.7146238938062" y="1250.1720454545452" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ZwzSwjjIeR9cFMFZii0b-35" connectable="0" parent="ZwzSwjjIeR9cFMFZii0b-34" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;Sends messages to&lt;/font&gt;" vertex="1">
@@ -179,76 +180,76 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="zOGvDR2fQ1psqFmyCW56-1" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
-          <mxGeometry height="776.52" width="1129.65" x="1270.35" y="121.89" as="geometry" />
+          <mxGeometry height="776.52" width="1129.65" x="750.3499999999999" y="141.89" as="geometry" />
         </mxCell>
         <mxCell id="zOGvDR2fQ1psqFmyCW56-3" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="zOGvDR2fQ1psqFmyCW56-1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=gap;exitX=0.001;exitY=0.607;exitDx=0;exitDy=0;entryX=0.999;entryY=0.607;entryDx=0;entryDy=0;exitPerimeter=0;entryPerimeter=0;" target="zOGvDR2fQ1psqFmyCW56-1" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="1714.5" y="479.5533740234373" as="sourcePoint" />
-            <mxPoint x="1764.5" y="429.5533740234373" as="targetPoint" />
+            <mxPoint x="1194.5" y="499.5533740234373" as="sourcePoint" />
+            <mxPoint x="1244.5" y="449.5533740234373" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="zOGvDR2fQ1psqFmyCW56-4" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="zOGvDR2fQ1psqFmyCW56-1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=gap;entryX=0;entryY=0.321;entryDx=0;entryDy=0;exitX=1;exitY=0.321;exitDx=0;exitDy=0;entryPerimeter=0;exitPerimeter=0;" target="zOGvDR2fQ1psqFmyCW56-1" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="1784.5" y="479.5533740234373" as="sourcePoint" />
-            <mxPoint x="1834.5" y="429.5533740234373" as="targetPoint" />
+            <mxPoint x="1264.5" y="499.5533740234373" as="sourcePoint" />
+            <mxPoint x="1314.5" y="449.5533740234373" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-53" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;" value="Telemetry Collector" vertex="1">
-          <mxGeometry height="149.02" width="343" x="1278.75" y="435.64000000000004" as="geometry" />
+          <mxGeometry height="149.02" width="343" x="758.75" y="455.64000000000004" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-55" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;" value="Telemetry Validator" vertex="1">
-          <mxGeometry height="149.02" width="360" x="1638.75" y="435.64000000000004" as="geometry" />
+          <mxGeometry height="149.02" width="360" x="1118.75" y="455.64000000000004" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-56" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;" value="Maintenance Data Analyzer" vertex="1">
-          <mxGeometry height="149.02" width="360" x="2008.75" y="435.64000000000004" as="geometry" />
+          <mxGeometry height="149.02" width="360" x="1488.75" y="455.64000000000004" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-129" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;" value="External Telemetry Gateway" vertex="1">
-          <mxGeometry height="180" width="289" x="1400" y="650" as="geometry" />
+          <mxGeometry height="180" width="289" x="880" y="670" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-130" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;" value="Telemetry Repository" vertex="1">
-          <mxGeometry height="180" width="302.58" x="1750" y="650" as="geometry" />
+          <mxGeometry height="180" width="302.58" x="1230" y="670" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-136" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Load the sensors registered for the selected car" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="1287.18" y="439.59" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="767.1800000000001" y="459.59" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-137" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Receive new measurements from the sensors" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="1400" y="439.59" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="880" y="459.59" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-138" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Link each measurement to the correct car and sensor" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="1510" y="439.59" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="990" y="459.59" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-142" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Check if measurements contain valid values" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="1650" y="439.59" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="1130" y="459.59" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-143" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Check if measurements are recent" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="1770" y="439.59" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="1250" y="459.59" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-144" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Identify missing measurement data" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="1885.86" y="439.59" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="1365.86" y="459.59" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-145" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Select measurements relevant to maintenance" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="2020" y="439.59" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="1500" y="459.59" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-146" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Compare measurements with configured limits" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="2136" y="439.59" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="1616" y="459.59" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-148" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Detect values outside the configured limits" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="2252" y="439.59" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="1732" y="459.59" as="geometry" />
         </mxCell>
         <mxCell id="zOGvDR2fQ1psqFmyCW56-2" parent="ZwzSwjjIeR9cFMFZii0b-47" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Capturing car measurements&lt;/b&gt;&lt;/font&gt;" vertex="1">
-          <mxGeometry height="30" width="325" x="1672.68" y="89.55337402343712" as="geometry" />
+          <mxGeometry height="30" width="325" x="1152.68" y="109.55337402343712" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-149" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Provide new measurements from car sensors" vertex="1">
-          <mxGeometry height="100.77" width="185.18" x="1451.91" y="680" as="geometry" />
+          <mxGeometry height="100.77" width="185.18" x="931.9100000000001" y="700" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-150" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="&lt;div&gt;Retrieve the latest stored measurements when needed&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="1780" y="683.5" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="1260" y="703.5" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-151" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Record processing errors" vertex="1">
-          <mxGeometry height="114.26" width="117.01" x="1910" y="680" as="geometry" />
+          <mxGeometry height="114.26" width="117.01" x="1390" y="700" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-152" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;" value="Access Control" vertex="1">
-          <mxGeometry height="50" width="1043.82" x="1301.8400000000001" y="376.79" as="geometry" />
+          <mxGeometry height="50" width="1043.82" x="781.8400000000001" y="396.79" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-178" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="QHyCtrshu7F3OPZsX5Y4-154" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="QHyCtrshu7F3OPZsX5Y4-155">
           <mxGeometry relative="1" as="geometry" />
@@ -272,7 +273,7 @@
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-155" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Telemetry Validator&lt;/font&gt;" vertex="1">
           <mxGeometry height="94.42681818181819" width="179.64601769911505" x="1623.1261061946902" y="1347.4093181818182" as="geometry" />
         </mxCell>
-        <mxCell id="QHyCtrshu7F3OPZsX5Y4-163" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="QHyCtrshu7F3OPZsX5Y4-156" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="ZwzSwjjIeR9cFMFZii0b-31">
+        <mxCell id="QHyCtrshu7F3OPZsX5Y4-163" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="QHyCtrshu7F3OPZsX5Y4-156" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="ZwzSwjjIeR9cFMFZii0b-31">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-164" connectable="0" parent="QHyCtrshu7F3OPZsX5Y4-163" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;sends&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: light-dark(rgb(255, 255, 255), rgb(18, 18, 18)); color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;measurements and warnings&lt;/span&gt;&lt;/div&gt;" vertex="1">
@@ -311,7 +312,7 @@
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-159" parent="ZwzSwjjIeR9cFMFZii0b-47" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Car telemetry database" vertex="1">
           <mxGeometry height="107.27272727272728" width="165.14601769911502" x="1623.1234513274333" y="1649.9972727272734" as="geometry" />
         </mxCell>
-        <mxCell id="QHyCtrshu7F3OPZsX5Y4-161" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="ZwzSwjjIeR9cFMFZii0b-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="QHyCtrshu7F3OPZsX5Y4-158">
+        <mxCell id="QHyCtrshu7F3OPZsX5Y4-161" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="ZwzSwjjIeR9cFMFZii0b-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="QHyCtrshu7F3OPZsX5Y4-158">
           <mxGeometry relative="1" x="0.1665" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-162" connectable="0" parent="QHyCtrshu7F3OPZsX5Y4-161" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];inheritText=1;defaultLabelBackgroundColor=page;" value="requests car and track telemetry" vertex="1">
@@ -334,27 +335,27 @@
           <mxGeometry relative="1" x="-0.2952" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-52" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;" value="Maintenance Dashboard" vertex="1">
-          <mxGeometry height="215.42" width="607" x="1480.01" y="139.13999999999987" as="geometry" />
+          <mxGeometry height="215.42" width="607" x="960.01" y="159.13999999999987" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-134" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Display warnings and data error messages" vertex="1">
-          <mxGeometry height="94.43" width="165.15" x="1896.93" y="199.6300000000001" as="geometry" />
+          <mxGeometry height="94.43" width="165.15" x="1376.93" y="219.6300000000001" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-133" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Display sensor measurements, units, and timestamps" vertex="1">
-          <mxGeometry height="94.43" width="185" x="1689.6100000000001" y="199.6300000000001" as="geometry" />
+          <mxGeometry height="94.43" width="185" x="1169.6100000000001" y="219.6300000000001" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-132" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Display available races and cars" vertex="1">
-          <mxGeometry height="88.54" width="165.15" x="1504.93" y="205.51999999999998" as="geometry" />
+          <mxGeometry height="88.54" width="165.15" x="984.9300000000001" y="225.51999999999998" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-187" parent="ZwzSwjjIeR9cFMFZii0b-47" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Telemetry database" vertex="1">
-          <mxGeometry height="107.27272727272728" width="165.14601769911502" x="2090.003451327433" y="699.9972727272734" as="geometry" />
+          <mxGeometry height="107.27272727272728" width="165.14601769911502" x="1570.0034513274331" y="719.9972727272734" as="geometry" />
         </mxCell>
         <mxCell id="QHyCtrshu7F3OPZsX5Y4-189" parent="ZwzSwjjIeR9cFMFZii0b-47" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Check if the technician has permission to view the selected car data" vertex="1">
-          <mxGeometry height="30" width="480" x="1583.75" y="376.79" as="geometry" />
+          <mxGeometry height="30" width="480" x="1063.75" y="396.79" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-131" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Tech. data validation&lt;/font&gt;" vertex="1">
           <mxGeometry height="80.17295454545454" width="165.14601769911502" x="290" y="1361.66" as="geometry" />
         </mxCell>
-        <mxCell id="-p7pe43o6-HY4JRFWrg_-132" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="-p7pe43o6-HY4JRFWrg_-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;endArrow=none;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=classic;startFill=1;" target="ZwzSwjjIeR9cFMFZii0b-31">
+        <mxCell id="-p7pe43o6-HY4JRFWrg_-132" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="-p7pe43o6-HY4JRFWrg_-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;endArrow=none;endFill=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;startArrow=classic;startFill=1;" target="ZwzSwjjIeR9cFMFZii0b-31">
           <mxGeometry relative="1" x="-0.3403" as="geometry">
             <mxPoint x="1241" y="1099.5500000000002" as="sourcePoint" />
             <mxPoint x="1000" y="1260.5500000000002" as="targetPoint" />
@@ -365,7 +366,7 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-p7pe43o6-HY4JRFWrg_-134" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="-p7pe43o6-HY4JRFWrg_-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="ZwzSwjjIeR9cFMFZii0b-31">
+        <mxCell id="-p7pe43o6-HY4JRFWrg_-134" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" source="-p7pe43o6-HY4JRFWrg_-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;" target="ZwzSwjjIeR9cFMFZii0b-31">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="950" y="1531" as="sourcePoint" />
             <mxPoint x="1150" y="1410" as="targetPoint" />
@@ -433,72 +434,72 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="zOGvDR2fQ1psqFmyCW56-16" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=top;align=center;verticalAlign=bottom;labelPerimeter=1;" value="&lt;h1&gt;Capturing track measurements&lt;/h1&gt;" vertex="1">
-          <mxGeometry height="776.52" width="1140" x="2400" y="121.88999999999987" as="geometry" />
+          <mxGeometry height="776.52" width="1140" x="1880" y="141.88999999999987" as="geometry" />
         </mxCell>
         <mxCell id="zOGvDR2fQ1psqFmyCW56-22" parent="ZwzSwjjIeR9cFMFZii0b-47" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;Presentation&lt;/font&gt;" vertex="1">
-          <mxGeometry height="30" width="325" x="2620" y="334.89337402343745" as="geometry" />
+          <mxGeometry height="30" width="325" x="2100" y="354.89337402343745" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-26" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;" value="Maintenance Dashboard" vertex="1">
-          <mxGeometry height="215.42" width="607" x="2649.26" y="139.14662597656252" as="geometry" />
+          <mxGeometry height="215.42" width="607" x="2129.26" y="159.14662597656252" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-27" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Display warnings and data error messages" vertex="1">
-          <mxGeometry height="94.43" width="165.15" x="3066.1800000000003" y="199.63662597656275" as="geometry" />
+          <mxGeometry height="94.43" width="165.15" x="2546.1800000000003" y="219.63662597656275" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-28" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Display sensor measurements, units, and timestamps" vertex="1">
-          <mxGeometry height="94.43" width="185" x="2858.86" y="199.63662597656275" as="geometry" />
+          <mxGeometry height="94.43" width="185" x="2338.86" y="219.63662597656275" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-29" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Display available races and tracks" vertex="1">
-          <mxGeometry height="88.54" width="165.15" x="2674.1800000000003" y="205.52662597656263" as="geometry" />
+          <mxGeometry height="88.54" width="165.15" x="2154.1800000000003" y="225.52662597656263" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-7" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;" value="Telemetry Collector" vertex="1">
-          <mxGeometry height="149.02" width="343" x="2407.76" y="409.9966259765624" as="geometry" />
+          <mxGeometry height="149.02" width="343" x="1887.7600000000002" y="429.9966259765624" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-8" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;" value="Telemetry Validator" vertex="1">
-          <mxGeometry height="149.02" width="360" x="2767.76" y="409.9966259765624" as="geometry" />
+          <mxGeometry height="149.02" width="360" x="2247.76" y="429.9966259765624" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-9" parent="ZwzSwjjIeR9cFMFZii0b-47" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;" value="Maintenance Data Analyzer" vertex="1">
-          <mxGeometry height="149.02" width="360" x="3137.76" y="409.9966259765624" as="geometry" />
+          <mxGeometry height="149.02" width="360" x="2617.76" y="429.9966259765624" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-12" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Load the sensors registered for the selected track" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="2470" y="413.9466259765627" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="1950" y="433.9466259765627" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-13" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Receive new measurements from the sensors" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="2610" y="413.9466259765627" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="2090" y="433.9466259765627" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-15" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Check if measurements contain valid values" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="2779.01" y="413.9466259765627" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="2259.01" y="433.9466259765627" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-16" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Check if measurements are recent" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="2899.01" y="413.9466259765627" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="2379.01" y="433.9466259765627" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-17" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Identify missing measurement data" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="3014.87" y="413.9466259765627" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="2494.87" y="433.9466259765627" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-18" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Select measurements relevant to maintenance" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="3149.01" y="413.9466259765627" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="2629.01" y="433.9466259765627" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-19" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Compare measurements with configured limits" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="3265.01" y="413.9466259765627" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="2745.01" y="433.9466259765627" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-20" parent="ZwzSwjjIeR9cFMFZii0b-47" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Detect values outside the configured limits" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="3381.01" y="413.9466259765627" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="2861.01" y="433.9466259765627" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-38" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=gap;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="3540" y="600" as="sourcePoint" />
-            <mxPoint x="2400" y="600" as="targetPoint" />
+            <mxPoint x="3020" y="620" as="sourcePoint" />
+            <mxPoint x="1880" y="620" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-37" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=gap;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="3540" y="370.3299999999999" as="sourcePoint" />
-            <mxPoint x="2400" y="370.3299999999999" as="targetPoint" />
+            <mxPoint x="3020" y="390.3299999999999" as="sourcePoint" />
+            <mxPoint x="1880" y="390.3299999999999" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-39" edge="1" parent="ZwzSwjjIeR9cFMFZii0b-47" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=gap;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="3540" y="600" as="sourcePoint" />
-            <mxPoint x="2400" y="600" as="targetPoint" />
+            <mxPoint x="3020" y="620" as="sourcePoint" />
+            <mxPoint x="1880" y="620" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="ua2nItFE8PWgNGCcLxkP-3" parent="ZwzSwjjIeR9cFMFZii0b-47" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Track telemetry database" vertex="1">
@@ -511,78 +512,78 @@
           <mxGeometry height="30" width="202" x="1788" y="1774" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;fontColor=light-dark(#000000,#FFFFFF);" value="&lt;span style=&quot;font-family: monospace; text-align: start; white-space: nowrap;&quot;&gt;&lt;font size=&quot;1&quot;&gt;Dashboard&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;font-family: monospace; font-size: 1px; text-align: start; white-space: nowrap; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;l%3E&lt;/span&gt;" vertex="1">
-          <mxGeometry height="212.97" width="771.1" x="2537" y="2890.36" as="geometry" />
+          <mxGeometry height="212.97" width="771.1" x="2017" y="2910.36" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;&lt;b style=&quot;&quot;&gt;Technician Registry&lt;/b&gt;&lt;/font&gt;" vertex="1">
-          <mxGeometry height="30" width="325" x="2770.2199999999993" y="2830.15" as="geometry" />
+          <mxGeometry height="30" width="325" x="2250.2199999999993" y="2850.15" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-105" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="3460" y="3350" as="sourcePoint" />
-            <mxPoint x="2415.9" y="3350" as="targetPoint" />
+            <mxPoint x="2940" y="3370" as="sourcePoint" />
+            <mxPoint x="1895.9" y="3370" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-107" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Show form for entering technitian ID, BA, ..." vertex="1">
-          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2556.77" y="2910.15" as="geometry" />
+          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2036.77" y="2930.15" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-108" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Show form to upload technician CV" vertex="1">
-          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2756.6699999999996" y="2910.15" as="geometry" />
+          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2236.6699999999996" y="2930.15" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-109" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Display success confirmations" vertex="1">
-          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2939.18" y="2910.15" as="geometry" />
+          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2419.18" y="2930.15" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-110" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Display error messages" vertex="1">
-          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="3040.91" y="2990.33" as="geometry" />
+          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2520.91" y="3010.33" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-111" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Show form to assign roles &amp;amp; groups" vertex="1">
-          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2657.69" y="2987.1499999999996" as="geometry" />
+          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2137.69" y="3007.1499999999996" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-112" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Serve application?" vertex="1">
-          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2854.4" y="2987.1499999999996" as="geometry" />
+          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2334.4" y="3007.1499999999996" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-117" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;" value="Tech. data validation" vertex="1">
-          <mxGeometry height="170.72" width="457.39" x="2583.52" y="3149.28" as="geometry" />
+          <mxGeometry height="170.72" width="457.39" x="2063.52" y="3169.28" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-114" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Validate provided ID" vertex="1">
-          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2690" y="3156.7900000000004" as="geometry" />
+          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2170" y="3176.7900000000004" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-115" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Read data from tech. CV" vertex="1">
-          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2590" y="3214.85" as="geometry" />
+          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2070" y="3234.85" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-116" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Combine CV &amp;amp; government registry data" vertex="1">
-          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2798.0299999999997" y="3216.68" as="geometry" />
+          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2278.0299999999997" y="3236.68" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-121" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Validate assigned roles/groups" vertex="1">
-          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2887.77" y="3156.7899999999995" as="geometry" />
+          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2367.77" y="3176.7899999999995" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-122" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Display extarcted data from CV for reveiw" vertex="1">
-          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="3142.5299999999997" y="2906.97" as="geometry" />
+          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2622.5299999999997" y="2926.97" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-123" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;arcSize=10;" value="Extarnal tech data provider" vertex="1">
-          <mxGeometry height="149.01522727272726" width="342.99557522123894" x="2511.4" y="3402.5799999999995" as="geometry" />
+          <mxGeometry height="149.01522727272726" width="342.99557522123894" x="1991.4" y="3422.5799999999995" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-124" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;arcSize=10;" value="Tech. repository" vertex="1">
-          <mxGeometry height="149.02" width="315.29" x="2894" y="3402.58" as="geometry" />
+          <mxGeometry height="149.02" width="315.29" x="2374" y="3422.58" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-125" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Store new tech record" vertex="1">
-          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2910" y="3412.3899999999994" as="geometry" />
+          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2390" y="3432.3899999999994" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-126" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="set roles/groups relations" vertex="1">
-          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="3051.1499999999996" y="3444.6899999999996" as="geometry" />
+          <mxGeometry height="80.17888275803247" width="141.15044247787614" x="2531.1499999999996" y="3464.6899999999996" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-127" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Connect to governments API" vertex="1">
-          <mxGeometry height="88.54" width="141.15" x="2516.54" y="3417.9999999999995" as="geometry" />
+          <mxGeometry height="88.54" width="141.15" x="1996.54" y="3437.9999999999995" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-128" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Download tech. data info" vertex="1">
-          <mxGeometry height="80.17" width="141.15" x="2689.9999999999995" y="3426.37" as="geometry" />
+          <mxGeometry height="80.17" width="141.15" x="2169.9999999999995" y="3446.37" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-129" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Technician database" vertex="1">
-          <mxGeometry height="107.27272727272728" width="165.14601769911508" x="3250" y="3423.5" as="geometry" />
+          <mxGeometry height="107.27272727272728" width="165.14601769911508" x="2730" y="3443.5" as="geometry" />
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-130" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.004;entryY=0.32;entryDx=0;entryDy=0;entryPerimeter=0;" target="zOGvDR2fQ1psqFmyCW56-35" value="">
           <mxGeometry height="50" relative="1" width="50" as="geometry">
-            <mxPoint x="3460" y="3120.38" as="sourcePoint" />
-            <mxPoint x="2237.36" y="3150.1499999999996" as="targetPoint" />
+            <mxPoint x="2940" y="3140.38" as="sourcePoint" />
+            <mxPoint x="1717.3600000000001" y="3170.1499999999996" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="-p7pe43o6-HY4JRFWrg_-144" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;defaultLabelBackgroundColor=page;" target="-p7pe43o6-HY4JRFWrg_-141">
@@ -597,22 +598,22 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;" value="External Telemetry Gateway" vertex="1">
-          <mxGeometry height="180" width="289" x="1390" y="3402.576625976563" as="geometry" />
+          <mxGeometry height="180" width="289" x="870" y="3422.576625976563" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;verticalAlign=bottom;" value="Telemetry Repository" vertex="1">
-          <mxGeometry height="180" width="302.58" x="1771.25" y="3405.4466259765627" as="geometry" />
+          <mxGeometry height="180" width="302.58" x="1251.25" y="3425.4466259765627" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-22" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Provide new measurements from track data" vertex="1">
-          <mxGeometry height="100.77" width="185.18" x="1441.91" y="3420.3366259765626" as="geometry" />
+          <mxGeometry height="100.77" width="185.18" x="921.9100000000001" y="3440.3366259765626" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-23" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="&lt;div&gt;Retrieve the latest stored measurements when needed&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="107.27" width="107.5" x="1801.25" y="3438.9466259765627" as="geometry" />
+          <mxGeometry height="107.27" width="107.5" x="1281.25" y="3458.9466259765627" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-24" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="Record processing errors" vertex="1">
-          <mxGeometry height="114.26" width="117.01" x="1931.25" y="3435.4466259765627" as="geometry" />
+          <mxGeometry height="114.26" width="117.01" x="1411.25" y="3455.4466259765627" as="geometry" />
         </mxCell>
         <mxCell id="hbvNCAZIURWhrc79F5SA-30" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" value="Telemetry database" vertex="1">
-          <mxGeometry height="107.27272727272728" width="165.14601769911502" x="2111.253451327433" y="3455.443898703836" as="geometry" />
+          <mxGeometry height="107.27272727272728" width="165.14601769911502" x="1591.2534513274331" y="3475.443898703836" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
