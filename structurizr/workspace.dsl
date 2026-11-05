@@ -1,41 +1,47 @@
 workspace "RCT" "RCT System" {
 
     model {
+        # Level 1: Users
         manager = person "Race manager" "Registers cars and technicians, manage the race"
         maintenanceTech = person "Maintenance technician" "Monitors realtime data to prepare for pitstops"
         trackTech = person "Track technician" "Monitors track condition"
         driver = person "Driver" "Drives a race car"
         team = person "Team" "Views race results"
 
+        # Level 1: External Systems
         manufacturerSystem = softwareSystem "External manufacturer web/database" "Provides car data" "External"
         govSystem = softwareSystem "Government registry API" "Provides technician data" "External"
         telemetryGateway = softwareSystem "External Telemetry Gateway" "Provides telemetry data" "External"
 
+        # Level 1: Main Software System
         rctTracker = softwareSystem "RCT Tracker" "Tracks cars maintenance" {
-            
+
+            # Level 2: web application
             webApp = container "Web Application" "Dashboards for managers and technicians" "React"
-            
-            app = container "Application" "Processes data and validates" "Java/Spring" {
+
+            # Level 2: Main application and Level 3 components
+            app = container "Application" "Processes data and validates" "Java" {
                 accessControl = component "Access Control" "Checks permissions"
-                
+
                 carValidator = component "Car data validation" "Validates car IDs"
                 carProvider = component "External car data provider" "Connects to manufacturer"
                 carRepo = component "Car and sensor repository" "Persists car and sensor data"
                 sensorManager = component "Sensor Configuration Manager" "Manages sensor settings"
-                
+
                 techValidator = component "Tech. data validation" "Validates technician IDs"
                 techProvider = component "External Tech. data provider" "Connects to government registry"
                 techRepo = component "Tech. Repository" "Persists technician data"
-                
+
                 driverManager = component "Driver Management" "Registers drivers"
-                
+
                 telemetryCollector = component "Telemetry Collector" "Receives measurements"
                 telemetryValidator = component "Telemetry Validator" "Checks data validity"
                 maintenanceAnalyzer = component "Maintenance Data Analyzer" "Compares data with limits"
-                
+
                 raceReporter = component "Race Result Reporter" "Generates race reports"
             }
-            
+
+            # Level 2: databases
             carDb = container "Car and sensor database" "Stores car and sensor data" "PostgreSQL" "Database"
             techDb = container "Technician database" "Stores technician data" "PostgreSQL" "Database"
             telemetryDb = container "Telemetry database" "Stores time-series data" "InfluxDB" "Database"
@@ -43,12 +49,14 @@ workspace "RCT" "RCT System" {
             raceDb = container "Race database" "Stores race results" "PostgreSQL" "Database"
         }
 
+        # Relationships between users and containers
         manager -> webApp "Uses"
         maintenanceTech -> webApp "Uses"
         trackTech -> webApp "Uses"
         driver -> webApp "Views realtime data"
         team -> webApp "Views race results"
 
+        # Relationships between Level 2 containers
         webApp -> accessControl "Requests access"
         webApp -> carValidator "Registers car"
         webApp -> sensorManager "Manages sensors"
@@ -56,6 +64,7 @@ workspace "RCT" "RCT System" {
         webApp -> driverManager "Registers driver"
         webApp -> raceReporter "Requests race results"
 
+        # Relationships between Level 3 components
         accessControl -> maintenanceAnalyzer "Allows telemetry view"
         accessControl -> raceReporter "Allows results view"
 
@@ -82,14 +91,17 @@ workspace "RCT" "RCT System" {
     }
 
     views {
+        # Level 1: System Context View
         systemContext rctTracker "SoftwareSystem" {
             include *
         }
 
+        # Level 2: Container View
         container rctTracker "Containers" {
             include *
         }
 
+        # Level 3: Component View
         component app "Components" {
             include *
         }
