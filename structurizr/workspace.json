@@ -5,21 +5,27 @@
   "description" : "RCT System",
   "documentation" : { },
   "id" : 1,
-  "lastModifiedDate" : "2026-11-01T12:34:08Z",
+  "lastModifiedDate" : "2026-11-05T12:02:38Z",
   "model" : {
     "people" : [ {
-      "description" : "Registers cars and technicians, manages the race",
+      "description" : "Registers cars and technicians, manage the race",
       "id" : "1",
       "name" : "Race manager",
       "properties" : {
         "structurizr.dsl.identifier" : "manager"
       },
       "relationships" : [ {
-        "description" : "Registers cars and technicians",
-        "destinationId" : "5",
-        "id" : "8",
+        "description" : "Uses",
+        "destinationId" : "10",
+        "id" : "30",
         "sourceId" : "1",
         "tags" : "Relationship"
+      }, {
+        "description" : "Uses",
+        "destinationId" : "9",
+        "id" : "31",
+        "linkedRelationshipId" : "30",
+        "sourceId" : "1"
       } ],
       "tags" : "Element,Person"
     }, {
@@ -30,60 +36,731 @@
         "structurizr.dsl.identifier" : "maintenanceTech"
       },
       "relationships" : [ {
-        "description" : "Views realtime data",
-        "destinationId" : "5",
-        "id" : "6",
+        "description" : "Uses",
+        "destinationId" : "10",
+        "id" : "32",
         "sourceId" : "2",
         "tags" : "Relationship"
+      }, {
+        "description" : "Uses",
+        "destinationId" : "9",
+        "id" : "33",
+        "linkedRelationshipId" : "32",
+        "sourceId" : "2"
       } ],
       "tags" : "Element,Person"
     }, {
-      "description" : "Assesses track conditions",
+      "description" : "Monitors track condition",
       "id" : "3",
       "name" : "Track technician",
       "properties" : {
         "structurizr.dsl.identifier" : "trackTech"
       },
       "relationships" : [ {
-        "description" : "Views track data",
-        "destinationId" : "5",
-        "id" : "7",
+        "description" : "Uses",
+        "destinationId" : "10",
+        "id" : "34",
         "sourceId" : "3",
         "tags" : "Relationship"
+      }, {
+        "description" : "Uses",
+        "destinationId" : "9",
+        "id" : "35",
+        "linkedRelationshipId" : "34",
+        "sourceId" : "3"
       } ],
       "tags" : "Element,Person"
     }, {
-      "description" : "Drives a race car ",
+      "description" : "Drives a race car",
       "id" : "4",
-      "name" : "Deiver",
+      "name" : "Driver",
       "properties" : {
         "structurizr.dsl.identifier" : "driver"
       },
+      "relationships" : [ {
+        "description" : "Views realtime data",
+        "destinationId" : "10",
+        "id" : "36",
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Views realtime data",
+        "destinationId" : "9",
+        "id" : "37",
+        "linkedRelationshipId" : "36",
+        "sourceId" : "4"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Views race results",
+      "id" : "5",
+      "name" : "Team",
+      "properties" : {
+        "structurizr.dsl.identifier" : "team"
+      },
+      "relationships" : [ {
+        "description" : "Views race results",
+        "destinationId" : "10",
+        "id" : "38",
+        "sourceId" : "5",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Views race results",
+        "destinationId" : "9",
+        "id" : "39",
+        "linkedRelationshipId" : "38",
+        "sourceId" : "5"
+      } ],
       "tags" : "Element,Person"
     } ],
     "softwareSystems" : [ {
+      "description" : "Provides car data",
+      "documentation" : { },
+      "id" : "6",
+      "name" : "External manufacturer web/database",
+      "properties" : {
+        "structurizr.dsl.identifier" : "manufacturerSystem"
+      },
+      "tags" : "Element,Software System,External"
+    }, {
+      "description" : "Provides technician data",
+      "documentation" : { },
+      "id" : "7",
+      "name" : "Government registry API",
+      "properties" : {
+        "structurizr.dsl.identifier" : "govSystem"
+      },
+      "tags" : "Element,Software System,External"
+    }, {
+      "description" : "Provides telemetry data",
+      "documentation" : { },
+      "id" : "8",
+      "name" : "External Telemetry Gateway",
+      "properties" : {
+        "structurizr.dsl.identifier" : "telemetryGateway"
+      },
+      "relationships" : [ {
+        "description" : "Sends new measurements",
+        "destinationId" : "21",
+        "id" : "68",
+        "sourceId" : "8",
+        "tags" : "Relationship"
+      }, {
+        "description" : "Sends new measurements",
+        "destinationId" : "11",
+        "id" : "69",
+        "linkedRelationshipId" : "68",
+        "sourceId" : "8"
+      }, {
+        "description" : "Sends new measurements",
+        "destinationId" : "9",
+        "id" : "70",
+        "linkedRelationshipId" : "68",
+        "sourceId" : "8"
+      } ],
+      "tags" : "Element,Software System,External"
+    }, {
+      "containers" : [ {
+        "description" : "Dashboards for managers and technicians",
+        "documentation" : { },
+        "id" : "10",
+        "name" : "Web Application",
+        "properties" : {
+          "structurizr.dsl.identifier" : "webApp"
+        },
+        "relationships" : [ {
+          "description" : "Requests access",
+          "destinationId" : "12",
+          "id" : "40",
+          "sourceId" : "10",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Requests access",
+          "destinationId" : "11",
+          "id" : "41",
+          "linkedRelationshipId" : "40",
+          "sourceId" : "10"
+        }, {
+          "description" : "Registers car",
+          "destinationId" : "13",
+          "id" : "42",
+          "sourceId" : "10",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Manages sensors",
+          "destinationId" : "16",
+          "id" : "43",
+          "sourceId" : "10",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Registers technician",
+          "destinationId" : "17",
+          "id" : "44",
+          "sourceId" : "10",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Registers driver",
+          "destinationId" : "20",
+          "id" : "45",
+          "sourceId" : "10",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Requests race results",
+          "destinationId" : "24",
+          "id" : "46",
+          "sourceId" : "10",
+          "tags" : "Relationship"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "React"
+      }, {
+        "components" : [ {
+          "description" : "Checks permissions",
+          "documentation" : { },
+          "id" : "12",
+          "name" : "Access Control",
+          "properties" : {
+            "structurizr.dsl.identifier" : "accessControl"
+          },
+          "relationships" : [ {
+            "description" : "Allows telemetry view",
+            "destinationId" : "23",
+            "id" : "47",
+            "sourceId" : "12",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Allows results view",
+            "destinationId" : "24",
+            "id" : "48",
+            "sourceId" : "12",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Validates car IDs",
+          "documentation" : { },
+          "id" : "13",
+          "name" : "Car data validation",
+          "properties" : {
+            "structurizr.dsl.identifier" : "carValidator"
+          },
+          "relationships" : [ {
+            "description" : "Gets data from",
+            "destinationId" : "14",
+            "id" : "49",
+            "sourceId" : "13",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Sends data to",
+            "destinationId" : "15",
+            "id" : "53",
+            "sourceId" : "13",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Connects to manufacturer",
+          "documentation" : { },
+          "id" : "14",
+          "name" : "External car data provider",
+          "properties" : {
+            "structurizr.dsl.identifier" : "carProvider"
+          },
+          "relationships" : [ {
+            "description" : "Makes calls to read data",
+            "destinationId" : "6",
+            "id" : "50",
+            "sourceId" : "14",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Persists car and sensor data",
+          "documentation" : { },
+          "id" : "15",
+          "name" : "Car and sensor repository",
+          "properties" : {
+            "structurizr.dsl.identifier" : "carRepo"
+          },
+          "relationships" : [ {
+            "description" : "Writes to",
+            "destinationId" : "25",
+            "id" : "55",
+            "sourceId" : "15",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Manages sensor settings",
+          "documentation" : { },
+          "id" : "16",
+          "name" : "Sensor Configuration Manager",
+          "properties" : {
+            "structurizr.dsl.identifier" : "sensorManager"
+          },
+          "relationships" : [ {
+            "description" : "Updates sensor config",
+            "destinationId" : "15",
+            "id" : "54",
+            "sourceId" : "16",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Validates technician IDs",
+          "documentation" : { },
+          "id" : "17",
+          "name" : "Tech. data validation",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techValidator"
+          },
+          "relationships" : [ {
+            "description" : "Gets data from",
+            "destinationId" : "18",
+            "id" : "57",
+            "sourceId" : "17",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Sends data to",
+            "destinationId" : "19",
+            "id" : "61",
+            "sourceId" : "17",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Connects to government registry",
+          "documentation" : { },
+          "id" : "18",
+          "name" : "External Tech. data provider",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techProvider"
+          },
+          "relationships" : [ {
+            "description" : "Makes calls to read data",
+            "destinationId" : "7",
+            "id" : "58",
+            "sourceId" : "18",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Persists technician data",
+          "documentation" : { },
+          "id" : "19",
+          "name" : "Tech. Repository",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techRepo"
+          },
+          "relationships" : [ {
+            "description" : "Writes to",
+            "destinationId" : "26",
+            "id" : "62",
+            "sourceId" : "19",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Registers drivers",
+          "documentation" : { },
+          "id" : "20",
+          "name" : "Driver Management",
+          "properties" : {
+            "structurizr.dsl.identifier" : "driverManager"
+          },
+          "relationships" : [ {
+            "description" : "Writes to",
+            "destinationId" : "28",
+            "id" : "64",
+            "sourceId" : "20",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Receives measurements",
+          "documentation" : { },
+          "id" : "21",
+          "name" : "Telemetry Collector",
+          "properties" : {
+            "structurizr.dsl.identifier" : "telemetryCollector"
+          },
+          "relationships" : [ {
+            "description" : "Sends measurements to",
+            "destinationId" : "22",
+            "id" : "71",
+            "sourceId" : "21",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Checks data validity",
+          "documentation" : { },
+          "id" : "22",
+          "name" : "Telemetry Validator",
+          "properties" : {
+            "structurizr.dsl.identifier" : "telemetryValidator"
+          },
+          "relationships" : [ {
+            "description" : "Sends validated measurements to",
+            "destinationId" : "23",
+            "id" : "72",
+            "sourceId" : "22",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Compares data with limits",
+          "documentation" : { },
+          "id" : "23",
+          "name" : "Maintenance Data Analyzer",
+          "properties" : {
+            "structurizr.dsl.identifier" : "maintenanceAnalyzer"
+          },
+          "relationships" : [ {
+            "description" : "Loads sensor configuration",
+            "destinationId" : "15",
+            "id" : "73",
+            "sourceId" : "23",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Stores/retrieves measurements",
+            "destinationId" : "27",
+            "id" : "74",
+            "sourceId" : "23",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Sends measurements and warnings",
+            "destinationId" : "10",
+            "id" : "76",
+            "sourceId" : "23",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Generates race reports",
+          "documentation" : { },
+          "id" : "24",
+          "name" : "Race Result Reporter",
+          "properties" : {
+            "structurizr.dsl.identifier" : "raceReporter"
+          },
+          "relationships" : [ {
+            "description" : "Reads from",
+            "destinationId" : "29",
+            "id" : "66",
+            "sourceId" : "24",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Processes data and validates",
+        "documentation" : { },
+        "id" : "11",
+        "name" : "Application",
+        "properties" : {
+          "structurizr.dsl.identifier" : "app"
+        },
+        "relationships" : [ {
+          "description" : "Makes calls to read data",
+          "destinationId" : "6",
+          "id" : "51",
+          "linkedRelationshipId" : "50",
+          "sourceId" : "11"
+        }, {
+          "description" : "Writes to",
+          "destinationId" : "25",
+          "id" : "56",
+          "linkedRelationshipId" : "55",
+          "sourceId" : "11"
+        }, {
+          "description" : "Makes calls to read data",
+          "destinationId" : "7",
+          "id" : "59",
+          "linkedRelationshipId" : "58",
+          "sourceId" : "11"
+        }, {
+          "description" : "Writes to",
+          "destinationId" : "26",
+          "id" : "63",
+          "linkedRelationshipId" : "62",
+          "sourceId" : "11"
+        }, {
+          "description" : "Writes to",
+          "destinationId" : "28",
+          "id" : "65",
+          "linkedRelationshipId" : "64",
+          "sourceId" : "11"
+        }, {
+          "description" : "Reads from",
+          "destinationId" : "29",
+          "id" : "67",
+          "linkedRelationshipId" : "66",
+          "sourceId" : "11"
+        }, {
+          "description" : "Stores/retrieves measurements",
+          "destinationId" : "27",
+          "id" : "75",
+          "linkedRelationshipId" : "74",
+          "sourceId" : "11"
+        }, {
+          "description" : "Sends measurements and warnings",
+          "destinationId" : "10",
+          "id" : "77",
+          "linkedRelationshipId" : "76",
+          "sourceId" : "11"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Java/Spring"
+      }, {
+        "description" : "Stores car and sensor data",
+        "documentation" : { },
+        "id" : "25",
+        "name" : "Car and sensor database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "carDb"
+        },
+        "tags" : "Element,Container,Database",
+        "technology" : "PostgreSQL"
+      }, {
+        "description" : "Stores technician data",
+        "documentation" : { },
+        "id" : "26",
+        "name" : "Technician database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "techDb"
+        },
+        "tags" : "Element,Container,Database",
+        "technology" : "PostgreSQL"
+      }, {
+        "description" : "Stores time-series data",
+        "documentation" : { },
+        "id" : "27",
+        "name" : "Telemetry database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "telemetryDb"
+        },
+        "tags" : "Element,Container,Database",
+        "technology" : "InfluxDB"
+      }, {
+        "description" : "Stores driver data",
+        "documentation" : { },
+        "id" : "28",
+        "name" : "Driver database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "driverDb"
+        },
+        "tags" : "Element,Container,Database",
+        "technology" : "PostgreSQL"
+      }, {
+        "description" : "Stores race results",
+        "documentation" : { },
+        "id" : "29",
+        "name" : "Race database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "raceDb"
+        },
+        "tags" : "Element,Container,Database",
+        "technology" : "PostgreSQL"
+      } ],
       "description" : "Tracks cars maintenance",
       "documentation" : { },
-      "id" : "5",
+      "id" : "9",
       "name" : "RCT Tracker",
       "properties" : {
         "structurizr.dsl.identifier" : "rctTracker"
       },
-      "tags" : "Element,Software System,{}"
+      "relationships" : [ {
+        "description" : "Makes calls to read data",
+        "destinationId" : "6",
+        "id" : "52",
+        "linkedRelationshipId" : "50",
+        "sourceId" : "9"
+      }, {
+        "description" : "Makes calls to read data",
+        "destinationId" : "7",
+        "id" : "60",
+        "linkedRelationshipId" : "58",
+        "sourceId" : "9"
+      } ],
+      "tags" : "Element,Software System"
     } ]
   },
   "name" : "RCT",
   "properties" : {
-    "structurizr.inspection.error" : "5",
-    "structurizr.dsl" : "d29ya3NwYWNlICJSQ1QiICJSQ1QgU3lzdGVtIiB7CgogICAgbW9kZWwgewogICAgICAgIG1hbmFnZXIgPSBwZXJzb24gIlJhY2UgbWFuYWdlciIgIlJlZ2lzdGVycyBjYXJzIGFuZCB0ZWNobmljaWFucywgbWFuYWdlcyB0aGUgcmFjZSIKICAgICAgICBtYWludGVuYW5jZVRlY2ggPSBwZXJzb24gIk1haW50ZW5hbmNlIHRlY2huaWNpYW4iICJNb25pdG9ycyByZWFsdGltZSBkYXRhIHRvIHByZXBhcmUgZm9yIHBpdHN0b3BzIgogICAgICAgIHRyYWNrVGVjaCA9IHBlcnNvbiAiVHJhY2sgdGVjaG5pY2lhbiIgIkFzc2Vzc2VzIHRyYWNrIGNvbmRpdGlvbnMiCiAgICAgICAgZHJpdmVyID0gcGVyc29uICJEZWl2ZXIiICJEcml2ZXMgYSByYWNlIGNhciAiCgogICAgICAgIHJjdFRyYWNrZXIgPSBzb2Z0d2FyZVN5c3RlbSAiUkNUIFRyYWNrZXIiICJUcmFja3MgY2FycyBtYWludGVuYW5jZSIge30KCiAgICAgICAgbWFpbnRlbmFuY2VUZWNoIC0+IHJjdFRyYWNrZXIgIlZpZXdzIHJlYWx0aW1lIGRhdGEiCiAgICAgICAgdHJhY2tUZWNoIC0+IHJjdFRyYWNrZXIgIlZpZXdzIHRyYWNrIGRhdGEiCiAgICAgICAgbWFuYWdlciAtPiByY3RUcmFja2VyICJSZWdpc3RlcnMgY2FycyBhbmQgdGVjaG5pY2lhbnMiCiAgICB9CgogICAgdmlld3MgewogICAgICAgIHN5c3RlbUNvbnRleHQgcmN0VHJhY2tlciAiRGlhZ3JhbTEiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsKICAgICAgICAgICAgICAgIHNoYXBlIFBlcnNvbgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMGMyMzcwCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiU29mdHdhcmUgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMyMTU4YjgKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KCiAgICBjb25maWd1cmF0aW9uIHsKICAgICAgICBzY29wZSBzb2Z0d2FyZXN5c3RlbQogICAgfQoKfQ==",
+    "structurizr.inspection.error" : "50",
+    "structurizr.dsl" : "d29ya3NwYWNlICJSQ1QiICJSQ1QgU3lzdGVtIiB7CgogICAgbW9kZWwgewogICAgICAgIG1hbmFnZXIgPSBwZXJzb24gIlJhY2UgbWFuYWdlciIgIlJlZ2lzdGVycyBjYXJzIGFuZCB0ZWNobmljaWFucywgbWFuYWdlIHRoZSByYWNlIgogICAgICAgIG1haW50ZW5hbmNlVGVjaCA9IHBlcnNvbiAiTWFpbnRlbmFuY2UgdGVjaG5pY2lhbiIgIk1vbml0b3JzIHJlYWx0aW1lIGRhdGEgdG8gcHJlcGFyZSBmb3IgcGl0c3RvcHMiCiAgICAgICAgdHJhY2tUZWNoID0gcGVyc29uICJUcmFjayB0ZWNobmljaWFuIiAiTW9uaXRvcnMgdHJhY2sgY29uZGl0aW9uIgogICAgICAgIGRyaXZlciA9IHBlcnNvbiAiRHJpdmVyIiAiRHJpdmVzIGEgcmFjZSBjYXIiCiAgICAgICAgdGVhbSA9IHBlcnNvbiAiVGVhbSIgIlZpZXdzIHJhY2UgcmVzdWx0cyIKCiAgICAgICAgbWFudWZhY3R1cmVyU3lzdGVtID0gc29mdHdhcmVTeXN0ZW0gIkV4dGVybmFsIG1hbnVmYWN0dXJlciB3ZWIvZGF0YWJhc2UiICJQcm92aWRlcyBjYXIgZGF0YSIgIkV4dGVybmFsIgogICAgICAgIGdvdlN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJHb3Zlcm5tZW50IHJlZ2lzdHJ5IEFQSSIgIlByb3ZpZGVzIHRlY2huaWNpYW4gZGF0YSIgIkV4dGVybmFsIgogICAgICAgIHRlbGVtZXRyeUdhdGV3YXkgPSBzb2Z0d2FyZVN5c3RlbSAiRXh0ZXJuYWwgVGVsZW1ldHJ5IEdhdGV3YXkiICJQcm92aWRlcyB0ZWxlbWV0cnkgZGF0YSIgIkV4dGVybmFsIgoKICAgICAgICByY3RUcmFja2VyID0gc29mdHdhcmVTeXN0ZW0gIlJDVCBUcmFja2VyIiAiVHJhY2tzIGNhcnMgbWFpbnRlbmFuY2UiIHsKICAgICAgICAgICAgCiAgICAgICAgICAgIHdlYkFwcCA9IGNvbnRhaW5lciAiV2ViIEFwcGxpY2F0aW9uIiAiRGFzaGJvYXJkcyBmb3IgbWFuYWdlcnMgYW5kIHRlY2huaWNpYW5zIiAiUmVhY3QiCiAgICAgICAgICAgIAogICAgICAgICAgICBhcHAgPSBjb250YWluZXIgIkFwcGxpY2F0aW9uIiAiUHJvY2Vzc2VzIGRhdGEgYW5kIHZhbGlkYXRlcyIgIkphdmEvU3ByaW5nIiB7CiAgICAgICAgICAgICAgICBhY2Nlc3NDb250cm9sID0gY29tcG9uZW50ICJBY2Nlc3MgQ29udHJvbCIgIkNoZWNrcyBwZXJtaXNzaW9ucyIKICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgY2FyVmFsaWRhdG9yID0gY29tcG9uZW50ICJDYXIgZGF0YSB2YWxpZGF0aW9uIiAiVmFsaWRhdGVzIGNhciBJRHMiCiAgICAgICAgICAgICAgICBjYXJQcm92aWRlciA9IGNvbXBvbmVudCAiRXh0ZXJuYWwgY2FyIGRhdGEgcHJvdmlkZXIiICJDb25uZWN0cyB0byBtYW51ZmFjdHVyZXIiCiAgICAgICAgICAgICAgICBjYXJSZXBvID0gY29tcG9uZW50ICJDYXIgYW5kIHNlbnNvciByZXBvc2l0b3J5IiAiUGVyc2lzdHMgY2FyIGFuZCBzZW5zb3IgZGF0YSIKICAgICAgICAgICAgICAgIHNlbnNvck1hbmFnZXIgPSBjb21wb25lbnQgIlNlbnNvciBDb25maWd1cmF0aW9uIE1hbmFnZXIiICJNYW5hZ2VzIHNlbnNvciBzZXR0aW5ncyIKICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgdGVjaFZhbGlkYXRvciA9IGNvbXBvbmVudCAiVGVjaC4gZGF0YSB2YWxpZGF0aW9uIiAiVmFsaWRhdGVzIHRlY2huaWNpYW4gSURzIgogICAgICAgICAgICAgICAgdGVjaFByb3ZpZGVyID0gY29tcG9uZW50ICJFeHRlcm5hbCBUZWNoLiBkYXRhIHByb3ZpZGVyIiAiQ29ubmVjdHMgdG8gZ292ZXJubWVudCByZWdpc3RyeSIKICAgICAgICAgICAgICAgIHRlY2hSZXBvID0gY29tcG9uZW50ICJUZWNoLiBSZXBvc2l0b3J5IiAiUGVyc2lzdHMgdGVjaG5pY2lhbiBkYXRhIgogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICBkcml2ZXJNYW5hZ2VyID0gY29tcG9uZW50ICJEcml2ZXIgTWFuYWdlbWVudCIgIlJlZ2lzdGVycyBkcml2ZXJzIgogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICB0ZWxlbWV0cnlDb2xsZWN0b3IgPSBjb21wb25lbnQgIlRlbGVtZXRyeSBDb2xsZWN0b3IiICJSZWNlaXZlcyBtZWFzdXJlbWVudHMiCiAgICAgICAgICAgICAgICB0ZWxlbWV0cnlWYWxpZGF0b3IgPSBjb21wb25lbnQgIlRlbGVtZXRyeSBWYWxpZGF0b3IiICJDaGVja3MgZGF0YSB2YWxpZGl0eSIKICAgICAgICAgICAgICAgIG1haW50ZW5hbmNlQW5hbHl6ZXIgPSBjb21wb25lbnQgIk1haW50ZW5hbmNlIERhdGEgQW5hbHl6ZXIiICJDb21wYXJlcyBkYXRhIHdpdGggbGltaXRzIgogICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICByYWNlUmVwb3J0ZXIgPSBjb21wb25lbnQgIlJhY2UgUmVzdWx0IFJlcG9ydGVyIiAiR2VuZXJhdGVzIHJhY2UgcmVwb3J0cyIKICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgY2FyRGIgPSBjb250YWluZXIgIkNhciBhbmQgc2Vuc29yIGRhdGFiYXNlIiAiU3RvcmVzIGNhciBhbmQgc2Vuc29yIGRhdGEiICJQb3N0Z3JlU1FMIiAiRGF0YWJhc2UiCiAgICAgICAgICAgIHRlY2hEYiA9IGNvbnRhaW5lciAiVGVjaG5pY2lhbiBkYXRhYmFzZSIgIlN0b3JlcyB0ZWNobmljaWFuIGRhdGEiICJQb3N0Z3JlU1FMIiAiRGF0YWJhc2UiCiAgICAgICAgICAgIHRlbGVtZXRyeURiID0gY29udGFpbmVyICJUZWxlbWV0cnkgZGF0YWJhc2UiICJTdG9yZXMgdGltZS1zZXJpZXMgZGF0YSIgIkluZmx1eERCIiAiRGF0YWJhc2UiCiAgICAgICAgICAgIGRyaXZlckRiID0gY29udGFpbmVyICJEcml2ZXIgZGF0YWJhc2UiICJTdG9yZXMgZHJpdmVyIGRhdGEiICJQb3N0Z3JlU1FMIiAiRGF0YWJhc2UiCiAgICAgICAgICAgIHJhY2VEYiA9IGNvbnRhaW5lciAiUmFjZSBkYXRhYmFzZSIgIlN0b3JlcyByYWNlIHJlc3VsdHMiICJQb3N0Z3JlU1FMIiAiRGF0YWJhc2UiCiAgICAgICAgfQoKICAgICAgICBtYW5hZ2VyIC0+IHdlYkFwcCAiVXNlcyIKICAgICAgICBtYWludGVuYW5jZVRlY2ggLT4gd2ViQXBwICJVc2VzIgogICAgICAgIHRyYWNrVGVjaCAtPiB3ZWJBcHAgIlVzZXMiCiAgICAgICAgZHJpdmVyIC0+IHdlYkFwcCAiVmlld3MgcmVhbHRpbWUgZGF0YSIKICAgICAgICB0ZWFtIC0+IHdlYkFwcCAiVmlld3MgcmFjZSByZXN1bHRzIgoKICAgICAgICB3ZWJBcHAgLT4gYWNjZXNzQ29udHJvbCAiUmVxdWVzdHMgYWNjZXNzIgogICAgICAgIHdlYkFwcCAtPiBjYXJWYWxpZGF0b3IgIlJlZ2lzdGVycyBjYXIiCiAgICAgICAgd2ViQXBwIC0+IHNlbnNvck1hbmFnZXIgIk1hbmFnZXMgc2Vuc29ycyIKICAgICAgICB3ZWJBcHAgLT4gdGVjaFZhbGlkYXRvciAiUmVnaXN0ZXJzIHRlY2huaWNpYW4iCiAgICAgICAgd2ViQXBwIC0+IGRyaXZlck1hbmFnZXIgIlJlZ2lzdGVycyBkcml2ZXIiCiAgICAgICAgd2ViQXBwIC0+IHJhY2VSZXBvcnRlciAiUmVxdWVzdHMgcmFjZSByZXN1bHRzIgoKICAgICAgICBhY2Nlc3NDb250cm9sIC0+IG1haW50ZW5hbmNlQW5hbHl6ZXIgIkFsbG93cyB0ZWxlbWV0cnkgdmlldyIKICAgICAgICBhY2Nlc3NDb250cm9sIC0+IHJhY2VSZXBvcnRlciAiQWxsb3dzIHJlc3VsdHMgdmlldyIKCiAgICAgICAgY2FyVmFsaWRhdG9yIC0+IGNhclByb3ZpZGVyICJHZXRzIGRhdGEgZnJvbSIKICAgICAgICBjYXJQcm92aWRlciAtPiBtYW51ZmFjdHVyZXJTeXN0ZW0gIk1ha2VzIGNhbGxzIHRvIHJlYWQgZGF0YSIKICAgICAgICBjYXJWYWxpZGF0b3IgLT4gY2FyUmVwbyAiU2VuZHMgZGF0YSB0byIKICAgICAgICBzZW5zb3JNYW5hZ2VyIC0+IGNhclJlcG8gIlVwZGF0ZXMgc2Vuc29yIGNvbmZpZyIKICAgICAgICBjYXJSZXBvIC0+IGNhckRiICJXcml0ZXMgdG8iCiAgICAgICAgdGVjaFZhbGlkYXRvciAtPiB0ZWNoUHJvdmlkZXIgIkdldHMgZGF0YSBmcm9tIgogICAgICAgIHRlY2hQcm92aWRlciAtPiBnb3ZTeXN0ZW0gIk1ha2VzIGNhbGxzIHRvIHJlYWQgZGF0YSIKICAgICAgICB0ZWNoVmFsaWRhdG9yIC0+IHRlY2hSZXBvICJTZW5kcyBkYXRhIHRvIgogICAgICAgIHRlY2hSZXBvIC0+IHRlY2hEYiAiV3JpdGVzIHRvIgoKICAgICAgICBkcml2ZXJNYW5hZ2VyIC0+IGRyaXZlckRiICJXcml0ZXMgdG8iCiAgICAgICAgcmFjZVJlcG9ydGVyIC0+IHJhY2VEYiAiUmVhZHMgZnJvbSIKCiAgICAgICAgdGVsZW1ldHJ5R2F0ZXdheSAtPiB0ZWxlbWV0cnlDb2xsZWN0b3IgIlNlbmRzIG5ldyBtZWFzdXJlbWVudHMiCiAgICAgICAgdGVsZW1ldHJ5Q29sbGVjdG9yIC0+IHRlbGVtZXRyeVZhbGlkYXRvciAiU2VuZHMgbWVhc3VyZW1lbnRzIHRvIgogICAgICAgIHRlbGVtZXRyeVZhbGlkYXRvciAtPiBtYWludGVuYW5jZUFuYWx5emVyICJTZW5kcyB2YWxpZGF0ZWQgbWVhc3VyZW1lbnRzIHRvIgogICAgICAgIAogICAgICAgIG1haW50ZW5hbmNlQW5hbHl6ZXIgLT4gY2FyUmVwbyAiTG9hZHMgc2Vuc29yIGNvbmZpZ3VyYXRpb24iCiAgICAgICAgbWFpbnRlbmFuY2VBbmFseXplciAtPiB0ZWxlbWV0cnlEYiAiU3RvcmVzL3JldHJpZXZlcyBtZWFzdXJlbWVudHMiCiAgICAgICAgbWFpbnRlbmFuY2VBbmFseXplciAtPiB3ZWJBcHAgIlNlbmRzIG1lYXN1cmVtZW50cyBhbmQgd2FybmluZ3MiCiAgICB9CgogICAgdmlld3MgewogICAgICAgIHN5c3RlbUNvbnRleHQgcmN0VHJhY2tlciAiU29mdHdhcmVTeXN0ZW0iIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBjb250YWluZXIgcmN0VHJhY2tlciAiQ29udGFpbmVycyIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgIGNvbXBvbmVudCBhcHAgIkNvbXBvbmVudHMiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsKICAgICAgICAgICAgICAgIHNoYXBlIFBlcnNvbgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMGMyMzcwCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiU29mdHdhcmUgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMyMTU4YjgKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJDb250YWluZXIiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzQzOGRkNQogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkNvbXBvbmVudCIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjODViYmYwCiAgICAgICAgICAgICAgICBjb2xvciAjMDAwMDAwCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRXh0ZXJuYWwiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzk5OTk5OQogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkRhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBDeWxpbmRlcgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjNDM4ZGQ1CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CgogICAgY29uZmlndXJhdGlvbiB7CiAgICAgICAgc2NvcGUgc29mdHdhcmVzeXN0ZW0KICAgIH0KCn0=",
     "structurizr.inspection.info" : "0",
     "structurizr.inspection.ignore" : "0",
     "structurizr.inspection.warning" : "0"
   },
   "views" : {
+    "componentViews" : [ {
+      "containerId" : "11",
+      "elements" : [ {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "10",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "12",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "13",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "14",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "15",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "16",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "17",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "19",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "20",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "21",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "22",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "23",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "24",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "25",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "26",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "27",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "28",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "29",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "Components",
+      "name" : "Component View: RCT Tracker - Application",
+      "order" : 3,
+      "relationships" : [ {
+        "id" : "40"
+      }, {
+        "id" : "42"
+      }, {
+        "id" : "43"
+      }, {
+        "id" : "44"
+      }, {
+        "id" : "45"
+      }, {
+        "id" : "46"
+      }, {
+        "id" : "47"
+      }, {
+        "id" : "48"
+      }, {
+        "id" : "49"
+      }, {
+        "id" : "50"
+      }, {
+        "id" : "53"
+      }, {
+        "id" : "54"
+      }, {
+        "id" : "55"
+      }, {
+        "id" : "57"
+      }, {
+        "id" : "58"
+      }, {
+        "id" : "61"
+      }, {
+        "id" : "62"
+      }, {
+        "id" : "64"
+      }, {
+        "id" : "66"
+      }, {
+        "id" : "68"
+      }, {
+        "id" : "71"
+      }, {
+        "id" : "72"
+      }, {
+        "id" : "73"
+      }, {
+        "id" : "74"
+      }, {
+        "id" : "76"
+      } ]
+    } ],
     "configuration" : {
       "styles" : {
         "elements" : [ {
+          "background" : "#85bbf0",
+          "color" : "#000000",
+          "tag" : "Component"
+        }, {
+          "background" : "#438dd5",
+          "color" : "#ffffff",
+          "tag" : "Container"
+        }, {
+          "background" : "#438dd5",
+          "color" : "#ffffff",
+          "shape" : "Cylinder",
+          "tag" : "Database"
+        }, {
+          "background" : "#999999",
+          "color" : "#ffffff",
+          "tag" : "External"
+        }, {
           "background" : "#0c2370",
           "color" : "#ffffff",
           "shape" : "Person",
@@ -96,6 +773,105 @@
       },
       "terminology" : { }
     },
+    "containerViews" : [ {
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "4",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "10",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "11",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "25",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "26",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "27",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "28",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "29",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "key" : "Containers",
+      "name" : "Container View: RCT Tracker",
+      "order" : 2,
+      "relationships" : [ {
+        "id" : "30"
+      }, {
+        "id" : "32"
+      }, {
+        "id" : "34"
+      }, {
+        "id" : "36"
+      }, {
+        "id" : "38"
+      }, {
+        "id" : "41"
+      }, {
+        "id" : "51"
+      }, {
+        "id" : "56"
+      }, {
+        "id" : "59"
+      }, {
+        "id" : "63"
+      }, {
+        "id" : "65"
+      }, {
+        "id" : "67"
+      }, {
+        "id" : "69"
+      }, {
+        "id" : "75"
+      }, {
+        "id" : "77"
+      } ],
+      "softwareSystemId" : "9"
+    } ],
     "systemContextViews" : [ {
       "elements" : [ {
         "id" : "1",
@@ -110,22 +886,52 @@
         "x" : 0,
         "y" : 0
       }, {
+        "id" : "4",
+        "x" : 0,
+        "y" : 0
+      }, {
         "id" : "5",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "9",
         "x" : 0,
         "y" : 0
       } ],
       "enterpriseBoundaryVisible" : true,
-      "key" : "Diagram1",
+      "key" : "SoftwareSystem",
       "name" : "System Context View: RCT Tracker",
       "order" : 1,
       "relationships" : [ {
-        "id" : "6"
+        "id" : "31"
       }, {
-        "id" : "7"
+        "id" : "33"
       }, {
-        "id" : "8"
+        "id" : "35"
+      }, {
+        "id" : "37"
+      }, {
+        "id" : "39"
+      }, {
+        "id" : "52"
+      }, {
+        "id" : "60"
+      }, {
+        "id" : "70"
       } ],
-      "softwareSystemId" : "5"
+      "softwareSystemId" : "9"
     } ]
   }
 }
