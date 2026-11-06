@@ -5,7 +5,7 @@
   "description" : "RCT System",
   "documentation" : { },
   "id" : 1,
-  "lastModifiedDate" : "2026-11-05T12:13:32Z",
+  "lastModifiedDate" : "2026-11-06T16:20:20Z",
   "model" : {
     "people" : [ {
       "description" : "Registers cars and technicians, manage the race",
@@ -17,14 +17,14 @@
       "relationships" : [ {
         "description" : "Uses",
         "destinationId" : "10",
-        "id" : "30",
+        "id" : "34",
         "sourceId" : "1",
         "tags" : "Relationship"
       }, {
         "description" : "Uses",
         "destinationId" : "9",
-        "id" : "31",
-        "linkedRelationshipId" : "30",
+        "id" : "35",
+        "linkedRelationshipId" : "34",
         "sourceId" : "1"
       } ],
       "tags" : "Element,Person"
@@ -38,14 +38,14 @@
       "relationships" : [ {
         "description" : "Uses",
         "destinationId" : "10",
-        "id" : "32",
+        "id" : "36",
         "sourceId" : "2",
         "tags" : "Relationship"
       }, {
         "description" : "Uses",
         "destinationId" : "9",
-        "id" : "33",
-        "linkedRelationshipId" : "32",
+        "id" : "37",
+        "linkedRelationshipId" : "36",
         "sourceId" : "2"
       } ],
       "tags" : "Element,Person"
@@ -59,14 +59,14 @@
       "relationships" : [ {
         "description" : "Uses",
         "destinationId" : "10",
-        "id" : "34",
+        "id" : "38",
         "sourceId" : "3",
         "tags" : "Relationship"
       }, {
         "description" : "Uses",
         "destinationId" : "9",
-        "id" : "35",
-        "linkedRelationshipId" : "34",
+        "id" : "39",
+        "linkedRelationshipId" : "38",
         "sourceId" : "3"
       } ],
       "tags" : "Element,Person"
@@ -80,14 +80,14 @@
       "relationships" : [ {
         "description" : "Views realtime data",
         "destinationId" : "10",
-        "id" : "36",
+        "id" : "40",
         "sourceId" : "4",
         "tags" : "Relationship"
       }, {
         "description" : "Views realtime data",
         "destinationId" : "9",
-        "id" : "37",
-        "linkedRelationshipId" : "36",
+        "id" : "41",
+        "linkedRelationshipId" : "40",
         "sourceId" : "4"
       } ],
       "tags" : "Element,Person"
@@ -101,14 +101,14 @@
       "relationships" : [ {
         "description" : "Views race results",
         "destinationId" : "10",
-        "id" : "38",
+        "id" : "42",
         "sourceId" : "5",
         "tags" : "Relationship"
       }, {
         "description" : "Views race results",
         "destinationId" : "9",
-        "id" : "39",
-        "linkedRelationshipId" : "38",
+        "id" : "43",
+        "linkedRelationshipId" : "42",
         "sourceId" : "5"
       } ],
       "tags" : "Element,Person"
@@ -132,7 +132,7 @@
       },
       "tags" : "Element,Software System,External"
     }, {
-      "description" : "Provides telemetry data",
+      "description" : "Provides real-time car and track telemetry data",
       "documentation" : { },
       "id" : "8",
       "name" : "External Telemetry Gateway",
@@ -141,21 +141,21 @@
       },
       "relationships" : [ {
         "description" : "Sends new measurements",
-        "destinationId" : "21",
-        "id" : "68",
+        "destinationId" : "26",
+        "id" : "80",
         "sourceId" : "8",
         "tags" : "Relationship"
       }, {
         "description" : "Sends new measurements",
-        "destinationId" : "11",
-        "id" : "69",
-        "linkedRelationshipId" : "68",
+        "destinationId" : "25",
+        "id" : "81",
+        "linkedRelationshipId" : "80",
         "sourceId" : "8"
       }, {
         "description" : "Sends new measurements",
         "destinationId" : "9",
-        "id" : "70",
-        "linkedRelationshipId" : "68",
+        "id" : "82",
+        "linkedRelationshipId" : "80",
         "sourceId" : "8"
       } ],
       "tags" : "Element,Software System,External"
@@ -171,47 +171,29 @@
         "relationships" : [ {
           "description" : "Requests access",
           "destinationId" : "12",
-          "id" : "40",
+          "id" : "44",
           "sourceId" : "10",
           "tags" : "Relationship"
         }, {
           "description" : "Requests access",
           "destinationId" : "11",
-          "id" : "41",
-          "linkedRelationshipId" : "40",
+          "id" : "45",
+          "linkedRelationshipId" : "44",
           "sourceId" : "10"
         }, {
-          "description" : "Registers car",
-          "destinationId" : "13",
-          "id" : "42",
+          "description" : "Requests access",
+          "destinationId" : "21",
+          "id" : "49",
           "sourceId" : "10",
           "tags" : "Relationship"
         }, {
-          "description" : "Manages sensors",
-          "destinationId" : "16",
-          "id" : "43",
-          "sourceId" : "10",
-          "tags" : "Relationship"
-        }, {
-          "description" : "Registers technician",
-          "destinationId" : "17",
-          "id" : "44",
-          "sourceId" : "10",
-          "tags" : "Relationship"
-        }, {
-          "description" : "Registers driver",
+          "description" : "Requests access",
           "destinationId" : "20",
-          "id" : "45",
-          "sourceId" : "10",
-          "tags" : "Relationship"
-        }, {
-          "description" : "Requests race results",
-          "destinationId" : "24",
-          "id" : "46",
-          "sourceId" : "10",
-          "tags" : "Relationship"
+          "id" : "50",
+          "linkedRelationshipId" : "49",
+          "sourceId" : "10"
         } ],
-        "tags" : "Element,Container",
+        "tags" : "Element,Container,WebBrowserTag",
         "technology" : "React"
       }, {
         "components" : [ {
@@ -223,15 +205,21 @@
             "structurizr.dsl.identifier" : "accessControl"
           },
           "relationships" : [ {
-            "description" : "Allows telemetry view",
-            "destinationId" : "23",
-            "id" : "47",
+            "description" : "Registers car",
+            "destinationId" : "13",
+            "id" : "51",
             "sourceId" : "12",
             "tags" : "Relationship"
           }, {
-            "description" : "Allows results view",
-            "destinationId" : "24",
-            "id" : "48",
+            "description" : "Manages sensors",
+            "destinationId" : "16",
+            "id" : "52",
+            "sourceId" : "12",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Registers technician",
+            "destinationId" : "17",
+            "id" : "53",
             "sourceId" : "12",
             "tags" : "Relationship"
           } ],
@@ -245,15 +233,21 @@
             "structurizr.dsl.identifier" : "carValidator"
           },
           "relationships" : [ {
+            "description" : "Sends messages to",
+            "destinationId" : "10",
+            "id" : "46",
+            "sourceId" : "13",
+            "tags" : "Relationship"
+          }, {
             "description" : "Gets data from",
             "destinationId" : "14",
-            "id" : "49",
+            "id" : "65",
             "sourceId" : "13",
             "tags" : "Relationship"
           }, {
             "description" : "Sends data to",
             "destinationId" : "15",
-            "id" : "53",
+            "id" : "69",
             "sourceId" : "13",
             "tags" : "Relationship"
           } ],
@@ -269,7 +263,7 @@
           "relationships" : [ {
             "description" : "Makes calls to read data",
             "destinationId" : "6",
-            "id" : "50",
+            "id" : "66",
             "sourceId" : "14",
             "tags" : "Relationship"
           } ],
@@ -284,8 +278,8 @@
           },
           "relationships" : [ {
             "description" : "Writes to",
-            "destinationId" : "25",
-            "id" : "55",
+            "destinationId" : "30",
+            "id" : "71",
             "sourceId" : "15",
             "tags" : "Relationship"
           } ],
@@ -301,7 +295,7 @@
           "relationships" : [ {
             "description" : "Updates sensor config",
             "destinationId" : "15",
-            "id" : "54",
+            "id" : "70",
             "sourceId" : "16",
             "tags" : "Relationship"
           } ],
@@ -315,15 +309,21 @@
             "structurizr.dsl.identifier" : "techValidator"
           },
           "relationships" : [ {
+            "description" : "Sends messages to",
+            "destinationId" : "10",
+            "id" : "48",
+            "sourceId" : "17",
+            "tags" : "Relationship"
+          }, {
             "description" : "Gets data from",
             "destinationId" : "18",
-            "id" : "57",
+            "id" : "73",
             "sourceId" : "17",
             "tags" : "Relationship"
           }, {
             "description" : "Sends data to",
             "destinationId" : "19",
-            "id" : "61",
+            "id" : "77",
             "sourceId" : "17",
             "tags" : "Relationship"
           } ],
@@ -339,7 +339,7 @@
           "relationships" : [ {
             "description" : "Makes calls to read data",
             "destinationId" : "7",
-            "id" : "58",
+            "id" : "74",
             "sourceId" : "18",
             "tags" : "Relationship"
           } ],
@@ -354,167 +354,281 @@
           },
           "relationships" : [ {
             "description" : "Writes to",
-            "destinationId" : "26",
-            "id" : "62",
+            "destinationId" : "31",
+            "id" : "78",
             "sourceId" : "19",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
+        } ],
+        "description" : "Validates data and stores them",
+        "documentation" : { },
+        "id" : "11",
+        "name" : "Administration Application",
+        "properties" : {
+          "structurizr.dsl.identifier" : "administartionApp"
+        },
+        "relationships" : [ {
+          "description" : "Sends messages to",
+          "destinationId" : "10",
+          "id" : "47",
+          "linkedRelationshipId" : "46",
+          "sourceId" : "11"
         }, {
-          "description" : "Registers drivers",
-          "documentation" : { },
-          "id" : "20",
-          "name" : "Driver Management",
-          "properties" : {
-            "structurizr.dsl.identifier" : "driverManager"
-          },
-          "relationships" : [ {
-            "description" : "Writes to",
-            "destinationId" : "28",
-            "id" : "64",
-            "sourceId" : "20",
-            "tags" : "Relationship"
-          } ],
-          "tags" : "Element,Component"
+          "description" : "Makes calls to read data",
+          "destinationId" : "6",
+          "id" : "67",
+          "linkedRelationshipId" : "66",
+          "sourceId" : "11"
         }, {
-          "description" : "Receives measurements",
+          "description" : "Writes to",
+          "destinationId" : "30",
+          "id" : "72",
+          "linkedRelationshipId" : "71",
+          "sourceId" : "11"
+        }, {
+          "description" : "Makes calls to read data",
+          "destinationId" : "7",
+          "id" : "75",
+          "linkedRelationshipId" : "74",
+          "sourceId" : "11"
+        }, {
+          "description" : "Writes to",
+          "destinationId" : "31",
+          "id" : "79",
+          "linkedRelationshipId" : "78",
+          "sourceId" : "11"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Java"
+      }, {
+        "components" : [ {
+          "description" : "Checks permissions",
           "documentation" : { },
           "id" : "21",
-          "name" : "Telemetry Collector",
+          "name" : "Access Controll",
           "properties" : {
-            "structurizr.dsl.identifier" : "telemetryCollector"
+            "structurizr.dsl.identifier" : "analyzerAccessControl"
           },
           "relationships" : [ {
-            "description" : "Sends measurements to",
+            "description" : "Allows telemetry view",
             "destinationId" : "22",
-            "id" : "71",
+            "id" : "54",
             "sourceId" : "21",
-            "tags" : "Relationship"
-          } ],
-          "tags" : "Element,Component"
-        }, {
-          "description" : "Checks data validity",
-          "documentation" : { },
-          "id" : "22",
-          "name" : "Telemetry Validator",
-          "properties" : {
-            "structurizr.dsl.identifier" : "telemetryValidator"
-          },
-          "relationships" : [ {
-            "description" : "Sends validated measurements to",
-            "destinationId" : "23",
-            "id" : "72",
-            "sourceId" : "22",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
           "description" : "Compares data with limits",
           "documentation" : { },
-          "id" : "23",
+          "id" : "22",
           "name" : "Maintenance Data Analyzer",
           "properties" : {
             "structurizr.dsl.identifier" : "maintenanceAnalyzer"
           },
           "relationships" : [ {
+            "description" : "Sends results to",
+            "destinationId" : "24",
+            "id" : "55",
+            "sourceId" : "22",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component",
+          "technology" : ")"
+        }, {
+          "description" : "Loads needed data from telemetry measurements and car/sensor repository",
+          "documentation" : { },
+          "id" : "23",
+          "name" : "Loader",
+          "properties" : {
+            "structurizr.dsl.identifier" : "dataLoader"
+          },
+          "relationships" : [ {
             "description" : "Loads sensor configuration",
             "destinationId" : "15",
-            "id" : "73",
+            "id" : "56",
             "sourceId" : "23",
             "tags" : "Relationship"
           }, {
-            "description" : "Stores/retrieves measurements",
-            "destinationId" : "27",
-            "id" : "74",
+            "description" : "Loads sensor configuration",
+            "destinationId" : "11",
+            "id" : "57",
+            "linkedRelationshipId" : "56",
+            "sourceId" : "23"
+          }, {
+            "description" : "Retrieves measurements",
+            "destinationId" : "28",
+            "id" : "60",
             "sourceId" : "23",
             "tags" : "Relationship"
           }, {
-            "description" : "Sends measurements and warnings",
-            "destinationId" : "10",
-            "id" : "76",
+            "description" : "Retrieves measurements",
+            "destinationId" : "25",
+            "id" : "61",
+            "linkedRelationshipId" : "60",
+            "sourceId" : "23"
+          }, {
+            "description" : "Provides data to",
+            "destinationId" : "22",
+            "id" : "64",
             "sourceId" : "23",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
-          "description" : "Generates race reports",
+          "description" : "Reports results of analysis to",
           "documentation" : { },
           "id" : "24",
-          "name" : "Race Result Reporter",
+          "name" : "Result Reporter",
           "properties" : {
-            "structurizr.dsl.identifier" : "raceReporter"
+            "structurizr.dsl.identifier" : "resultReporter"
           },
           "relationships" : [ {
-            "description" : "Reads from",
-            "destinationId" : "29",
-            "id" : "66",
+            "description" : "Reports measurements and warnings",
+            "destinationId" : "10",
+            "id" : "90",
             "sourceId" : "24",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         } ],
-        "description" : "Processes data and validates",
+        "description" : "Loads and analyzes data",
         "documentation" : { },
-        "id" : "11",
-        "name" : "Application",
+        "id" : "20",
+        "name" : "Maintenance Data Analyzer",
         "properties" : {
-          "structurizr.dsl.identifier" : "app"
+          "structurizr.dsl.identifier" : "dataAnalyzer"
         },
         "relationships" : [ {
-          "description" : "Makes calls to read data",
-          "destinationId" : "6",
-          "id" : "51",
-          "linkedRelationshipId" : "50",
-          "sourceId" : "11"
+          "description" : "Loads sensor configuration",
+          "destinationId" : "15",
+          "id" : "58",
+          "linkedRelationshipId" : "56",
+          "sourceId" : "20"
         }, {
-          "description" : "Writes to",
-          "destinationId" : "25",
-          "id" : "56",
-          "linkedRelationshipId" : "55",
-          "sourceId" : "11"
-        }, {
-          "description" : "Makes calls to read data",
-          "destinationId" : "7",
+          "description" : "Loads sensor configuration",
+          "destinationId" : "11",
           "id" : "59",
-          "linkedRelationshipId" : "58",
-          "sourceId" : "11"
+          "linkedRelationshipId" : "56",
+          "sourceId" : "20"
         }, {
-          "description" : "Writes to",
-          "destinationId" : "26",
-          "id" : "63",
-          "linkedRelationshipId" : "62",
-          "sourceId" : "11"
-        }, {
-          "description" : "Writes to",
+          "description" : "Retrieves measurements",
           "destinationId" : "28",
-          "id" : "65",
-          "linkedRelationshipId" : "64",
-          "sourceId" : "11"
+          "id" : "62",
+          "linkedRelationshipId" : "60",
+          "sourceId" : "20"
         }, {
-          "description" : "Reads from",
-          "destinationId" : "29",
-          "id" : "67",
-          "linkedRelationshipId" : "66",
-          "sourceId" : "11"
+          "description" : "Retrieves measurements",
+          "destinationId" : "25",
+          "id" : "63",
+          "linkedRelationshipId" : "60",
+          "sourceId" : "20"
         }, {
-          "description" : "Stores/retrieves measurements",
-          "destinationId" : "27",
-          "id" : "75",
-          "linkedRelationshipId" : "74",
-          "sourceId" : "11"
-        }, {
-          "description" : "Sends measurements and warnings",
+          "description" : "Reports measurements and warnings",
           "destinationId" : "10",
-          "id" : "77",
-          "linkedRelationshipId" : "76",
-          "sourceId" : "11"
+          "id" : "91",
+          "linkedRelationshipId" : "90",
+          "sourceId" : "20"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Java"
+      }, {
+        "components" : [ {
+          "description" : "Receives measurements",
+          "documentation" : { },
+          "id" : "26",
+          "name" : "Telemetry Collector",
+          "properties" : {
+            "structurizr.dsl.identifier" : "telemetryCollector"
+          },
+          "relationships" : [ {
+            "description" : "Sends measurements to",
+            "destinationId" : "27",
+            "id" : "83",
+            "sourceId" : "26",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Checks data validity",
+          "documentation" : { },
+          "id" : "27",
+          "name" : "Telemetry Validator",
+          "properties" : {
+            "structurizr.dsl.identifier" : "telemetryValidator"
+          },
+          "relationships" : [ {
+            "description" : "Sends validated measurements to",
+            "destinationId" : "28",
+            "id" : "84",
+            "sourceId" : "27",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Stores measured data to database",
+          "documentation" : { },
+          "id" : "28",
+          "name" : "Telemetry Repository",
+          "properties" : {
+            "structurizr.dsl.identifier" : "telemetryRepository"
+          },
+          "relationships" : [ {
+            "description" : "Stores car telemetry data",
+            "destinationId" : "32",
+            "id" : "85",
+            "sourceId" : "28",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Stores track telemetry data",
+            "destinationId" : "33",
+            "id" : "87",
+            "sourceId" : "28",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Stores newest telemetry data",
+            "destinationId" : "29",
+            "id" : "89",
+            "sourceId" : "28",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Stores newest telemetry data for quicker access for analyzer",
+          "documentation" : { },
+          "id" : "29",
+          "name" : "Cache",
+          "properties" : {
+            "structurizr.dsl.identifier" : "telemetryCache"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Collects real-time data from sensors",
+        "documentation" : { },
+        "id" : "25",
+        "name" : "Telemetry Data Capturer",
+        "properties" : {
+          "structurizr.dsl.identifier" : "telemetryCapturer"
+        },
+        "relationships" : [ {
+          "description" : "Stores car telemetry data",
+          "destinationId" : "32",
+          "id" : "86",
+          "linkedRelationshipId" : "85",
+          "sourceId" : "25"
+        }, {
+          "description" : "Stores track telemetry data",
+          "destinationId" : "33",
+          "id" : "88",
+          "linkedRelationshipId" : "87",
+          "sourceId" : "25"
         } ],
         "tags" : "Element,Container",
         "technology" : "Java"
       }, {
         "description" : "Stores car and sensor data",
         "documentation" : { },
-        "id" : "25",
+        "id" : "30",
         "name" : "Car and sensor database",
         "properties" : {
           "structurizr.dsl.identifier" : "carDb"
@@ -524,7 +638,7 @@
       }, {
         "description" : "Stores technician data",
         "documentation" : { },
-        "id" : "26",
+        "id" : "31",
         "name" : "Technician database",
         "properties" : {
           "structurizr.dsl.identifier" : "techDb"
@@ -534,35 +648,25 @@
       }, {
         "description" : "Stores time-series data",
         "documentation" : { },
-        "id" : "27",
-        "name" : "Telemetry database",
+        "id" : "32",
+        "name" : "Telemetry Car database",
         "properties" : {
-          "structurizr.dsl.identifier" : "telemetryDb"
+          "structurizr.dsl.identifier" : "telemetryCarDb"
         },
         "tags" : "Element,Container,Database",
         "technology" : "InfluxDB"
       }, {
-        "description" : "Stores driver data",
+        "description" : "Stores time-series data",
         "documentation" : { },
-        "id" : "28",
-        "name" : "Driver database",
+        "id" : "33",
+        "name" : "Telemetry Track database",
         "properties" : {
-          "structurizr.dsl.identifier" : "driverDb"
+          "structurizr.dsl.identifier" : "telemetryTrackDb"
         },
         "tags" : "Element,Container,Database",
-        "technology" : "PostgreSQL"
-      }, {
-        "description" : "Stores race results",
-        "documentation" : { },
-        "id" : "29",
-        "name" : "Race database",
-        "properties" : {
-          "structurizr.dsl.identifier" : "raceDb"
-        },
-        "tags" : "Element,Container,Database",
-        "technology" : "PostgreSQL"
+        "technology" : "InfluxDB"
       } ],
-      "description" : "Tracks cars maintenance",
+      "description" : "Tracks cars and track conditions",
       "documentation" : { },
       "id" : "9",
       "name" : "RCT Tracker",
@@ -572,14 +676,14 @@
       "relationships" : [ {
         "description" : "Makes calls to read data",
         "destinationId" : "6",
-        "id" : "52",
-        "linkedRelationshipId" : "50",
+        "id" : "68",
+        "linkedRelationshipId" : "66",
         "sourceId" : "9"
       }, {
         "description" : "Makes calls to read data",
         "destinationId" : "7",
-        "id" : "60",
-        "linkedRelationshipId" : "58",
+        "id" : "76",
+        "linkedRelationshipId" : "74",
         "sourceId" : "9"
       } ],
       "tags" : "Element,Software System"
@@ -587,8 +691,8 @@
   },
   "name" : "RCT",
   "properties" : {
-    "structurizr.inspection.error" : "50",
-    "structurizr.dsl" : "d29ya3NwYWNlICJSQ1QiICJSQ1QgU3lzdGVtIiB7CgogICAgbW9kZWwgewogICAgICAgICMgTGV2ZWwgMTogVXNlcnMKICAgICAgICBtYW5hZ2VyID0gcGVyc29uICJSYWNlIG1hbmFnZXIiICJSZWdpc3RlcnMgY2FycyBhbmQgdGVjaG5pY2lhbnMsIG1hbmFnZSB0aGUgcmFjZSIKICAgICAgICBtYWludGVuYW5jZVRlY2ggPSBwZXJzb24gIk1haW50ZW5hbmNlIHRlY2huaWNpYW4iICJNb25pdG9ycyByZWFsdGltZSBkYXRhIHRvIHByZXBhcmUgZm9yIHBpdHN0b3BzIgogICAgICAgIHRyYWNrVGVjaCA9IHBlcnNvbiAiVHJhY2sgdGVjaG5pY2lhbiIgIk1vbml0b3JzIHRyYWNrIGNvbmRpdGlvbiIKICAgICAgICBkcml2ZXIgPSBwZXJzb24gIkRyaXZlciIgIkRyaXZlcyBhIHJhY2UgY2FyIgogICAgICAgIHRlYW0gPSBwZXJzb24gIlRlYW0iICJWaWV3cyByYWNlIHJlc3VsdHMiCgogICAgICAgICMgTGV2ZWwgMTogRXh0ZXJuYWwgU3lzdGVtcwogICAgICAgIG1hbnVmYWN0dXJlclN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJFeHRlcm5hbCBtYW51ZmFjdHVyZXIgd2ViL2RhdGFiYXNlIiAiUHJvdmlkZXMgY2FyIGRhdGEiICJFeHRlcm5hbCIKICAgICAgICBnb3ZTeXN0ZW0gPSBzb2Z0d2FyZVN5c3RlbSAiR292ZXJubWVudCByZWdpc3RyeSBBUEkiICJQcm92aWRlcyB0ZWNobmljaWFuIGRhdGEiICJFeHRlcm5hbCIKICAgICAgICB0ZWxlbWV0cnlHYXRld2F5ID0gc29mdHdhcmVTeXN0ZW0gIkV4dGVybmFsIFRlbGVtZXRyeSBHYXRld2F5IiAiUHJvdmlkZXMgdGVsZW1ldHJ5IGRhdGEiICJFeHRlcm5hbCIKCiAgICAgICAgIyBMZXZlbCAxOiBNYWluIFNvZnR3YXJlIFN5c3RlbQogICAgICAgIHJjdFRyYWNrZXIgPSBzb2Z0d2FyZVN5c3RlbSAiUkNUIFRyYWNrZXIiICJUcmFja3MgY2FycyBtYWludGVuYW5jZSIgewoKICAgICAgICAgICAgIyBMZXZlbCAyOiB3ZWIgYXBwbGljYXRpb24KICAgICAgICAgICAgd2ViQXBwID0gY29udGFpbmVyICJXZWIgQXBwbGljYXRpb24iICJEYXNoYm9hcmRzIGZvciBtYW5hZ2VycyBhbmQgdGVjaG5pY2lhbnMiICJSZWFjdCIKCiAgICAgICAgICAgICMgTGV2ZWwgMjogTWFpbiBhcHBsaWNhdGlvbiBhbmQgTGV2ZWwgMyBjb21wb25lbnRzCiAgICAgICAgICAgIGFwcCA9IGNvbnRhaW5lciAiQXBwbGljYXRpb24iICJQcm9jZXNzZXMgZGF0YSBhbmQgdmFsaWRhdGVzIiAiSmF2YSIgewogICAgICAgICAgICAgICAgYWNjZXNzQ29udHJvbCA9IGNvbXBvbmVudCAiQWNjZXNzIENvbnRyb2wiICJDaGVja3MgcGVybWlzc2lvbnMiCgogICAgICAgICAgICAgICAgY2FyVmFsaWRhdG9yID0gY29tcG9uZW50ICJDYXIgZGF0YSB2YWxpZGF0aW9uIiAiVmFsaWRhdGVzIGNhciBJRHMiCiAgICAgICAgICAgICAgICBjYXJQcm92aWRlciA9IGNvbXBvbmVudCAiRXh0ZXJuYWwgY2FyIGRhdGEgcHJvdmlkZXIiICJDb25uZWN0cyB0byBtYW51ZmFjdHVyZXIiCiAgICAgICAgICAgICAgICBjYXJSZXBvID0gY29tcG9uZW50ICJDYXIgYW5kIHNlbnNvciByZXBvc2l0b3J5IiAiUGVyc2lzdHMgY2FyIGFuZCBzZW5zb3IgZGF0YSIKICAgICAgICAgICAgICAgIHNlbnNvck1hbmFnZXIgPSBjb21wb25lbnQgIlNlbnNvciBDb25maWd1cmF0aW9uIE1hbmFnZXIiICJNYW5hZ2VzIHNlbnNvciBzZXR0aW5ncyIKCiAgICAgICAgICAgICAgICB0ZWNoVmFsaWRhdG9yID0gY29tcG9uZW50ICJUZWNoLiBkYXRhIHZhbGlkYXRpb24iICJWYWxpZGF0ZXMgdGVjaG5pY2lhbiBJRHMiCiAgICAgICAgICAgICAgICB0ZWNoUHJvdmlkZXIgPSBjb21wb25lbnQgIkV4dGVybmFsIFRlY2guIGRhdGEgcHJvdmlkZXIiICJDb25uZWN0cyB0byBnb3Zlcm5tZW50IHJlZ2lzdHJ5IgogICAgICAgICAgICAgICAgdGVjaFJlcG8gPSBjb21wb25lbnQgIlRlY2guIFJlcG9zaXRvcnkiICJQZXJzaXN0cyB0ZWNobmljaWFuIGRhdGEiCgogICAgICAgICAgICAgICAgZHJpdmVyTWFuYWdlciA9IGNvbXBvbmVudCAiRHJpdmVyIE1hbmFnZW1lbnQiICJSZWdpc3RlcnMgZHJpdmVycyIKCiAgICAgICAgICAgICAgICB0ZWxlbWV0cnlDb2xsZWN0b3IgPSBjb21wb25lbnQgIlRlbGVtZXRyeSBDb2xsZWN0b3IiICJSZWNlaXZlcyBtZWFzdXJlbWVudHMiCiAgICAgICAgICAgICAgICB0ZWxlbWV0cnlWYWxpZGF0b3IgPSBjb21wb25lbnQgIlRlbGVtZXRyeSBWYWxpZGF0b3IiICJDaGVja3MgZGF0YSB2YWxpZGl0eSIKICAgICAgICAgICAgICAgIG1haW50ZW5hbmNlQW5hbHl6ZXIgPSBjb21wb25lbnQgIk1haW50ZW5hbmNlIERhdGEgQW5hbHl6ZXIiICJDb21wYXJlcyBkYXRhIHdpdGggbGltaXRzIgoKICAgICAgICAgICAgICAgIHJhY2VSZXBvcnRlciA9IGNvbXBvbmVudCAiUmFjZSBSZXN1bHQgUmVwb3J0ZXIiICJHZW5lcmF0ZXMgcmFjZSByZXBvcnRzIgogICAgICAgICAgICB9CgogICAgICAgICAgICAjIExldmVsIDI6IGRhdGFiYXNlcwogICAgICAgICAgICBjYXJEYiA9IGNvbnRhaW5lciAiQ2FyIGFuZCBzZW5zb3IgZGF0YWJhc2UiICJTdG9yZXMgY2FyIGFuZCBzZW5zb3IgZGF0YSIgIlBvc3RncmVTUUwiICJEYXRhYmFzZSIKICAgICAgICAgICAgdGVjaERiID0gY29udGFpbmVyICJUZWNobmljaWFuIGRhdGFiYXNlIiAiU3RvcmVzIHRlY2huaWNpYW4gZGF0YSIgIlBvc3RncmVTUUwiICJEYXRhYmFzZSIKICAgICAgICAgICAgdGVsZW1ldHJ5RGIgPSBjb250YWluZXIgIlRlbGVtZXRyeSBkYXRhYmFzZSIgIlN0b3JlcyB0aW1lLXNlcmllcyBkYXRhIiAiSW5mbHV4REIiICJEYXRhYmFzZSIKICAgICAgICAgICAgZHJpdmVyRGIgPSBjb250YWluZXIgIkRyaXZlciBkYXRhYmFzZSIgIlN0b3JlcyBkcml2ZXIgZGF0YSIgIlBvc3RncmVTUUwiICJEYXRhYmFzZSIKICAgICAgICAgICAgcmFjZURiID0gY29udGFpbmVyICJSYWNlIGRhdGFiYXNlIiAiU3RvcmVzIHJhY2UgcmVzdWx0cyIgIlBvc3RncmVTUUwiICJEYXRhYmFzZSIKICAgICAgICB9CgogICAgICAgICMgUmVsYXRpb25zaGlwcyBiZXR3ZWVuIHVzZXJzIGFuZCBjb250YWluZXJzCiAgICAgICAgbWFuYWdlciAtPiB3ZWJBcHAgIlVzZXMiCiAgICAgICAgbWFpbnRlbmFuY2VUZWNoIC0+IHdlYkFwcCAiVXNlcyIKICAgICAgICB0cmFja1RlY2ggLT4gd2ViQXBwICJVc2VzIgogICAgICAgIGRyaXZlciAtPiB3ZWJBcHAgIlZpZXdzIHJlYWx0aW1lIGRhdGEiCiAgICAgICAgdGVhbSAtPiB3ZWJBcHAgIlZpZXdzIHJhY2UgcmVzdWx0cyIKCiAgICAgICAgIyBSZWxhdGlvbnNoaXBzIGJldHdlZW4gTGV2ZWwgMiBjb250YWluZXJzCiAgICAgICAgd2ViQXBwIC0+IGFjY2Vzc0NvbnRyb2wgIlJlcXVlc3RzIGFjY2VzcyIKICAgICAgICB3ZWJBcHAgLT4gY2FyVmFsaWRhdG9yICJSZWdpc3RlcnMgY2FyIgogICAgICAgIHdlYkFwcCAtPiBzZW5zb3JNYW5hZ2VyICJNYW5hZ2VzIHNlbnNvcnMiCiAgICAgICAgd2ViQXBwIC0+IHRlY2hWYWxpZGF0b3IgIlJlZ2lzdGVycyB0ZWNobmljaWFuIgogICAgICAgIHdlYkFwcCAtPiBkcml2ZXJNYW5hZ2VyICJSZWdpc3RlcnMgZHJpdmVyIgogICAgICAgIHdlYkFwcCAtPiByYWNlUmVwb3J0ZXIgIlJlcXVlc3RzIHJhY2UgcmVzdWx0cyIKCiAgICAgICAgIyBSZWxhdGlvbnNoaXBzIGJldHdlZW4gTGV2ZWwgMyBjb21wb25lbnRzCiAgICAgICAgYWNjZXNzQ29udHJvbCAtPiBtYWludGVuYW5jZUFuYWx5emVyICJBbGxvd3MgdGVsZW1ldHJ5IHZpZXciCiAgICAgICAgYWNjZXNzQ29udHJvbCAtPiByYWNlUmVwb3J0ZXIgIkFsbG93cyByZXN1bHRzIHZpZXciCgogICAgICAgIGNhclZhbGlkYXRvciAtPiBjYXJQcm92aWRlciAiR2V0cyBkYXRhIGZyb20iCiAgICAgICAgY2FyUHJvdmlkZXIgLT4gbWFudWZhY3R1cmVyU3lzdGVtICJNYWtlcyBjYWxscyB0byByZWFkIGRhdGEiCiAgICAgICAgY2FyVmFsaWRhdG9yIC0+IGNhclJlcG8gIlNlbmRzIGRhdGEgdG8iCiAgICAgICAgc2Vuc29yTWFuYWdlciAtPiBjYXJSZXBvICJVcGRhdGVzIHNlbnNvciBjb25maWciCiAgICAgICAgY2FyUmVwbyAtPiBjYXJEYiAiV3JpdGVzIHRvIgogICAgICAgIHRlY2hWYWxpZGF0b3IgLT4gdGVjaFByb3ZpZGVyICJHZXRzIGRhdGEgZnJvbSIKICAgICAgICB0ZWNoUHJvdmlkZXIgLT4gZ292U3lzdGVtICJNYWtlcyBjYWxscyB0byByZWFkIGRhdGEiCiAgICAgICAgdGVjaFZhbGlkYXRvciAtPiB0ZWNoUmVwbyAiU2VuZHMgZGF0YSB0byIKICAgICAgICB0ZWNoUmVwbyAtPiB0ZWNoRGIgIldyaXRlcyB0byIKCiAgICAgICAgZHJpdmVyTWFuYWdlciAtPiBkcml2ZXJEYiAiV3JpdGVzIHRvIgogICAgICAgIHJhY2VSZXBvcnRlciAtPiByYWNlRGIgIlJlYWRzIGZyb20iCgogICAgICAgIHRlbGVtZXRyeUdhdGV3YXkgLT4gdGVsZW1ldHJ5Q29sbGVjdG9yICJTZW5kcyBuZXcgbWVhc3VyZW1lbnRzIgogICAgICAgIHRlbGVtZXRyeUNvbGxlY3RvciAtPiB0ZWxlbWV0cnlWYWxpZGF0b3IgIlNlbmRzIG1lYXN1cmVtZW50cyB0byIKICAgICAgICB0ZWxlbWV0cnlWYWxpZGF0b3IgLT4gbWFpbnRlbmFuY2VBbmFseXplciAiU2VuZHMgdmFsaWRhdGVkIG1lYXN1cmVtZW50cyB0byIKICAgICAgICAKICAgICAgICBtYWludGVuYW5jZUFuYWx5emVyIC0+IGNhclJlcG8gIkxvYWRzIHNlbnNvciBjb25maWd1cmF0aW9uIgogICAgICAgIG1haW50ZW5hbmNlQW5hbHl6ZXIgLT4gdGVsZW1ldHJ5RGIgIlN0b3Jlcy9yZXRyaWV2ZXMgbWVhc3VyZW1lbnRzIgogICAgICAgIG1haW50ZW5hbmNlQW5hbHl6ZXIgLT4gd2ViQXBwICJTZW5kcyBtZWFzdXJlbWVudHMgYW5kIHdhcm5pbmdzIgogICAgfQoKICAgIHZpZXdzIHsKICAgICAgICAjIExldmVsIDE6IFN5c3RlbSBDb250ZXh0IFZpZXcKICAgICAgICBzeXN0ZW1Db250ZXh0IHJjdFRyYWNrZXIgIlNvZnR3YXJlU3lzdGVtIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgIyBMZXZlbCAyOiBDb250YWluZXIgVmlldwogICAgICAgIGNvbnRhaW5lciByY3RUcmFja2VyICJDb250YWluZXJzIiB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgIH0KCiAgICAgICAgIyBMZXZlbCAzOiBDb21wb25lbnQgVmlldwogICAgICAgIGNvbXBvbmVudCBhcHAgIkNvbXBvbmVudHMiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsKICAgICAgICAgICAgICAgIHNoYXBlIFBlcnNvbgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMGMyMzcwCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiU29mdHdhcmUgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMyMTU4YjgKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJDb250YWluZXIiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzQzOGRkNQogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkNvbXBvbmVudCIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjODViYmYwCiAgICAgICAgICAgICAgICBjb2xvciAjMDAwMDAwCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRXh0ZXJuYWwiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzk5OTk5OQogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkRhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBDeWxpbmRlcgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjNDM4ZGQ1CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICB9CgogICAgY29uZmlndXJhdGlvbiB7CiAgICAgICAgc2NvcGUgc29mdHdhcmVzeXN0ZW0KICAgIH0KCn0=",
+    "structurizr.inspection.error" : "60",
+    "structurizr.dsl" : "d29ya3NwYWNlICJSQ1QiICJSQ1QgU3lzdGVtIiB7CgogICAgbW9kZWwgewogICAgICAgICMgTGV2ZWwgMTogVXNlcnMKICAgICAgICBtYW5hZ2VyID0gcGVyc29uICJSYWNlIG1hbmFnZXIiICJSZWdpc3RlcnMgY2FycyBhbmQgdGVjaG5pY2lhbnMsIG1hbmFnZSB0aGUgcmFjZSIKICAgICAgICBtYWludGVuYW5jZVRlY2ggPSBwZXJzb24gIk1haW50ZW5hbmNlIHRlY2huaWNpYW4iICJNb25pdG9ycyByZWFsdGltZSBkYXRhIHRvIHByZXBhcmUgZm9yIHBpdHN0b3BzIgogICAgICAgIHRyYWNrVGVjaCA9IHBlcnNvbiAiVHJhY2sgdGVjaG5pY2lhbiIgIk1vbml0b3JzIHRyYWNrIGNvbmRpdGlvbiIKICAgICAgICBkcml2ZXIgPSBwZXJzb24gIkRyaXZlciIgIkRyaXZlcyBhIHJhY2UgY2FyIgogICAgICAgIHRlYW0gPSBwZXJzb24gIlRlYW0iICJWaWV3cyByYWNlIHJlc3VsdHMiCgogICAgICAgICMgTGV2ZWwgMTogRXh0ZXJuYWwgU3lzdGVtcwogICAgICAgIG1hbnVmYWN0dXJlclN5c3RlbSA9IHNvZnR3YXJlU3lzdGVtICJFeHRlcm5hbCBtYW51ZmFjdHVyZXIgd2ViL2RhdGFiYXNlIiAiUHJvdmlkZXMgY2FyIGRhdGEiICJFeHRlcm5hbCIKICAgICAgICBnb3ZTeXN0ZW0gPSBzb2Z0d2FyZVN5c3RlbSAiR292ZXJubWVudCByZWdpc3RyeSBBUEkiICJQcm92aWRlcyB0ZWNobmljaWFuIGRhdGEiICJFeHRlcm5hbCIKICAgICAgICB0ZWxlbWV0cnlHYXRld2F5ID0gc29mdHdhcmVTeXN0ZW0gIkV4dGVybmFsIFRlbGVtZXRyeSBHYXRld2F5IiAiUHJvdmlkZXMgcmVhbC10aW1lIGNhciBhbmQgdHJhY2sgdGVsZW1ldHJ5IGRhdGEiICJFeHRlcm5hbCIKCiAgICAgICAgIyBMZXZlbCAxOiBNYWluIFNvZnR3YXJlIFN5c3RlbQogICAgICAgIHJjdFRyYWNrZXIgPSBzb2Z0d2FyZVN5c3RlbSAiUkNUIFRyYWNrZXIiICJUcmFja3MgY2FycyBhbmQgdHJhY2sgY29uZGl0aW9ucyIgewoKICAgICAgICAgICAgIyBMZXZlbCAyOiB3ZWIgYXBwbGljYXRpb24KICAgICAgICAgICAgd2ViQXBwID0gY29udGFpbmVyICJXZWIgQXBwbGljYXRpb24iICJEYXNoYm9hcmRzIGZvciBtYW5hZ2VycyBhbmQgdGVjaG5pY2lhbnMiICJSZWFjdCIgIldlYkJyb3dzZXJUYWciCgogICAgICAgICAgICAjIExldmVsIDI6IGJ1c2luZXNzIGxvZ2ljIGFuZCBMZXZlbCAzIGNvbXBvbmVudHMKICAgICAgICAgICAgYWRtaW5pc3RhcnRpb25BcHAgPSBjb250YWluZXIgIkFkbWluaXN0cmF0aW9uIEFwcGxpY2F0aW9uIiAiVmFsaWRhdGVzIGRhdGEgYW5kIHN0b3JlcyB0aGVtIiAiSmF2YSIgewogICAgICAgICAgICAgICAgYWNjZXNzQ29udHJvbCA9IGNvbXBvbmVudCAiQWNjZXNzIENvbnRyb2wiICJDaGVja3MgcGVybWlzc2lvbnMiCgogICAgICAgICAgICAgICAgY2FyVmFsaWRhdG9yID0gY29tcG9uZW50ICJDYXIgZGF0YSB2YWxpZGF0aW9uIiAiVmFsaWRhdGVzIGNhciBJRHMiCiAgICAgICAgICAgICAgICBjYXJQcm92aWRlciA9IGNvbXBvbmVudCAiRXh0ZXJuYWwgY2FyIGRhdGEgcHJvdmlkZXIiICJDb25uZWN0cyB0byBtYW51ZmFjdHVyZXIiCiAgICAgICAgICAgICAgICBjYXJSZXBvID0gY29tcG9uZW50ICJDYXIgYW5kIHNlbnNvciByZXBvc2l0b3J5IiAiUGVyc2lzdHMgY2FyIGFuZCBzZW5zb3IgZGF0YSIKICAgICAgICAgICAgICAgIHNlbnNvck1hbmFnZXIgPSBjb21wb25lbnQgIlNlbnNvciBDb25maWd1cmF0aW9uIE1hbmFnZXIiICJNYW5hZ2VzIHNlbnNvciBzZXR0aW5ncyIKCiAgICAgICAgICAgICAgICB0ZWNoVmFsaWRhdG9yID0gY29tcG9uZW50ICJUZWNoLiBkYXRhIHZhbGlkYXRpb24iICJWYWxpZGF0ZXMgdGVjaG5pY2lhbiBJRHMiCiAgICAgICAgICAgICAgICB0ZWNoUHJvdmlkZXIgPSBjb21wb25lbnQgIkV4dGVybmFsIFRlY2guIGRhdGEgcHJvdmlkZXIiICJDb25uZWN0cyB0byBnb3Zlcm5tZW50IHJlZ2lzdHJ5IgogICAgICAgICAgICAgICAgdGVjaFJlcG8gPSBjb21wb25lbnQgIlRlY2guIFJlcG9zaXRvcnkiICJQZXJzaXN0cyB0ZWNobmljaWFuIGRhdGEiCgogICAgICAgICAgICAgICAgI2RyaXZlck1hbmFnZXIgPSBjb21wb25lbnQgIkRyaXZlciBNYW5hZ2VtZW50IiAiUmVnaXN0ZXJzIGRyaXZlcnMiCgogICAgICAgICAgICAgICAgI21haW50ZW5hbmNlQW5hbHl6ZXIgPSBjb21wb25lbnQgIk1haW50ZW5hbmNlIERhdGEgQW5hbHl6ZXIiICJDb21wYXJlcyBkYXRhIHdpdGggbGltaXRzIgoKICAgICAgICAgICAgICAgICNyYWNlUmVwb3J0ZXIgPSBjb21wb25lbnQgIlJhY2UgUmVzdWx0IFJlcG9ydGVyIiAiR2VuZXJhdGVzIHJhY2UgcmVwb3J0cyIKICAgICAgICAgICAgfQoKICAgICAgICAgICAgZGF0YUFuYWx5emVyID0gY29udGFpbmVyICJNYWludGVuYW5jZSBEYXRhIEFuYWx5emVyIiAiTG9hZHMgYW5kIGFuYWx5emVzIGRhdGEiICJKYXZhIiB7CiAgICAgICAgICAgICAgICBhbmFseXplckFjY2Vzc0NvbnRyb2wgPSBjb21wb25lbnQgIkFjY2VzcyBDb250cm9sbCIgIkNoZWNrcyBwZXJtaXNzaW9ucyIKICAgICAgICAgICAgICAgIG1haW50ZW5hbmNlQW5hbHl6ZXIgPSBjb21wb25lbnQgIk1haW50ZW5hbmNlIERhdGEgQW5hbHl6ZXIiICJDb21wYXJlcyBkYXRhIHdpdGggbGltaXRzIikKICAgICAgICAgICAgICAgIGRhdGFMb2FkZXIgPSBjb21wb25lbnQgIkxvYWRlciIgIkxvYWRzIG5lZWRlZCBkYXRhIGZyb20gdGVsZW1ldHJ5IG1lYXN1cmVtZW50cyBhbmQgY2FyL3NlbnNvciByZXBvc2l0b3J5IgogICAgICAgICAgICAgICAgcmVzdWx0UmVwb3J0ZXIgPSBjb21wb25lbnQgIlJlc3VsdCBSZXBvcnRlciIgIlJlcG9ydHMgcmVzdWx0cyBvZiBhbmFseXNpcyB0byIKICAgICAgICAgICAgfQoKICAgICAgICAgICAgIyBMZXZlbCAyOiBkYXRhIGNvbGxlY3Rpb24gZnJvbSBzZW5zb3JzOgogICAgICAgICAgICB0ZWxlbWV0cnlDYXB0dXJlciA9IGNvbnRhaW5lciAiVGVsZW1ldHJ5IERhdGEgQ2FwdHVyZXIiICJDb2xsZWN0cyByZWFsLXRpbWUgZGF0YSBmcm9tIHNlbnNvcnMiICJKYXZhIiB7CiAgICAgICAgICAgICAgICB0ZWxlbWV0cnlDb2xsZWN0b3IgPSBjb21wb25lbnQgIlRlbGVtZXRyeSBDb2xsZWN0b3IiICJSZWNlaXZlcyBtZWFzdXJlbWVudHMiCiAgICAgICAgICAgICAgICB0ZWxlbWV0cnlWYWxpZGF0b3IgPSBjb21wb25lbnQgIlRlbGVtZXRyeSBWYWxpZGF0b3IiICJDaGVja3MgZGF0YSB2YWxpZGl0eSIKICAgICAgICAgICAgICAgIHRlbGVtZXRyeVJlcG9zaXRvcnkgPSBjb21wb25lbnQgIlRlbGVtZXRyeSBSZXBvc2l0b3J5IiAiU3RvcmVzIG1lYXN1cmVkIGRhdGEgdG8gZGF0YWJhc2UiCiAgICAgICAgICAgICAgICB0ZWxlbWV0cnlDYWNoZSA9IGNvbXBvbmVudCAiQ2FjaGUiICJTdG9yZXMgbmV3ZXN0IHRlbGVtZXRyeSBkYXRhIGZvciBxdWlja2VyIGFjY2VzcyBmb3IgYW5hbHl6ZXIiCiAgICAgICAgICAgIH0KCiAgICAgICAgICAgICMgTGV2ZWwgMjogZGF0YWJhc2VzCiAgICAgICAgICAgIGNhckRiID0gY29udGFpbmVyICJDYXIgYW5kIHNlbnNvciBkYXRhYmFzZSIgIlN0b3JlcyBjYXIgYW5kIHNlbnNvciBkYXRhIiAiUG9zdGdyZVNRTCIgIkRhdGFiYXNlIgogICAgICAgICAgICB0ZWNoRGIgPSBjb250YWluZXIgIlRlY2huaWNpYW4gZGF0YWJhc2UiICJTdG9yZXMgdGVjaG5pY2lhbiBkYXRhIiAiUG9zdGdyZVNRTCIgIkRhdGFiYXNlIgogICAgICAgICAgICB0ZWxlbWV0cnlDYXJEYiA9IGNvbnRhaW5lciAiVGVsZW1ldHJ5IENhciBkYXRhYmFzZSIgIlN0b3JlcyB0aW1lLXNlcmllcyBkYXRhIiAiSW5mbHV4REIiICJEYXRhYmFzZSIKICAgICAgICAgICAgdGVsZW1ldHJ5VHJhY2tEYiA9IGNvbnRhaW5lciAiVGVsZW1ldHJ5IFRyYWNrIGRhdGFiYXNlIiAiU3RvcmVzIHRpbWUtc2VyaWVzIGRhdGEiICJJbmZsdXhEQiIgIkRhdGFiYXNlIgogICAgICAgICAgICAjZHJpdmVyRGIgPSBjb250YWluZXIgIkRyaXZlciBkYXRhYmFzZSIgIlN0b3JlcyBkcml2ZXIgZGF0YSIgIlBvc3RncmVTUUwiICJEYXRhYmFzZSIKICAgICAgICAgICAgI3JhY2VEYiA9IGNvbnRhaW5lciAiUmFjZSBkYXRhYmFzZSIgIlN0b3JlcyByYWNlIHJlc3VsdHMiICJQb3N0Z3JlU1FMIiAiRGF0YWJhc2UiCiAgICAgICAgfQoKICAgICAgICAjIFJlbGF0aW9uc2hpcHMgYmV0d2VlbiB1c2VycyBhbmQgY29udGFpbmVycwogICAgICAgIG1hbmFnZXIgLT4gd2ViQXBwICJVc2VzIgogICAgICAgIG1haW50ZW5hbmNlVGVjaCAtPiB3ZWJBcHAgIlVzZXMiCiAgICAgICAgdHJhY2tUZWNoIC0+IHdlYkFwcCAiVXNlcyIKICAgICAgICBkcml2ZXIgLT4gd2ViQXBwICJWaWV3cyByZWFsdGltZSBkYXRhIgogICAgICAgIHRlYW0gLT4gd2ViQXBwICJWaWV3cyByYWNlIHJlc3VsdHMiCgogICAgICAgICMgUmVsYXRpb25zaGlwcyBiZXR3ZWVuIExldmVsIDIgY29udGFpbmVycwogICAgICAgIHdlYkFwcCAtPiBhY2Nlc3NDb250cm9sICJSZXF1ZXN0cyBhY2Nlc3MiCiAgICAgICAgY2FyVmFsaWRhdG9yIC0+IHdlYkFwcCAiU2VuZHMgbWVzc2FnZXMgdG8iCiAgICAgICAgdGVjaFZhbGlkYXRvciAtPiB3ZWJBcHAgIlNlbmRzIG1lc3NhZ2VzIHRvIgogICAgICAgIHdlYkFwcCAtPiBhbmFseXplckFjY2Vzc0NvbnRyb2wgIlJlcXVlc3RzIGFjY2VzcyIKICAgICAgICAjd2ViQXBwIC0+IGNhclZhbGlkYXRvciAiUmVnaXN0ZXJzIGNhciIKICAgICAgICAjd2ViQXBwIC0+IHNlbnNvck1hbmFnZXIgIk1hbmFnZXMgc2Vuc29ycyIKICAgICAgICAjd2ViQXBwIC0+IHRlY2hWYWxpZGF0b3IgIlJlZ2lzdGVycyB0ZWNobmljaWFuIgogICAgICAgICN3ZWJBcHAgLT4gZHJpdmVyTWFuYWdlciAiUmVnaXN0ZXJzIGRyaXZlciIKICAgICAgICAjd2ViQXBwIC0+IHJhY2VSZXBvcnRlciAiUmVxdWVzdHMgcmFjZSByZXN1bHRzIgoKICAgICAgICAjIFJlbGF0aW9uc2hpcHMgYmV0d2VlbiBMZXZlbCAzIGNvbXBvbmVudHMKICAgICAgICBhY2Nlc3NDb250cm9sIC0+IGNhclZhbGlkYXRvciAiUmVnaXN0ZXJzIGNhciIKICAgICAgICBhY2Nlc3NDb250cm9sIC0+IHNlbnNvck1hbmFnZXIgIk1hbmFnZXMgc2Vuc29ycyIKICAgICAgICBhY2Nlc3NDb250cm9sIC0+IHRlY2hWYWxpZGF0b3IgIlJlZ2lzdGVycyB0ZWNobmljaWFuIgogICAgICAgIGFuYWx5emVyQWNjZXNzQ29udHJvbCAtPiBtYWludGVuYW5jZUFuYWx5emVyICJBbGxvd3MgdGVsZW1ldHJ5IHZpZXciCiAgICAgICAgbWFpbnRlbmFuY2VBbmFseXplciAtPiByZXN1bHRSZXBvcnRlciAiU2VuZHMgcmVzdWx0cyB0byIKICAgICAgICBkYXRhTG9hZGVyIC0+IGNhclJlcG8gIkxvYWRzIHNlbnNvciBjb25maWd1cmF0aW9uIgogICAgICAgIGRhdGFMb2FkZXIgLT4gdGVsZW1ldHJ5UmVwb3NpdG9yeSAiUmV0cmlldmVzIG1lYXN1cmVtZW50cyIKICAgICAgICBkYXRhTG9hZGVyIC0+IG1haW50ZW5hbmNlQW5hbHl6ZXIgIlByb3ZpZGVzIGRhdGEgdG8iCiAgICAgICAgI2FjY2Vzc0NvbnRyb2wgLT4gcmFjZVJlcG9ydGVyICJBbGxvd3MgcmVzdWx0cyB2aWV3IgoKICAgICAgICBjYXJWYWxpZGF0b3IgLT4gY2FyUHJvdmlkZXIgIkdldHMgZGF0YSBmcm9tIgogICAgICAgIGNhclByb3ZpZGVyIC0+IG1hbnVmYWN0dXJlclN5c3RlbSAiTWFrZXMgY2FsbHMgdG8gcmVhZCBkYXRhIgogICAgICAgIGNhclZhbGlkYXRvciAtPiBjYXJSZXBvICJTZW5kcyBkYXRhIHRvIgogICAgICAgIHNlbnNvck1hbmFnZXIgLT4gY2FyUmVwbyAiVXBkYXRlcyBzZW5zb3IgY29uZmlnIgogICAgICAgIGNhclJlcG8gLT4gY2FyRGIgIldyaXRlcyB0byIKICAgICAgICB0ZWNoVmFsaWRhdG9yIC0+IHRlY2hQcm92aWRlciAiR2V0cyBkYXRhIGZyb20iCiAgICAgICAgdGVjaFByb3ZpZGVyIC0+IGdvdlN5c3RlbSAiTWFrZXMgY2FsbHMgdG8gcmVhZCBkYXRhIgogICAgICAgIHRlY2hWYWxpZGF0b3IgLT4gdGVjaFJlcG8gIlNlbmRzIGRhdGEgdG8iCiAgICAgICAgdGVjaFJlcG8gLT4gdGVjaERiICJXcml0ZXMgdG8iCgogICAgICAgICNkcml2ZXJNYW5hZ2VyIC0+IGRyaXZlckRiICJXcml0ZXMgdG8iCiAgICAgICAgI3JhY2VSZXBvcnRlciAtPiByYWNlRGIgIlJlYWRzIGZyb20iCgogICAgICAgIHRlbGVtZXRyeUdhdGV3YXkgLT4gdGVsZW1ldHJ5Q29sbGVjdG9yICJTZW5kcyBuZXcgbWVhc3VyZW1lbnRzIgogICAgICAgIHRlbGVtZXRyeUNvbGxlY3RvciAtPiB0ZWxlbWV0cnlWYWxpZGF0b3IgIlNlbmRzIG1lYXN1cmVtZW50cyB0byIKICAgICAgICB0ZWxlbWV0cnlWYWxpZGF0b3IgLT4gdGVsZW1ldHJ5UmVwb3NpdG9yeSAiU2VuZHMgdmFsaWRhdGVkIG1lYXN1cmVtZW50cyB0byIKICAgICAgICB0ZWxlbWV0cnlSZXBvc2l0b3J5IC0+IHRlbGVtZXRyeUNhckRiICJTdG9yZXMgY2FyIHRlbGVtZXRyeSBkYXRhIgogICAgICAgIHRlbGVtZXRyeVJlcG9zaXRvcnkgLT4gdGVsZW1ldHJ5VHJhY2tEYiAiU3RvcmVzIHRyYWNrIHRlbGVtZXRyeSBkYXRhIgogICAgICAgIHRlbGVtZXRyeVJlcG9zaXRvcnkgLT4gdGVsZW1ldHJ5Q2FjaGUgIlN0b3JlcyBuZXdlc3QgdGVsZW1ldHJ5IGRhdGEiCiAgICAgICAgCiAgICAgICAgI21haW50ZW5hbmNlQW5hbHl6ZXIgLT4gY2FyUmVwbyAiTG9hZHMgc2Vuc29yIGNvbmZpZ3VyYXRpb24iCiAgICAgICAgI21haW50ZW5hbmNlQW5hbHl6ZXIgLT4gdGVsZW1ldHJ5UmVwb3NpdG9yeSAiUmV0cmlldmVzIG1lYXN1cmVtZW50cyIKICAgICAgICByZXN1bHRSZXBvcnRlciAtPiB3ZWJBcHAgIlJlcG9ydHMgbWVhc3VyZW1lbnRzIGFuZCB3YXJuaW5ncyIKICAgIH0KCiAgICB2aWV3cyB7CiAgICAgICAgIyBMZXZlbCAxOiBTeXN0ZW0gQ29udGV4dCBWaWV3CiAgICAgICAgc3lzdGVtQ29udGV4dCByY3RUcmFja2VyICJTb2Z0d2FyZVN5c3RlbSIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgICMgTGV2ZWwgMjogQ29udGFpbmVyIFZpZXcKICAgICAgICBjb250YWluZXIgcmN0VHJhY2tlciAiQ29udGFpbmVycyIgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICB9CgogICAgICAgICMgTGV2ZWwgMzogQ29tcG9uZW50IFZpZXcKICAgICAgICBjb21wb25lbnQgYWRtaW5pc3RhcnRpb25BcHAgIkNvbXBvbmVudHMiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgdGVsZW1ldHJ5Q2FwdHVyZXIgIkNvbGxlY3RvckNvbXBvbmVudHMiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBjb21wb25lbnQgZGF0YUFuYWx5emVyICJBbmFseXplckNvbXBvbmVudHMiIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgfQoKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJQZXJzb24iIHsKICAgICAgICAgICAgICAgIHNoYXBlIFBlcnNvbgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMGMyMzcwCiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiU29mdHdhcmUgU3lzdGVtIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMyMTU4YjgKICAgICAgICAgICAgICAgIGNvbG9yICNmZmZmZmYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJDb250YWluZXIiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzQzOGRkNQogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkNvbXBvbmVudCIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjODViYmYwCiAgICAgICAgICAgICAgICBjb2xvciAjMDAwMDAwCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRXh0ZXJuYWwiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzk5OTk5OQogICAgICAgICAgICAgICAgY29sb3IgI2ZmZmZmZgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkRhdGFiYXNlIiB7CiAgICAgICAgICAgICAgICBzaGFwZSBDeWxpbmRlcgogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjNDM4ZGQ1CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiV2ViQnJvd3NlclRhZyIgewogICAgICAgICAgICAgICAgc2hhcGUgV2ViQnJvd3NlcgogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQoKICAgIGNvbmZpZ3VyYXRpb24gewogICAgICAgIHNjb3BlIHNvZnR3YXJlc3lzdGVtCiAgICB9Cgp9",
     "structurizr.inspection.info" : "0",
     "structurizr.inspection.ignore" : "0",
     "structurizr.inspection.warning" : "0"
@@ -596,76 +700,198 @@
   "views" : {
     "componentViews" : [ {
       "containerId" : "11",
+      "dimensions" : {
+        "height" : 3398,
+        "width" : 4210
+      },
       "elements" : [ {
         "id" : "6",
-        "x" : 0,
-        "y" : 0
+        "x" : 3605,
+        "y" : 25
       }, {
         "id" : "7",
-        "x" : 0,
-        "y" : 0
+        "x" : 3015,
+        "y" : 35
       }, {
+        "id" : "10",
+        "x" : 249,
+        "y" : 1772
+      }, {
+        "id" : "12",
+        "x" : 1089,
+        "y" : 1484
+      }, {
+        "id" : "13",
+        "x" : 1870,
+        "y" : 1515
+      }, {
+        "id" : "14",
+        "x" : 2685,
+        "y" : 1715
+      }, {
+        "id" : "15",
+        "x" : 2705,
+        "y" : 2270
+      }, {
+        "id" : "16",
+        "x" : 1870,
+        "y" : 2000
+      }, {
+        "id" : "17",
+        "x" : 1865,
+        "y" : 1010
+      }, {
+        "id" : "18",
+        "x" : 2665,
+        "y" : 1290
+      }, {
+        "id" : "19",
+        "x" : 2570,
+        "y" : 875
+      }, {
+        "id" : "20",
+        "x" : 1089,
+        "y" : 2728
+      }, {
+        "id" : "30",
+        "x" : 3465,
+        "y" : 1950
+      }, {
+        "id" : "31",
+        "x" : 2535,
+        "y" : 430
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "Components",
+      "name" : "Component View: RCT Tracker - Administration Application",
+      "order" : 3,
+      "relationships" : [ {
+        "id" : "44",
+        "vertices" : [ {
+          "x" : 869,
+          "y" : 1634
+        } ]
+      }, {
+        "id" : "46",
+        "vertices" : [ {
+          "x" : 1660,
+          "y" : 1940
+        }, {
+          "x" : 1205,
+          "y" : 1985
+        }, {
+          "x" : 950,
+          "y" : 1960
+        } ]
+      }, {
+        "id" : "48",
+        "vertices" : [ {
+          "x" : 1335,
+          "y" : 1330
+        }, {
+          "x" : 845,
+          "y" : 1495
+        } ]
+      }, {
+        "id" : "50",
+        "vertices" : [ {
+          "x" : 869,
+          "y" : 2947
+        }, {
+          "x" : 1039,
+          "y" : 2947
+        } ]
+      }, {
+        "id" : "51",
+        "vertices" : [ {
+          "x" : 1705,
+          "y" : 1634
+        } ]
+      }, {
+        "id" : "52",
+        "vertices" : [ {
+          "x" : 1695,
+          "y" : 1820
+        } ]
+      }, {
+        "id" : "53",
+        "vertices" : [ {
+          "x" : 1655,
+          "y" : 1455
+        } ]
+      }, {
+        "id" : "58",
+        "vertices" : [ {
+          "x" : 1705,
+          "y" : 2650
+        }, {
+          "x" : 2290,
+          "y" : 2560
+        } ]
+      }, {
+        "id" : "65",
+        "vertices" : [ {
+          "x" : 2365,
+          "y" : 1720
+        } ]
+      }, {
+        "id" : "66",
+        "vertices" : [ {
+          "x" : 3520,
+          "y" : 1185
+        } ]
+      }, {
+        "id" : "69",
+        "vertices" : [ {
+          "x" : 2499,
+          "y" : 2072
+        } ]
+      }, {
+        "id" : "70",
+        "vertices" : [ {
+          "x" : 2500,
+          "y" : 2325
+        } ]
+      }, {
+        "id" : "71"
+      }, {
+        "id" : "73",
+        "vertices" : [ {
+          "x" : 2500,
+          "y" : 1330
+        } ]
+      }, {
+        "id" : "74",
+        "vertices" : [ {
+          "x" : 3340,
+          "y" : 990
+        } ]
+      }, {
+        "id" : "77",
+        "vertices" : [ {
+          "x" : 2420,
+          "y" : 1025
+        } ]
+      }, {
+        "id" : "78"
+      }, {
+        "id" : "91",
+        "vertices" : [ {
+          "x" : 1039,
+          "y" : 2803
+        }, {
+          "x" : 869,
+          "y" : 2803
+        } ]
+      } ]
+    }, {
+      "containerId" : "25",
+      "elements" : [ {
         "id" : "8",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "10",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "12",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "13",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "14",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "15",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "16",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "17",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "18",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "19",
-        "x" : 0,
-        "y" : 0
-      }, {
         "id" : "20",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "21",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "22",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "23",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "24",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "25",
         "x" : 0,
         "y" : 0
       }, {
@@ -684,64 +910,140 @@
         "id" : "29",
         "x" : 0,
         "y" : 0
+      }, {
+        "id" : "32",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "33",
+        "x" : 0,
+        "y" : 0
       } ],
       "externalContainerBoundariesVisible" : false,
-      "key" : "Components",
-      "name" : "Component View: RCT Tracker - Application",
-      "order" : 3,
+      "key" : "CollectorComponents",
+      "name" : "Component View: RCT Tracker - Telemetry Data Capturer",
+      "order" : 4,
       "relationships" : [ {
-        "id" : "40"
-      }, {
-        "id" : "42"
-      }, {
-        "id" : "43"
-      }, {
-        "id" : "44"
-      }, {
-        "id" : "45"
-      }, {
-        "id" : "46"
-      }, {
-        "id" : "47"
-      }, {
-        "id" : "48"
-      }, {
-        "id" : "49"
-      }, {
-        "id" : "50"
-      }, {
-        "id" : "53"
-      }, {
-        "id" : "54"
-      }, {
-        "id" : "55"
-      }, {
-        "id" : "57"
-      }, {
-        "id" : "58"
-      }, {
-        "id" : "61"
-      }, {
         "id" : "62"
       }, {
-        "id" : "64"
+        "id" : "80"
       }, {
-        "id" : "66"
+        "id" : "83"
       }, {
-        "id" : "68"
+        "id" : "84"
       }, {
-        "id" : "71"
+        "id" : "85"
       }, {
-        "id" : "72"
+        "id" : "87"
       }, {
-        "id" : "73"
+        "id" : "89"
+      } ]
+    }, {
+      "containerId" : "20",
+      "dimensions" : {
+        "height" : 2226,
+        "width" : 3420
+      },
+      "elements" : [ {
+        "id" : "10",
+        "x" : 249,
+        "y" : 471
       }, {
-        "id" : "74"
+        "id" : "11",
+        "x" : 1879,
+        "y" : 210
       }, {
-        "id" : "76"
+        "id" : "21",
+        "x" : 1089,
+        "y" : 610
+      }, {
+        "id" : "22",
+        "x" : 1755,
+        "y" : 940
+      }, {
+        "id" : "23",
+        "x" : 2520,
+        "y" : 665
+      }, {
+        "id" : "24",
+        "x" : 2635,
+        "y" : 1210
+      }, {
+        "id" : "25",
+        "x" : 1879,
+        "y" : 1556
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "AnalyzerComponents",
+      "name" : "Component View: RCT Tracker - Maintenance Data Analyzer",
+      "order" : 5,
+      "relationships" : [ {
+        "id" : "45",
+        "vertices" : [ {
+          "x" : 869,
+          "y" : 291
+        }, {
+          "x" : 1709,
+          "y" : 291
+        } ]
+      }, {
+        "id" : "47",
+        "vertices" : [ {
+          "x" : 1709,
+          "y" : 404
+        }, {
+          "x" : 869,
+          "y" : 404
+        } ]
+      }, {
+        "id" : "49",
+        "vertices" : [ {
+          "x" : 869,
+          "y" : 760
+        } ]
+      }, {
+        "id" : "54",
+        "vertices" : [ {
+          "x" : 1709,
+          "y" : 760
+        } ]
+      }, {
+        "id" : "55",
+        "vertices" : [ {
+          "x" : 2499,
+          "y" : 1106
+        } ]
+      }, {
+        "id" : "57",
+        "vertices" : [ {
+          "x" : 2309,
+          "y" : 706
+        } ]
+      }, {
+        "id" : "61",
+        "vertices" : [ {
+          "x" : 2400,
+          "y" : 1685
+        } ]
+      }, {
+        "id" : "64",
+        "vertices" : [ {
+          "x" : 2220,
+          "y" : 860
+        } ]
+      }, {
+        "id" : "90",
+        "vertices" : [ {
+          "x" : 2499,
+          "y" : 1310
+        }, {
+          "x" : 869,
+          "y" : 1310
+        } ]
       } ]
     } ],
     "configuration" : {
+      "lastSavedView" : "Components",
       "styles" : {
         "elements" : [ {
           "background" : "#85bbf0",
@@ -769,106 +1071,201 @@
           "background" : "#2158b8",
           "color" : "#ffffff",
           "tag" : "Software System"
+        }, {
+          "shape" : "WebBrowser",
+          "tag" : "WebBrowserTag"
         } ]
       },
       "terminology" : { }
     },
     "containerViews" : [ {
+      "dimensions" : {
+        "height" : 3556,
+        "width" : 4060
+      },
       "elements" : [ {
         "id" : "1",
-        "x" : 0,
-        "y" : 0
+        "x" : 200,
+        "y" : 759
       }, {
         "id" : "2",
-        "x" : 0,
-        "y" : 0
+        "x" : 200,
+        "y" : 1209
       }, {
         "id" : "3",
-        "x" : 0,
-        "y" : 0
+        "x" : 200,
+        "y" : 1659
       }, {
         "id" : "4",
-        "x" : 0,
-        "y" : 0
+        "x" : 200,
+        "y" : 2265
       }, {
         "id" : "5",
-        "x" : 0,
-        "y" : 0
+        "x" : 200,
+        "y" : 2715
       }, {
         "id" : "6",
-        "x" : 0,
-        "y" : 0
+        "x" : 2580,
+        "y" : 885
       }, {
         "id" : "7",
-        "x" : 0,
-        "y" : 0
+        "x" : 3195,
+        "y" : 1050
       }, {
         "id" : "8",
-        "x" : 0,
-        "y" : 0
+        "x" : 1940,
+        "y" : 3090
       }, {
         "id" : "10",
-        "x" : 0,
-        "y" : 0
+        "x" : 975,
+        "y" : 1930
       }, {
         "id" : "11",
-        "x" : 0,
-        "y" : 0
+        "x" : 1730,
+        "y" : 1630
+      }, {
+        "id" : "20",
+        "x" : 1740,
+        "y" : 2325
       }, {
         "id" : "25",
-        "x" : 0,
-        "y" : 0
+        "x" : 2570,
+        "y" : 2440
       }, {
-        "id" : "26",
-        "x" : 0,
-        "y" : 0
+        "id" : "30",
+        "x" : 3360,
+        "y" : 1565
       }, {
-        "id" : "27",
-        "x" : 0,
-        "y" : 0
+        "id" : "31",
+        "x" : 3360,
+        "y" : 1915
       }, {
-        "id" : "28",
-        "x" : 0,
-        "y" : 0
+        "id" : "32",
+        "x" : 3360,
+        "y" : 2265
       }, {
-        "id" : "29",
-        "x" : 0,
-        "y" : 0
+        "id" : "33",
+        "x" : 3360,
+        "y" : 2615
       } ],
       "externalSoftwareSystemBoundariesVisible" : false,
       "key" : "Containers",
       "name" : "Container View: RCT Tracker",
       "order" : 2,
       "relationships" : [ {
-        "id" : "30"
+        "id" : "34",
+        "vertices" : [ {
+          "x" : 940,
+          "y" : 959
+        } ]
       }, {
-        "id" : "32"
+        "id" : "36",
+        "vertices" : [ {
+          "x" : 940,
+          "y" : 1409
+        } ]
       }, {
-        "id" : "34"
+        "id" : "38",
+        "vertices" : [ {
+          "x" : 940,
+          "y" : 1859
+        } ]
       }, {
-        "id" : "36"
+        "id" : "40",
+        "vertices" : [ {
+          "x" : 940,
+          "y" : 2465
+        } ]
       }, {
-        "id" : "38"
+        "id" : "42",
+        "vertices" : [ {
+          "x" : 940,
+          "y" : 2915
+        } ]
       }, {
-        "id" : "41"
+        "id" : "45",
+        "vertices" : [ {
+          "x" : 1360,
+          "y" : 1855
+        }, {
+          "x" : 1625,
+          "y" : 1745
+        } ]
       }, {
-        "id" : "51"
+        "id" : "47",
+        "vertices" : [ {
+          "x" : 1670,
+          "y" : 1825
+        }, {
+          "x" : 1490,
+          "y" : 1990
+        } ]
       }, {
-        "id" : "56"
+        "id" : "50",
+        "vertices" : [ {
+          "x" : 1545,
+          "y" : 2210
+        } ]
       }, {
-        "id" : "59"
+        "id" : "59",
+        "vertices" : [ {
+          "x" : 1953,
+          "y" : 2150
+        } ]
       }, {
-        "id" : "63"
+        "id" : "63",
+        "vertices" : [ {
+          "x" : 2265,
+          "y" : 2510
+        } ]
       }, {
-        "id" : "65"
+        "id" : "67",
+        "vertices" : [ {
+          "x" : 2350,
+          "y" : 1360
+        } ]
       }, {
-        "id" : "67"
+        "id" : "72",
+        "vertices" : [ {
+          "x" : 3190,
+          "y" : 1715
+        } ]
       }, {
-        "id" : "69"
+        "id" : "75",
+        "vertices" : [ {
+          "x" : 2910,
+          "y" : 1410
+        } ]
       }, {
-        "id" : "75"
+        "id" : "79",
+        "vertices" : [ {
+          "x" : 3190,
+          "y" : 2065
+        } ]
       }, {
-        "id" : "77"
+        "id" : "81",
+        "vertices" : [ {
+          "x" : 2400,
+          "y" : 2826
+        } ]
+      }, {
+        "id" : "86",
+        "vertices" : [ {
+          "x" : 3190,
+          "y" : 2415
+        } ]
+      }, {
+        "id" : "88",
+        "vertices" : [ {
+          "x" : 3190,
+          "y" : 2765
+        } ]
+      }, {
+        "id" : "91",
+        "vertices" : [ {
+          "x" : 1445,
+          "y" : 2510
+        } ]
       } ],
       "softwareSystemId" : "9"
     } ],
@@ -915,21 +1312,21 @@
       "name" : "System Context View: RCT Tracker",
       "order" : 1,
       "relationships" : [ {
-        "id" : "31"
-      }, {
-        "id" : "33"
-      }, {
         "id" : "35"
       }, {
         "id" : "37"
       }, {
         "id" : "39"
       }, {
-        "id" : "52"
+        "id" : "41"
       }, {
-        "id" : "60"
+        "id" : "43"
       }, {
-        "id" : "70"
+        "id" : "68"
+      }, {
+        "id" : "76"
+      }, {
+        "id" : "82"
       } ],
       "softwareSystemId" : "9"
     } ]

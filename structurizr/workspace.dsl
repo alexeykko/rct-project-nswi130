@@ -11,16 +11,16 @@ workspace "RCT" "RCT System" {
         # Level 1: External Systems
         manufacturerSystem = softwareSystem "External manufacturer web/database" "Provides car data" "External"
         govSystem = softwareSystem "Government registry API" "Provides technician data" "External"
-        telemetryGateway = softwareSystem "External Telemetry Gateway" "Provides telemetry data" "External"
+        telemetryGateway = softwareSystem "External Telemetry Gateway" "Provides real-time car and track telemetry data" "External"
 
         # Level 1: Main Software System
-        rctTracker = softwareSystem "RCT Tracker" "Tracks cars maintenance" {
+        rctTracker = softwareSystem "RCT Tracker" "Tracks cars and track conditions" {
 
             # Level 2: web application
-            webApp = container "Web Application" "Dashboards for managers and technicians" "React"
+            webApp = container "Web Application" "Dashboards for managers and technicians" "React" "WebBrowserTag"
 
-            # Level 2: Main application and Level 3 components
-            app = container "Application" "Processes data and validates" "Java" {
+            # Level 2: business logic and Level 3 components
+            administartionApp = container "Administration Application" "Validates data and stores them" "Java" {
                 accessControl = component "Access Control" "Checks permissions"
 
                 carValidator = component "Car data validation" "Validates car IDs"
@@ -32,21 +32,35 @@ workspace "RCT" "RCT System" {
                 techProvider = component "External Tech. data provider" "Connects to government registry"
                 techRepo = component "Tech. Repository" "Persists technician data"
 
-                driverManager = component "Driver Management" "Registers drivers"
+                #driverManager = component "Driver Management" "Registers drivers"
 
+                #maintenanceAnalyzer = component "Maintenance Data Analyzer" "Compares data with limits"
+
+                #raceReporter = component "Race Result Reporter" "Generates race reports"
+            }
+
+            dataAnalyzer = container "Maintenance Data Analyzer" "Loads and analyzes data" "Java" {
+                analyzerAccessControl = component "Access Controll" "Checks permissions"
+                maintenanceAnalyzer = component "Maintenance Data Analyzer" "Compares data with limits")
+                dataLoader = component "Loader" "Loads needed data from telemetry measurements and car/sensor repository"
+                resultReporter = component "Result Reporter" "Reports results of analysis to"
+            }
+
+            # Level 2: data collection from sensors:
+            telemetryCapturer = container "Telemetry Data Capturer" "Collects real-time data from sensors" "Java" {
                 telemetryCollector = component "Telemetry Collector" "Receives measurements"
                 telemetryValidator = component "Telemetry Validator" "Checks data validity"
-                maintenanceAnalyzer = component "Maintenance Data Analyzer" "Compares data with limits"
-
-                raceReporter = component "Race Result Reporter" "Generates race reports"
+                telemetryRepository = component "Telemetry Repository" "Stores measured data to database"
+                telemetryCache = component "Cache" "Stores newest telemetry data for quicker access for analyzer"
             }
 
             # Level 2: databases
             carDb = container "Car and sensor database" "Stores car and sensor data" "PostgreSQL" "Database"
             techDb = container "Technician database" "Stores technician data" "PostgreSQL" "Database"
-            telemetryDb = container "Telemetry database" "Stores time-series data" "InfluxDB" "Database"
-            driverDb = container "Driver database" "Stores driver data" "PostgreSQL" "Database"
-            raceDb = container "Race database" "Stores race results" "PostgreSQL" "Database"
+            telemetryCarDb = container "Telemetry Car database" "Stores time-series data" "InfluxDB" "Database"
+            telemetryTrackDb = container "Telemetry Track database" "Stores time-series data" "InfluxDB" "Database"
+            #driverDb = container "Driver database" "Stores driver data" "PostgreSQL" "Database"
+            #raceDb = container "Race database" "Stores race results" "PostgreSQL" "Database"
         }
 
         # Relationships between users and containers
@@ -58,15 +72,25 @@ workspace "RCT" "RCT System" {
 
         # Relationships between Level 2 containers
         webApp -> accessControl "Requests access"
-        webApp -> carValidator "Registers car"
-        webApp -> sensorManager "Manages sensors"
-        webApp -> techValidator "Registers technician"
-        webApp -> driverManager "Registers driver"
-        webApp -> raceReporter "Requests race results"
+        carValidator -> webApp "Sends messages to"
+        techValidator -> webApp "Sends messages to"
+        webApp -> analyzerAccessControl "Requests access"
+        #webApp -> carValidator "Registers car"
+        #webApp -> sensorManager "Manages sensors"
+        #webApp -> techValidator "Registers technician"
+        #webApp -> driverManager "Registers driver"
+        #webApp -> raceReporter "Requests race results"
 
         # Relationships between Level 3 components
-        accessControl -> maintenanceAnalyzer "Allows telemetry view"
-        accessControl -> raceReporter "Allows results view"
+        accessControl -> carValidator "Registers car"
+        accessControl -> sensorManager "Manages sensors"
+        accessControl -> techValidator "Registers technician"
+        analyzerAccessControl -> maintenanceAnalyzer "Allows telemetry view"
+        maintenanceAnalyzer -> resultReporter "Sends results to"
+        dataLoader -> carRepo "Loads sensor configuration"
+        dataLoader -> telemetryRepository "Retrieves measurements"
+        dataLoader -> maintenanceAnalyzer "Provides data to"
+        #accessControl -> raceReporter "Allows results view"
 
         carValidator -> carProvider "Gets data from"
         carProvider -> manufacturerSystem "Makes calls to read data"
@@ -78,16 +102,19 @@ workspace "RCT" "RCT System" {
         techValidator -> techRepo "Sends data to"
         techRepo -> techDb "Writes to"
 
-        driverManager -> driverDb "Writes to"
-        raceReporter -> raceDb "Reads from"
+        #driverManager -> driverDb "Writes to"
+        #raceReporter -> raceDb "Reads from"
 
         telemetryGateway -> telemetryCollector "Sends new measurements"
         telemetryCollector -> telemetryValidator "Sends measurements to"
-        telemetryValidator -> maintenanceAnalyzer "Sends validated measurements to"
+        telemetryValidator -> telemetryRepository "Sends validated measurements to"
+        telemetryRepository -> telemetryCarDb "Stores car telemetry data"
+        telemetryRepository -> telemetryTrackDb "Stores track telemetry data"
+        telemetryRepository -> telemetryCache "Stores newest telemetry data"
         
-        maintenanceAnalyzer -> carRepo "Loads sensor configuration"
-        maintenanceAnalyzer -> telemetryDb "Stores/retrieves measurements"
-        maintenanceAnalyzer -> webApp "Sends measurements and warnings"
+        #maintenanceAnalyzer -> carRepo "Loads sensor configuration"
+        #maintenanceAnalyzer -> telemetryRepository "Retrieves measurements"
+        resultReporter -> webApp "Reports measurements and warnings"
     }
 
     views {
@@ -102,7 +129,15 @@ workspace "RCT" "RCT System" {
         }
 
         # Level 3: Component View
-        component app "Components" {
+        component administartionApp "Components" {
+            include *
+        }
+
+        component telemetryCapturer "CollectorComponents" {
+            include *
+        }
+
+        component dataAnalyzer "AnalyzerComponents" {
             include *
         }
 
@@ -132,6 +167,9 @@ workspace "RCT" "RCT System" {
                 shape Cylinder
                 background #438dd5
                 color #ffffff
+            }
+            element "WebBrowserTag" {
+                shape WebBrowser
             }
         }
     }

@@ -233,3 +233,10 @@
             - Download car information
 
 #### Data assessment/Main/Everything Else
+
+## notes: 
+- maybe add some Notifier to analyzer - when something serious is discovered with car - notify team to call driver for pitstop etc.
+- maybe add cache to TelemetryRepository - so it saves data to database + to cache and the analyzer takes it from cache (it wants the newest anyways)
+- I'm not so sure how to connect our main app with telemetry Db - I think maybe devide the capturer more - exlude telem. repo and make it a container so it's more scalable
+- maybe everything should go through access control - even car/tech registration - to verify roles (not everyone can add new technicians etc.)
+- maybe separate analyzer from the registration logic (one part handles registering and modifications of these data and the second analyzing)
