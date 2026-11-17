@@ -5,7 +5,7 @@
   "description" : "RCT System",
   "documentation" : { },
   "id" : 1,
-  "lastModifiedDate" : "2026-11-17T15:31:01Z",
+  "lastModifiedDate" : "2026-11-17T18:36:31Z",
   "model" : {
     "people" : [ {
       "description" : "Registers cars and technicians, manage the race",
@@ -1413,6 +1413,144 @@
         "description" : "16. Sends confirmation (or error message) to user",
         "id" : "49",
         "order" : "16",
+        "response" : false
+      } ]
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "description" : "Dynamic diagram for real time maintenance technician view",
+      "elementId" : "20",
+      "elements" : [ {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "10",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "15",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "21",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "22",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "23",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "24",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "26",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "27",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "28",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "29",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "32",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "RealTimeDataFoeMaintenanceTech",
+      "name" : "Dynamic View: RCT Tracker - Maintenance Data Analyzer",
+      "order" : 7,
+      "relationships" : [ {
+        "description" : "1. Opens dashboard, selects race and car",
+        "id" : "36",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "2. Requests access to view car telemetry",
+        "id" : "50",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "3. Validates access",
+        "id" : "55",
+        "order" : "3",
+        "response" : false
+      }, {
+        "description" : "4. Loads sensor configuration",
+        "id" : "57",
+        "order" : "4",
+        "response" : false
+      }, {
+        "description" : "5. Requests latest stored measurements",
+        "id" : "61",
+        "order" : "5",
+        "response" : false
+      }, {
+        "description" : "6. Queries time-series database",
+        "id" : "86",
+        "order" : "6",
+        "response" : false
+      }, {
+        "description" : "7. Sends data to analyzer",
+        "id" : "65",
+        "order" : "7",
+        "response" : false
+      }, {
+        "description" : "8. Sends new real time measurements",
+        "id" : "81",
+        "order" : "8",
+        "response" : false
+      }, {
+        "description" : "9. Sends data for validation",
+        "id" : "84",
+        "order" : "9",
+        "response" : false
+      }, {
+        "description" : "10. Sends validated measurements",
+        "id" : "85",
+        "order" : "10",
+        "response" : false
+      }, {
+        "description" : "11. Updates cache",
+        "id" : "90",
+        "order" : "11",
+        "response" : false
+      }, {
+        "description" : "12. Sends analyzed data and warnings",
+        "id" : "56",
+        "order" : "12",
+        "response" : false
+      }, {
+        "description" : "13. Displays data, timestamps, and warnings",
+        "id" : "91",
+        "order" : "13",
+        "response" : false
+      }, {
+        "description" : "14. Reviews displayed data to plan pitstop maintenance",
+        "id" : "36",
+        "order" : "14",
         "response" : false
       } ]
     } ],
