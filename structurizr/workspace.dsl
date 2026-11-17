@@ -41,7 +41,7 @@ workspace "RCT" "RCT System" {
 
             dataAnalyzer = container "Maintenance Data Analyzer" "Loads and analyzes data" "Java" {
                 analyzerAccessControl = component "Access Controll" "Checks permissions"
-                maintenanceAnalyzer = component "Maintenance Data Analyzer" "Compares data with limits")
+                maintenanceAnalyzer = component "Maintenance Data Analyzer" "Compares data with limits"
                 dataLoader = component "Loader" "Loads needed data from telemetry measurements and car/sensor repository"
                 resultReporter = component "Result Reporter" "Reports results of analysis to"
             }
@@ -74,6 +74,7 @@ workspace "RCT" "RCT System" {
         webApp -> accessControl "Requests access"
         carValidator -> webApp "Sends messages to"
         techValidator -> webApp "Sends messages to"
+        sensorManager -> webApp "Sends messages to"
         webApp -> analyzerAccessControl "Requests access"
         #webApp -> carValidator "Registers car"
         #webApp -> sensorManager "Manages sensors"
@@ -141,6 +142,38 @@ workspace "RCT" "RCT System" {
             include *
         }
 
+        # Here comes dynamic views:
+        # 1. Dynamic view for feature Register new car
+        dynamic administartionApp "RegisterNewCar" "Dynamic diagram for registering a new car and its sensors" {
+            # 1-2. Race manager opens web app and submits unique car ID
+            manager -> webApp "1. Opens dashboard and submits unique car ID"
+            webApp -> accessControl "2. Requests access to register a car"
+            accessControl -> carValidator "3. Forwards car registration request"
+
+            # 3. System checks if ID is valid and not already present in the database
+            carValidator -> carRepo "4. Checks if car ID already exists"
+            carRepo -> carDb "5. Queries existing car IDs"
+
+            # 4. Download basic car info from manufacturer
+            carValidator -> carProvider "6. Requests basic car data by ID"
+            carProvider -> manufacturerSystem "7. Downloads car info (brand, model, motor, weight)"
+
+            # 5-6. Clean data, store to DB, and redirect manager to new car page
+            carValidator -> carRepo "8. Sends cleaned car data for storage"
+            carRepo -> carDb "9. Writes new car record"
+            carValidator -> webApp "10. Confirms registration and redirects to car info page"
+
+            # 7-8. Manager registers sensors for the new car and system saves them
+            manager -> webApp "11. Fills and submits new sensor configuration (part, unit, frequency)"
+            webApp -> accessControl "12. Requests access to add sensor configuration"
+            accessControl -> sensorManager "13. Forwards sensor configuration request"
+            sensorManager -> carRepo "14. Updates sensor configuration for the car"
+            carRepo -> carDb "15. Writes sensor configuration to database"
+            sensorManager -> webApp "16. Sends confirmation (or error message) to user"
+
+            autoLayout lr
+        }
+        
         styles {
             element "Person" {
                 shape Person
