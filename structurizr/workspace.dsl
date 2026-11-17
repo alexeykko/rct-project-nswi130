@@ -175,6 +175,33 @@ workspace "RCT" "RCT System" {
             autoLayout lr
         }
 
+        # 4. Dynamic view for feature Real time data for maintenance technician
+        dynamic dataAnalyzer "RealTimeDataFoeMaintenanceTech" "Dynamic diagram for real time maintenance technician view" {
+            # 1-3. Technician opens app, selects car, system checks access
+            maintenanceTech -> webApp "1. Opens dashboard, selects race and car"
+            webApp -> analyzerAccessControl "2. Requests access to view car telemetry"
+            analyzerAccessControl -> maintenanceAnalyzer "3. Validates access"
+
+            # 4-7. System loads car sensors and latest measurements
+            dataLoader -> carRepo "4. Loads sensor configuration"
+            dataLoader -> telemetryRepository "5. Requests latest stored measurements"
+            telemetryRepository -> telemetryCarDb "6. Queries time-series database"
+            dataLoader -> maintenanceAnalyzer "7. Sends data to analyzer"
+
+            # 8-11. System receives and stores new measurements in real time
+            telemetryGateway -> telemetryCollector "8. Sends new real time measurements"
+            telemetryCollector -> telemetryValidator "9. Sends data for validation"
+            telemetryValidator -> telemetryRepository "10. Sends validated measurements"
+            telemetryRepository -> telemetryCache "11. Updates cache"
+
+            # 12-14. System reports data and warnings, technician reviews
+            maintenanceAnalyzer -> resultReporter "12. Sends analyzed data and warnings"
+            resultReporter -> webApp "13. Displays data, timestamps, and warnings"
+            maintenanceTech -> webApp "14. Reviews displayed data to plan pitstop maintenance"
+
+            autoLayout lr
+        }
+
         styles {
             element "Person" {
                 shape Person
