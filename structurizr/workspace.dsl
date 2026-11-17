@@ -15,7 +15,8 @@ workspace "RCT" "RCT System" {
 
         # Level 1: Main Software System
         rctTracker = softwareSystem "RCT Tracker" "Tracks cars and track conditions" {
-
+            !docs docs
+            
             # Level 2: web application
             webApp = container "Web Application" "Dashboards for managers and technicians" "React" "WebBrowserTag"
 
@@ -173,7 +174,7 @@ workspace "RCT" "RCT System" {
 
             autoLayout lr
         }
-        
+
         styles {
             element "Person" {
                 shape Person
