@@ -5,8 +5,247 @@
   "description" : "RCT System",
   "documentation" : { },
   "id" : 1,
-  "lastModifiedDate" : "2026-11-17T18:36:31Z",
+  "lastModifiedDate" : "2026-11-18T09:58:00Z",
   "model" : {
+    "deploymentNodes" : [ {
+      "children" : [ {
+        "containerInstances" : [ {
+          "containerId" : "11",
+          "environment" : "Production",
+          "id" : "95",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "adminAppInstance"
+          },
+          "relationships" : [ {
+            "description" : "Sends messages to",
+            "destinationId" : "99",
+            "id" : "101",
+            "linkedRelationshipId" : "47",
+            "sourceId" : "95"
+          }, {
+            "description" : "Writes to",
+            "destinationId" : "109",
+            "id" : "110",
+            "linkedRelationshipId" : "73",
+            "sourceId" : "95"
+          }, {
+            "description" : "Writes to",
+            "destinationId" : "111",
+            "id" : "112",
+            "linkedRelationshipId" : "80",
+            "sourceId" : "95"
+          } ],
+          "tags" : "Container Instance"
+        }, {
+          "containerId" : "20",
+          "environment" : "Production",
+          "id" : "96",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "dataAnalyzerInstance"
+          },
+          "relationships" : [ {
+            "description" : "Loads sensor configuration",
+            "destinationId" : "95",
+            "id" : "97",
+            "linkedRelationshipId" : "60",
+            "sourceId" : "96"
+          }, {
+            "description" : "Reports measurements and warnings",
+            "destinationId" : "99",
+            "id" : "103",
+            "linkedRelationshipId" : "92",
+            "sourceId" : "96"
+          }, {
+            "description" : "Retrieves measurements",
+            "destinationId" : "105",
+            "id" : "106",
+            "linkedRelationshipId" : "64",
+            "sourceId" : "96"
+          } ],
+          "tags" : "Container Instance"
+        } ],
+        "environment" : "Production",
+        "id" : "94",
+        "instances" : "1",
+        "name" : "Web server",
+        "properties" : {
+          "structurizr.dsl.identifier" : "a4168a9f-1a4e-41d7-b851-e024d63b2723"
+        },
+        "tags" : "Element,Deployment Node",
+        "technology" : "Apache Tomcat 11.0.29"
+      } ],
+      "environment" : "Production",
+      "id" : "93",
+      "instances" : "1",
+      "name" : "Application Server",
+      "properties" : {
+        "structurizr.dsl.identifier" : "3f34c878-9da7-4573-b55b-4a8af5e292dc"
+      },
+      "tags" : "Element,Deployment Node",
+      "technology" : "Ubuntu 26.04 LTS"
+    }, {
+      "containerInstances" : [ {
+        "containerId" : "10",
+        "environment" : "Production",
+        "id" : "99",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "webAppInstance"
+        },
+        "relationships" : [ {
+          "description" : "Requests access",
+          "destinationId" : "95",
+          "id" : "100",
+          "linkedRelationshipId" : "45",
+          "sourceId" : "99"
+        }, {
+          "description" : "Requests access",
+          "destinationId" : "96",
+          "id" : "102",
+          "linkedRelationshipId" : "51",
+          "sourceId" : "99"
+        } ],
+        "tags" : "Container Instance"
+      } ],
+      "environment" : "Production",
+      "id" : "98",
+      "instances" : "1",
+      "name" : "User's web browser",
+      "properties" : {
+        "structurizr.dsl.identifier" : "07af6c5e-e882-446e-b4c1-2305c17762c6"
+      },
+      "tags" : "Element,Deployment Node"
+    }, {
+      "containerInstances" : [ {
+        "containerId" : "25",
+        "environment" : "Production",
+        "id" : "105",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "telemetryCapturerInstance"
+        },
+        "relationships" : [ {
+          "description" : "Stores car telemetry data",
+          "destinationId" : "114",
+          "id" : "115",
+          "linkedRelationshipId" : "87",
+          "sourceId" : "105"
+        }, {
+          "description" : "Stores track telemetry data",
+          "destinationId" : "116",
+          "id" : "117",
+          "linkedRelationshipId" : "89",
+          "sourceId" : "105"
+        } ],
+        "tags" : "Container Instance"
+      } ],
+      "environment" : "Production",
+      "id" : "104",
+      "instances" : "1",
+      "name" : "Capture Server",
+      "properties" : {
+        "structurizr.dsl.identifier" : "6a9ed4c8-f682-4785-ab18-cf7ad746f731"
+      },
+      "tags" : "Element,Deployment Node",
+      "technology" : "Ubuntu 26.04 LTS"
+    }, {
+      "children" : [ {
+        "containerInstances" : [ {
+          "containerId" : "30",
+          "environment" : "Production",
+          "id" : "109",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "carDbInstance"
+          },
+          "tags" : "Container Instance"
+        }, {
+          "containerId" : "31",
+          "environment" : "Production",
+          "id" : "111",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "techDbInstance"
+          },
+          "tags" : "Container Instance"
+        } ],
+        "environment" : "Production",
+        "id" : "108",
+        "instances" : "1",
+        "name" : "Relational DB server",
+        "properties" : {
+          "structurizr.dsl.identifier" : "e3bf078a-f803-48ec-8806-7d38d276034e"
+        },
+        "tags" : "Element,Deployment Node",
+        "technology" : "PostgreSQL 18.7"
+      }, {
+        "containerInstances" : [ {
+          "containerId" : "32",
+          "environment" : "Production",
+          "id" : "114",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "telemetryCarDbInstance"
+          },
+          "tags" : "Container Instance"
+        }, {
+          "containerId" : "33",
+          "environment" : "Production",
+          "id" : "116",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "telemetryTrackDbInstance"
+          },
+          "tags" : "Container Instance"
+        } ],
+        "environment" : "Production",
+        "id" : "113",
+        "instances" : "1",
+        "name" : "Time-Series DB server",
+        "properties" : {
+          "structurizr.dsl.identifier" : "7b526fc9-31c3-4258-a91c-4c77df593e97"
+        },
+        "tags" : "Element,Deployment Node",
+        "technology" : "InfluxDB 3.12.2"
+      } ],
+      "environment" : "Production",
+      "id" : "107",
+      "instances" : "1",
+      "name" : "Database Server",
+      "properties" : {
+        "structurizr.dsl.identifier" : "e90ecc1a-8407-42b4-99da-a505ba1c3e8f"
+      },
+      "tags" : "Element,Deployment Node",
+      "technology" : "Ubuntu 26.04 LTS"
+    }, {
+      "environment" : "Production",
+      "id" : "118",
+      "instances" : "1",
+      "name" : "External IoT Network",
+      "properties" : {
+        "structurizr.dsl.identifier" : "624793e5-c2ee-4b33-9dd0-ad598b7d8876"
+      },
+      "softwareSystemInstances" : [ {
+        "environment" : "Production",
+        "id" : "119",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "telemetryGatewayInstance"
+        },
+        "relationships" : [ {
+          "description" : "Sends new measurements",
+          "destinationId" : "105",
+          "id" : "120",
+          "linkedRelationshipId" : "82",
+          "sourceId" : "119"
+        } ],
+        "softwareSystemId" : "8",
+        "tags" : "Software System Instance"
+      } ],
+      "tags" : "Element,Deployment Node"
+    } ],
     "people" : [ {
       "description" : "Registers cars and technicians, manage the race",
       "id" : "1",
@@ -372,7 +611,7 @@
         "id" : "11",
         "name" : "Administration Application",
         "properties" : {
-          "structurizr.dsl.identifier" : "administartionApp"
+          "structurizr.dsl.identifier" : "administrationApp"
         },
         "relationships" : [ {
           "description" : "Sends messages to",
@@ -704,7 +943,7 @@
   },
   "name" : "RCT",
   "properties" : {
-    "structurizr.inspection.error" : "60",
+    "structurizr.inspection.error" : "81",
     "structurizr.inspection.info" : "0",
     "structurizr.inspection.ignore" : "0",
     "structurizr.inspection.warning" : "0"
@@ -1283,6 +1522,105 @@
       } ],
       "softwareSystemId" : "9"
     } ],
+    "deploymentViews" : [ {
+      "elements" : [ {
+        "id" : "93",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "94",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "95",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "96",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "98",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "99",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "104",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "105",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "107",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "108",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "109",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "111",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "113",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "114",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "116",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "118",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "119",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "environment" : "Production",
+      "key" : "ProductionDeployment",
+      "name" : "Deployment View: RCT Tracker - Production",
+      "order" : 6,
+      "relationships" : [ {
+        "id" : "100"
+      }, {
+        "id" : "101"
+      }, {
+        "id" : "102"
+      }, {
+        "id" : "103"
+      }, {
+        "id" : "106"
+      }, {
+        "id" : "110"
+      }, {
+        "id" : "112"
+      }, {
+        "id" : "115"
+      }, {
+        "id" : "117"
+      }, {
+        "id" : "120"
+      }, {
+        "id" : "97"
+      } ],
+      "softwareSystemId" : "9"
+    } ],
     "dynamicViews" : [ {
       "automaticLayout" : {
         "edgeSeparation" : 50,
@@ -1333,7 +1671,7 @@
       "externalBoundariesVisible" : false,
       "key" : "RegisterNewCar",
       "name" : "Dynamic View: RCT Tracker - Administration Application",
-      "order" : 6,
+      "order" : 7,
       "relationships" : [ {
         "description" : "1. Opens dashboard and submits unique car ID",
         "id" : "34",
@@ -1481,7 +1819,7 @@
       "externalBoundariesVisible" : false,
       "key" : "RealTimeDataFoeMaintenanceTech",
       "name" : "Dynamic View: RCT Tracker - Maintenance Data Analyzer",
-      "order" : 7,
+      "order" : 8,
       "relationships" : [ {
         "description" : "1. Opens dashboard, selects race and car",
         "id" : "36",

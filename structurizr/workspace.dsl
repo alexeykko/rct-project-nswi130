@@ -21,7 +21,7 @@ workspace "RCT" "RCT System" {
             webApp = container "Web Application" "Dashboards for managers and technicians" "React" "WebBrowserTag"
 
             # Level 2: business logic and Level 3 components
-            administartionApp = container "Administration Application" "Validates data and stores them" "Java" {
+            administrationApp = container "Administration Application" "Validates data and stores them" "Java" {
                 accessControl = component "Access Control" "Checks permissions"
 
                 carValidator = component "Car data validation" "Validates car IDs"
@@ -117,6 +117,41 @@ workspace "RCT" "RCT System" {
         #maintenanceAnalyzer -> carRepo "Loads sensor configuration"
         #maintenanceAnalyzer -> telemetryRepository "Retrieves measurements"
         resultReporter -> webApp "Reports measurements and warnings"
+
+        # Deployment for Production
+        deploymentEnvironment "Production" {
+
+            deploymentNode "Application Server" "" "Ubuntu 26.04 LTS" {
+                deploymentNode "Web server" "" "Apache Tomcat 11.0.29" {
+                    adminAppInstance = containerInstance administrationApp
+                    dataAnalyzerInstance = containerInstance dataAnalyzer
+                }
+            }
+
+            deploymentNode "User's web browser" "" "" {
+                webAppInstance = containerInstance webApp
+            }
+
+            deploymentNode "Capture Server" "" "Ubuntu 26.04 LTS" {
+                telemetryCapturerInstance = containerInstance telemetryCapturer
+            }
+
+            deploymentNode "Database Server" "" "Ubuntu 26.04 LTS" {
+                deploymentNode "Relational DB server" "" "PostgreSQL 18.7" {
+                    carDbInstance = containerInstance carDb
+                    techDbInstance = containerInstance techDb
+                }
+
+                deploymentNode "Time-Series DB server" "" "InfluxDB 3.12.2" {
+                    telemetryCarDbInstance = containerInstance telemetryCarDb
+                    telemetryTrackDbInstance = containerInstance telemetryTrackDb
+                }
+            }
+
+            deploymentNode "External IoT Network" "" "" {
+                telemetryGatewayInstance = softwareSystemInstance telemetryGateway
+            }
+        }
     }
 
     views {
@@ -131,7 +166,7 @@ workspace "RCT" "RCT System" {
         }
 
         # Level 3: Component View
-        component administartionApp "Components" {
+        component administrationApp "Components" {
             include *
         }
 
@@ -143,9 +178,14 @@ workspace "RCT" "RCT System" {
             include *
         }
 
+        # Production Deployment View
+        deployment rctTracker "Production" "ProductionDeployment" {
+            include *
+        }
+
         # Here comes dynamic views:
         # 1. Dynamic view for feature Register new car
-        dynamic administartionApp "RegisterNewCar" "Dynamic diagram for registering a new car and its sensors" {
+        dynamic administrationApp "RegisterNewCar" "Dynamic diagram for registering a new car and its sensors" {
             # 1-2. Race manager opens web app and submits unique car ID
             manager -> webApp "1. Opens dashboard and submits unique car ID"
             webApp -> accessControl "2. Requests access to register a car"
