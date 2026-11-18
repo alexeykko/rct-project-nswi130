@@ -29,7 +29,7 @@ workspace "RCT" "RCT System" {
                 carRepo = component "Car and sensor repository" "Persists car and sensor data"
                 sensorManager = component "Sensor Configuration Manager" "Manages sensor settings"
 
-                techValidator = component "Tech. data validation" "Validates technician IDs"
+                techValidator = component "Tech. data validation" "Validates technician IDs, extracts CV data using OCR and LLM"
                 techProvider = component "External Tech. data provider" "Connects to government registry"
                 techRepo = component "Tech. Repository" "Persists technician data"
 
@@ -185,11 +185,11 @@ workspace "RCT" "RCT System" {
                         devTelemetryGatewayInstance = softwareSystemInstance telemetryGateway
                     }
                 }
+            }
 
-                deploymentNode "External IoT Network" "" "" {
-                    devGovSystemInstance = softwareSystemInstance govSystem
-                    devManufacturerSystemInstance = softwareSystemInstance manufacturerSystem
-                }
+            deploymentNode "External IoT Network" "" "" {
+                devGovSystemInstance = softwareSystemInstance govSystem
+                devManufacturerSystemInstance = softwareSystemInstance manufacturerSystem
             }
         }
     }
@@ -256,6 +256,39 @@ workspace "RCT" "RCT System" {
             sensorManager -> carRepo "14. Updates sensor configuration for the car"
             carRepo -> carDb "15. Writes sensor configuration to database"
             sensorManager -> webApp "16. Sends confirmation (or error message) to user"
+
+            autoLayout lr
+        }
+
+        # 2. Dynamic view for feature Register new technician
+        dynamic administrationApp "RegisterNewTechnician" "Dynamic diagram for registering a new technician with specialisation and roles" {
+            # 1.-2. Manager submits identification and the system checks access and duplicates
+            manager -> webApp "1. Opens technician registration and enters ID and bank account"
+            webApp -> accessControl "2. Requests access to register a technician"
+            accessControl -> techValidator "3. Forwards registration request for ID validation"
+
+            # 3. Check if technician ID is valid and not already present in the database
+            techValidator -> techRepo "4. Checks if technician ID already exists"
+            techRepo -> techDb "5. Queries existing technician IDs"
+
+            # 4. Download and process government data for a valid, unique technician ID
+            techValidator -> techProvider "6. Requests government data by technician ID"
+            techProvider -> govSystem "7. Downloads technician identification data"
+            techValidator -> webApp "8. Presents processed government data and requests CV upload"
+
+            # 5-7. Uploads technician CV, system extracts data and send them for manager review
+            manager -> webApp "9. Uploads technician CV"
+            webApp -> accessControl "10. Requests access to process technician CV"
+            accessControl -> techValidator "11. Forwards CV for OCR and LLM extraction by the validator"
+            techValidator -> webApp "12. Presents extracted data for manager review"
+
+            # 8-10. Manager reviews and corrects data, assigns specialised group and roles, system saves them
+            manager -> webApp "13. Reviews and corrects data, assigns specialised group and roles"
+            webApp -> accessControl "14. Requests access to save technician registration"
+            accessControl -> techValidator "15. Forwards reviewed data for final validation"
+            techValidator -> techRepo "16. Sends validated identification, CV data, group and roles for storage"
+            techRepo -> techDb "17. Stores technician, group membership and roles"
+            techValidator -> webApp "18. Shows registration confirmation or validation errors"
 
             autoLayout lr
         }

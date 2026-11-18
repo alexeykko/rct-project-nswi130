@@ -5,9 +5,7 @@
   "description" : "RCT System",
   "documentation" : { },
   "id" : 1,
-  "lastModifiedAgent" : "structurizr/diagrams/a73d472c-7ad8-471d-a03a-e425a530e7ac",
-  "lastModifiedDate" : "2026-11-18T18:00:26Z",
-  "lastModifiedUser" : "161347522",
+  "lastModifiedDate" : "2026-11-18T19:13:25Z",
   "model" : {
     "deploymentNodes" : [ {
       "children" : [ {
@@ -85,7 +83,7 @@
         "instances" : "1",
         "name" : "Web server",
         "properties" : {
-          "structurizr.dsl.identifier" : "75a40ee5-306a-47ba-a01e-84499643d942"
+          "structurizr.dsl.identifier" : "0bf73ccc-0db1-4ca6-a4e3-ba110d80a83e"
         },
         "tags" : "Element,Deployment Node",
         "technology" : "Apache Tomcat 11.0.29"
@@ -95,7 +93,7 @@
       "instances" : "1",
       "name" : "Application Server",
       "properties" : {
-        "structurizr.dsl.identifier" : "2ab5ed3c-2b01-4f63-9a86-b0b63efb4e4a"
+        "structurizr.dsl.identifier" : "ad7c08a4-2a32-49be-8d35-f96db7e1531e"
       },
       "tags" : "Element,Deployment Node",
       "technology" : "Ubuntu 26.04 LTS"
@@ -128,7 +126,7 @@
       "instances" : "1",
       "name" : "User's web browser",
       "properties" : {
-        "structurizr.dsl.identifier" : "634c6f92-dc47-4ed4-b4ed-2e269909a325"
+        "structurizr.dsl.identifier" : "802cdbe4-5d3d-482e-ac29-a893b9632c1f"
       },
       "tags" : "Element,Deployment Node"
     }, {
@@ -160,7 +158,7 @@
       "instances" : "1",
       "name" : "Capture Server",
       "properties" : {
-        "structurizr.dsl.identifier" : "442e1218-e0fa-431c-8c57-cfe725f7dde5"
+        "structurizr.dsl.identifier" : "e6f1b4c4-70c2-42cc-8272-6e66ff9002a9"
       },
       "tags" : "Element,Deployment Node",
       "technology" : "Ubuntu 26.04 LTS"
@@ -190,7 +188,7 @@
         "instances" : "1",
         "name" : "Relational DB server",
         "properties" : {
-          "structurizr.dsl.identifier" : "c40e8ee0-a212-46a2-9491-2f4e1cf59aba"
+          "structurizr.dsl.identifier" : "333f6b4f-bd5e-4178-8059-cbe280e67af8"
         },
         "tags" : "Element,Deployment Node",
         "technology" : "PostgreSQL 18.7"
@@ -219,7 +217,7 @@
         "instances" : "1",
         "name" : "Time-Series DB server",
         "properties" : {
-          "structurizr.dsl.identifier" : "483ac689-3a57-47d9-9979-c9513474d55c"
+          "structurizr.dsl.identifier" : "1594a750-85ce-4767-90f4-510a475fc95d"
         },
         "tags" : "Element,Deployment Node",
         "technology" : "InfluxDB 3.12.2"
@@ -229,7 +227,7 @@
       "instances" : "1",
       "name" : "Database Server",
       "properties" : {
-        "structurizr.dsl.identifier" : "b4fe68ba-c5f2-4b76-b558-191a88592f24"
+        "structurizr.dsl.identifier" : "6fdf320c-ace7-4ff4-9c49-18ff0d4f3559"
       },
       "tags" : "Element,Deployment Node",
       "technology" : "Ubuntu 26.04 LTS"
@@ -239,7 +237,7 @@
       "instances" : "1",
       "name" : "External IoT Network",
       "properties" : {
-        "structurizr.dsl.identifier" : "26d2a641-2617-4d41-91ca-3b614bf40048"
+        "structurizr.dsl.identifier" : "25ab78d4-b8d7-475d-883c-7e924f88d590"
       },
       "softwareSystemInstances" : [ {
         "environment" : "Production",
@@ -308,7 +306,7 @@
         "instances" : "1",
         "name" : "Developer's web browser",
         "properties" : {
-          "structurizr.dsl.identifier" : "4244933d-b399-4b0b-b186-eae1734f94e9"
+          "structurizr.dsl.identifier" : "1095385d-52a5-4ffe-9e6d-e9c1d18f6538"
         },
         "tags" : "Element,Deployment Node",
         "technology" : "Google Chrome / Mozila Firefox"
@@ -411,7 +409,7 @@
           "instances" : "1",
           "name" : "Local Java Runtime",
           "properties" : {
-            "structurizr.dsl.identifier" : "e3164cd1-cfe7-4f4e-8a16-78312c62e0fa"
+            "structurizr.dsl.identifier" : "7c2225ee-5807-42b9-9882-6a80f410a624"
           },
           "tags" : "Element,Deployment Node"
         }, {
@@ -440,7 +438,7 @@
           "instances" : "1",
           "name" : "Relational DB server",
           "properties" : {
-            "structurizr.dsl.identifier" : "618e344a-3e74-4780-a05d-fe8253e14f32"
+            "structurizr.dsl.identifier" : "2ae8fd65-11f5-4208-bea1-3fd6e376d8bf"
           },
           "tags" : "Element,Deployment Node",
           "technology" : "PostgreSQL 18.7"
@@ -470,7 +468,7 @@
           "instances" : "1",
           "name" : "Time-Series DB server",
           "properties" : {
-            "structurizr.dsl.identifier" : "0d381152-5923-4f6e-9a6a-e05396e712d6"
+            "structurizr.dsl.identifier" : "e25d6fb3-5741-4e1e-9eda-8569e3ff69a7"
           },
           "tags" : "Element,Deployment Node",
           "technology" : "InfluxDB 3.12.2"
@@ -481,7 +479,7 @@
           "instances" : "1",
           "name" : "Telemetry simualator",
           "properties" : {
-            "structurizr.dsl.identifier" : "042ccecc-04de-4fff-a546-eee0b5c1f1b9"
+            "structurizr.dsl.identifier" : "ae0a3211-118f-4d98-9177-4fdfdbc855c5"
           },
           "softwareSystemInstances" : [ {
             "environment" : "Development",
@@ -508,38 +506,10 @@
         "instances" : "1",
         "name" : "Docker Desktop",
         "properties" : {
-          "structurizr.dsl.identifier" : "eedf7097-3496-4ea2-a601-dc1e649e0641"
+          "structurizr.dsl.identifier" : "77148f63-a674-47ec-a794-3a9c46cdebe1"
         },
         "tags" : "Element,Deployment Node",
         "technology" : "Docker Engine"
-      }, {
-        "environment" : "Development",
-        "id" : "152",
-        "instances" : "1",
-        "name" : "External IoT Network",
-        "properties" : {
-          "structurizr.dsl.identifier" : "0217e048-0175-49a9-a1fc-f3ac19617848"
-        },
-        "softwareSystemInstances" : [ {
-          "environment" : "Development",
-          "id" : "153",
-          "instanceId" : 1,
-          "properties" : {
-            "structurizr.dsl.identifier" : "devGovSystemInstance"
-          },
-          "softwareSystemId" : "7",
-          "tags" : "Software System Instance"
-        }, {
-          "environment" : "Development",
-          "id" : "155",
-          "instanceId" : 1,
-          "properties" : {
-            "structurizr.dsl.identifier" : "devManufacturerSystemInstance"
-          },
-          "softwareSystemId" : "6",
-          "tags" : "Software System Instance"
-        } ],
-        "tags" : "Element,Deployment Node"
       } ],
       "description" : "Local development machine",
       "environment" : "Development",
@@ -547,10 +517,38 @@
       "instances" : "1",
       "name" : "Developer Workstation",
       "properties" : {
-        "structurizr.dsl.identifier" : "de8a9c8b-d616-4715-99da-10ec2261b968"
+        "structurizr.dsl.identifier" : "322a2b6c-0011-46ff-9599-3179d69cd856"
       },
       "tags" : "Element,Deployment Node",
       "technology" : "Windows 11 / macOS / Linux"
+    }, {
+      "environment" : "Development",
+      "id" : "152",
+      "instances" : "1",
+      "name" : "External IoT Network",
+      "properties" : {
+        "structurizr.dsl.identifier" : "e7dfeb18-58aa-420d-8ee2-605228ab7e10"
+      },
+      "softwareSystemInstances" : [ {
+        "environment" : "Development",
+        "id" : "153",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "devGovSystemInstance"
+        },
+        "softwareSystemId" : "7",
+        "tags" : "Software System Instance"
+      }, {
+        "environment" : "Development",
+        "id" : "155",
+        "instanceId" : 1,
+        "properties" : {
+          "structurizr.dsl.identifier" : "devManufacturerSystemInstance"
+        },
+        "softwareSystemId" : "6",
+        "tags" : "Software System Instance"
+      } ],
+      "tags" : "Element,Deployment Node"
     } ],
     "people" : [ {
       "description" : "Registers cars and technicians, manage the race",
@@ -852,7 +850,7 @@
           } ],
           "tags" : "Element,Component"
         }, {
-          "description" : "Validates technician IDs",
+          "description" : "Validates technician IDs, extracts CV data using OCR and LLM",
           "documentation" : { },
           "id" : "17",
           "name" : "Tech. data validation",
@@ -1249,9 +1247,9 @@
   },
   "name" : "RCT",
   "properties" : {
+    "structurizr.inspection.error" : "100",
     "structurizr.inspection.info" : "0",
     "structurizr.inspection.ignore" : "0",
-    "structurizr.inspection.error" : "100",
     "structurizr.inspection.warning" : "0"
   },
   "views" : {
@@ -1603,7 +1601,6 @@
     } ],
     "configuration" : {
       "lastSavedView" : "DevelopmentDeployment",
-      "metadataSymbols" : "SquareBrackets",
       "styles" : {
         "elements" : [ {
           "background" : "#85bbf0",
@@ -2327,6 +2324,144 @@
         "rankSeparation" : 100,
         "vertices" : true
       },
+      "description" : "Dynamic diagram for registering a new technician with specialisation and roles",
+      "elementId" : "11",
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "10",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "12",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "17",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "19",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "31",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "RegisterNewTechnician",
+      "name" : "Dynamic View: RCT Tracker - Administration Application",
+      "order" : 9,
+      "relationships" : [ {
+        "description" : "1. Opens technician registration and enters ID and bank account",
+        "id" : "34",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "2. Requests access to register a technician",
+        "id" : "44",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "3. Forwards registration request for ID validation",
+        "id" : "54",
+        "order" : "3",
+        "response" : false
+      }, {
+        "description" : "4. Checks if technician ID already exists",
+        "id" : "78",
+        "order" : "4",
+        "response" : false
+      }, {
+        "description" : "5. Queries existing technician IDs",
+        "id" : "79",
+        "order" : "5",
+        "response" : false
+      }, {
+        "description" : "6. Requests government data by technician ID",
+        "id" : "74",
+        "order" : "6",
+        "response" : false
+      }, {
+        "description" : "7. Downloads technician identification data",
+        "id" : "75",
+        "order" : "7",
+        "response" : false
+      }, {
+        "description" : "8. Presents processed government data and requests CV upload",
+        "id" : "48",
+        "order" : "8",
+        "response" : false
+      }, {
+        "description" : "9. Uploads technician CV",
+        "id" : "34",
+        "order" : "9",
+        "response" : false
+      }, {
+        "description" : "10. Requests access to process technician CV",
+        "id" : "44",
+        "order" : "10",
+        "response" : false
+      }, {
+        "description" : "11. Forwards CV for OCR and LLM extraction by the validator",
+        "id" : "54",
+        "order" : "11",
+        "response" : false
+      }, {
+        "description" : "12. Presents extracted data for manager review",
+        "id" : "48",
+        "order" : "12",
+        "response" : false
+      }, {
+        "description" : "13. Reviews and corrects data, assigns specialised group and roles",
+        "id" : "34",
+        "order" : "13",
+        "response" : false
+      }, {
+        "description" : "14. Requests access to save technician registration",
+        "id" : "44",
+        "order" : "14",
+        "response" : false
+      }, {
+        "description" : "15. Forwards reviewed data for final validation",
+        "id" : "54",
+        "order" : "15",
+        "response" : false
+      }, {
+        "description" : "16. Sends validated identification, CV data, group and roles for storage",
+        "id" : "78",
+        "order" : "16",
+        "response" : false
+      }, {
+        "description" : "17. Stores technician, group membership and roles",
+        "id" : "79",
+        "order" : "17",
+        "response" : false
+      }, {
+        "description" : "18. Shows registration confirmation or validation errors",
+        "id" : "48",
+        "order" : "18",
+        "response" : false
+      } ]
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
       "description" : "Dynamic diagram for real time maintenance technician view",
       "elementId" : "20",
       "elements" : [ {
@@ -2385,7 +2520,7 @@
       "externalBoundariesVisible" : false,
       "key" : "RealTimeDataFoeMaintenanceTech",
       "name" : "Dynamic View: RCT Tracker - Maintenance Data Analyzer",
-      "order" : 9,
+      "order" : 10,
       "relationships" : [ {
         "description" : "1. Opens dashboard, selects race and car",
         "id" : "36",
