@@ -150,6 +150,46 @@ workspace "RCT" "RCT System" {
 
             deploymentNode "External IoT Network" "" "" {
                 telemetryGatewayInstance = softwareSystemInstance telemetryGateway
+                GovSystemInstance = softwareSystemInstance govSystem
+                ManufacturerSystemInstance = softwareSystemInstance manufacturerSystem
+            }
+        }
+
+        # Deployment for development
+        deploymentEnvironment "Development" {
+            deploymentNode "Developer Workstation" "Local development machine" "Windows 11 / macOS / Linux" {
+
+                deploymentNode "Developer's web browser" "Local web browser" "Google Chrome / Mozila Firefox" {
+                    devWebAppInstance = containerInstance webApp
+                }
+                
+                deploymentNode "Docker Desktop" "" "Docker Engine" {
+
+                    deploymentNode "Local Java Runtime" "IDE" "" {
+                        devAdminAppInstance = containerInstance administrationApp
+                        devDataAnalyzerInstance = containerInstance dataAnalyzer
+                        devTelemetryCapturerInstance = containerInstance telemetryCapturer
+                    }
+
+                    deploymentNode "Relational DB server" "Local relational DB container" "PostgreSQL 18.7" {
+                        devCarDbInstance = containerInstance carDb
+                        devTechDbInstance = containerInstance techDb
+                    }
+
+                    deploymentNode "Time-Series DB server" "Local time-series DB container" "InfluxDB 3.12.2" {
+                        devTelemetryCarDbInstance = containerInstance telemetryCarDb
+                        devTelemetryTrackDbInstance = containerInstance telemetryTrackDb
+                    }
+
+                    deploymentNode "Telemetry simualator" "Simulates race telemetry data" "Python Telemetry Simulator" {
+                        devTelemetryGatewayInstance = softwareSystemInstance telemetryGateway
+                    }
+                }
+
+                deploymentNode "External IoT Network" "" "" {
+                    devGovSystemInstance = softwareSystemInstance govSystem
+                    devManufacturerSystemInstance = softwareSystemInstance manufacturerSystem
+                }
             }
         }
     }
@@ -180,6 +220,11 @@ workspace "RCT" "RCT System" {
 
         # Production Deployment View
         deployment rctTracker "Production" "ProductionDeployment" {
+            include *
+        }
+
+        # Development Deployment View
+        deployment rctTracker "Development" "DevelopmentDeployment" {
             include *
         }
 
