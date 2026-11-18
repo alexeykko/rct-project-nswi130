@@ -5,6 +5,6 @@
 3. deployment diagramy (production + development)
 4. 4x dynamic diagram: 
     - ~~register new car~~
-    - register new technician
+    - ~~register new technician~~
     - Real time data for maintanance technician
     - Real time data for track technician
