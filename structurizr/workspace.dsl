@@ -293,6 +293,39 @@ workspace "RCT" "RCT System" {
             autoLayout lr
         }
 
+        # 5. Dynamic view for feature Real time data for track technician
+        dynamic dataAnalyzer "RealTimeDataForTrackTech" "Dynamic diagram for real time track technician view" {
+            # 1-2. Technician opens app, selects upcoming race, system checks access
+            trackTech -> webApp "1. Opens dashboard and selects an upcoming race"
+            webApp -> analyzerAccessControl "2. Requests access to view race track data"
+            analyzerAccessControl -> maintenanceAnalyzer "3. Validates access to the selected race"
+
+            # 3. System loads basic track information and latest track measurements
+            dataLoader -> telemetryRepository "4. Requests basic track info and latest track measurements"
+            telemetryRepository -> telemetryTrackDb "5. Queries track time-series database"
+
+            # 4-5. System receives new track measurements and weather data, checks validity and recency
+            telemetryGateway -> telemetryCollector "6. Sends new track measurements and weather forecast"
+            telemetryCollector -> telemetryValidator "7. Sends data for validity and recency check"
+            telemetryValidator -> telemetryRepository "8. Sends validated and cleaned measurements"
+            telemetryRepository -> telemetryTrackDb "9. Stores track measurements"
+            telemetryRepository -> telemetryCache "10. Updates cache with newest track data"
+            dataLoader -> maintenanceAnalyzer "11. Provides track data for comparison with configured limits"
+
+            # 6. System displays data and warnings
+            maintenanceAnalyzer -> resultReporter "12. Sends analyzed track data and warnings"
+            resultReporter -> webApp "13. Displays track info, measurements, forecast and warnings"
+
+            # 7-8. Technician states track condition, system stores it and confirms
+            trackTech -> webApp "14. Reviews data and states track condition (dry, wet, ...)"
+            webApp -> analyzerAccessControl "15. Requests access to save track condition"
+            analyzerAccessControl -> maintenanceAnalyzer "16. Forwards track condition for the race"
+            maintenanceAnalyzer -> resultReporter "17. Sends result of saving track condition"
+            resultReporter -> webApp "18. Shows confirmation or error message"
+
+            autoLayout lr
+        }
+
         # 4. Dynamic view for feature Real time data for maintenance technician
         dynamic dataAnalyzer "RealTimeDataFoeMaintenanceTech" "Dynamic diagram for real time maintenance technician view" {
             # 1-3. Technician opens app, selects car, system checks access

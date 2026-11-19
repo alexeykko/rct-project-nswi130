@@ -5,7 +5,7 @@
   "description" : "RCT System",
   "documentation" : { },
   "id" : 1,
-  "lastModifiedDate" : "2026-11-18T19:13:25Z",
+  "lastModifiedDate" : "2026-11-19T11:18:16Z",
   "model" : {
     "deploymentNodes" : [ {
       "children" : [ {
@@ -83,7 +83,7 @@
         "instances" : "1",
         "name" : "Web server",
         "properties" : {
-          "structurizr.dsl.identifier" : "0bf73ccc-0db1-4ca6-a4e3-ba110d80a83e"
+          "structurizr.dsl.identifier" : "9fcc71c8-c36c-46da-b2fd-3794a298edcb"
         },
         "tags" : "Element,Deployment Node",
         "technology" : "Apache Tomcat 11.0.29"
@@ -93,7 +93,7 @@
       "instances" : "1",
       "name" : "Application Server",
       "properties" : {
-        "structurizr.dsl.identifier" : "ad7c08a4-2a32-49be-8d35-f96db7e1531e"
+        "structurizr.dsl.identifier" : "a5d63796-2306-40e8-8987-a87d2257b0e1"
       },
       "tags" : "Element,Deployment Node",
       "technology" : "Ubuntu 26.04 LTS"
@@ -126,7 +126,7 @@
       "instances" : "1",
       "name" : "User's web browser",
       "properties" : {
-        "structurizr.dsl.identifier" : "802cdbe4-5d3d-482e-ac29-a893b9632c1f"
+        "structurizr.dsl.identifier" : "16de1c16-8bbe-41f9-aa53-7254a4fc2f7e"
       },
       "tags" : "Element,Deployment Node"
     }, {
@@ -158,7 +158,7 @@
       "instances" : "1",
       "name" : "Capture Server",
       "properties" : {
-        "structurizr.dsl.identifier" : "e6f1b4c4-70c2-42cc-8272-6e66ff9002a9"
+        "structurizr.dsl.identifier" : "3d6d7e86-5d16-4f5c-bcba-f2f516805370"
       },
       "tags" : "Element,Deployment Node",
       "technology" : "Ubuntu 26.04 LTS"
@@ -188,7 +188,7 @@
         "instances" : "1",
         "name" : "Relational DB server",
         "properties" : {
-          "structurizr.dsl.identifier" : "333f6b4f-bd5e-4178-8059-cbe280e67af8"
+          "structurizr.dsl.identifier" : "dfba5cdb-4046-4e63-a34d-987d19867404"
         },
         "tags" : "Element,Deployment Node",
         "technology" : "PostgreSQL 18.7"
@@ -217,7 +217,7 @@
         "instances" : "1",
         "name" : "Time-Series DB server",
         "properties" : {
-          "structurizr.dsl.identifier" : "1594a750-85ce-4767-90f4-510a475fc95d"
+          "structurizr.dsl.identifier" : "124355b2-3238-4c88-a374-1ffaa50b669f"
         },
         "tags" : "Element,Deployment Node",
         "technology" : "InfluxDB 3.12.2"
@@ -227,7 +227,7 @@
       "instances" : "1",
       "name" : "Database Server",
       "properties" : {
-        "structurizr.dsl.identifier" : "6fdf320c-ace7-4ff4-9c49-18ff0d4f3559"
+        "structurizr.dsl.identifier" : "1c577129-06ef-451e-abd6-7ec973467894"
       },
       "tags" : "Element,Deployment Node",
       "technology" : "Ubuntu 26.04 LTS"
@@ -237,7 +237,7 @@
       "instances" : "1",
       "name" : "External IoT Network",
       "properties" : {
-        "structurizr.dsl.identifier" : "25ab78d4-b8d7-475d-883c-7e924f88d590"
+        "structurizr.dsl.identifier" : "467d89b1-fcf1-4067-b155-5c154bc35f85"
       },
       "softwareSystemInstances" : [ {
         "environment" : "Production",
@@ -306,7 +306,7 @@
         "instances" : "1",
         "name" : "Developer's web browser",
         "properties" : {
-          "structurizr.dsl.identifier" : "1095385d-52a5-4ffe-9e6d-e9c1d18f6538"
+          "structurizr.dsl.identifier" : "82fbaaac-884b-403c-b9ba-8cbfa8ddae3d"
         },
         "tags" : "Element,Deployment Node",
         "technology" : "Google Chrome / Mozila Firefox"
@@ -409,7 +409,7 @@
           "instances" : "1",
           "name" : "Local Java Runtime",
           "properties" : {
-            "structurizr.dsl.identifier" : "7c2225ee-5807-42b9-9882-6a80f410a624"
+            "structurizr.dsl.identifier" : "9efab42f-32b1-4ebf-a0de-c00a7adfdae8"
           },
           "tags" : "Element,Deployment Node"
         }, {
@@ -438,7 +438,7 @@
           "instances" : "1",
           "name" : "Relational DB server",
           "properties" : {
-            "structurizr.dsl.identifier" : "2ae8fd65-11f5-4208-bea1-3fd6e376d8bf"
+            "structurizr.dsl.identifier" : "c843d126-38e6-428f-8c54-911420fa449b"
           },
           "tags" : "Element,Deployment Node",
           "technology" : "PostgreSQL 18.7"
@@ -468,7 +468,7 @@
           "instances" : "1",
           "name" : "Time-Series DB server",
           "properties" : {
-            "structurizr.dsl.identifier" : "e25d6fb3-5741-4e1e-9eda-8569e3ff69a7"
+            "structurizr.dsl.identifier" : "522a46e7-f049-4790-9cf9-0bb04bc53fee"
           },
           "tags" : "Element,Deployment Node",
           "technology" : "InfluxDB 3.12.2"
@@ -479,7 +479,7 @@
           "instances" : "1",
           "name" : "Telemetry simualator",
           "properties" : {
-            "structurizr.dsl.identifier" : "ae0a3211-118f-4d98-9177-4fdfdbc855c5"
+            "structurizr.dsl.identifier" : "2ab282e7-2c8c-4109-9504-f0e5600a79e5"
           },
           "softwareSystemInstances" : [ {
             "environment" : "Development",
@@ -506,7 +506,7 @@
         "instances" : "1",
         "name" : "Docker Desktop",
         "properties" : {
-          "structurizr.dsl.identifier" : "77148f63-a674-47ec-a794-3a9c46cdebe1"
+          "structurizr.dsl.identifier" : "bcc8e5b4-36a8-4496-9c02-d581195f81a3"
         },
         "tags" : "Element,Deployment Node",
         "technology" : "Docker Engine"
@@ -517,7 +517,7 @@
       "instances" : "1",
       "name" : "Developer Workstation",
       "properties" : {
-        "structurizr.dsl.identifier" : "322a2b6c-0011-46ff-9599-3179d69cd856"
+        "structurizr.dsl.identifier" : "7b1e49d8-c055-4ee7-9143-bbf7aaf99bbd"
       },
       "tags" : "Element,Deployment Node",
       "technology" : "Windows 11 / macOS / Linux"
@@ -527,7 +527,7 @@
       "instances" : "1",
       "name" : "External IoT Network",
       "properties" : {
-        "structurizr.dsl.identifier" : "e7dfeb18-58aa-420d-8ee2-605228ab7e10"
+        "structurizr.dsl.identifier" : "1d418eaa-93c9-453e-a822-d18501156d6b"
       },
       "softwareSystemInstances" : [ {
         "environment" : "Development",
@@ -2462,6 +2462,160 @@
         "rankSeparation" : 100,
         "vertices" : true
       },
+      "description" : "Dynamic diagram for real time track technician view",
+      "elementId" : "20",
+      "elements" : [ {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "10",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "21",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "22",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "23",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "24",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "26",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "27",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "28",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "29",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "33",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "RealTimeDataForTrackTech",
+      "name" : "Dynamic View: RCT Tracker - Maintenance Data Analyzer",
+      "order" : 10,
+      "relationships" : [ {
+        "description" : "1. Opens dashboard and selects an upcoming race",
+        "id" : "38",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "2. Requests access to view race track data",
+        "id" : "50",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "3. Validates access to the selected race",
+        "id" : "55",
+        "order" : "3",
+        "response" : false
+      }, {
+        "description" : "4. Requests basic track info and latest track measurements",
+        "id" : "61",
+        "order" : "4",
+        "response" : false
+      }, {
+        "description" : "5. Queries track time-series database",
+        "id" : "88",
+        "order" : "5",
+        "response" : false
+      }, {
+        "description" : "6. Sends new track measurements and weather forecast",
+        "id" : "81",
+        "order" : "6",
+        "response" : false
+      }, {
+        "description" : "7. Sends data for validity and recency check",
+        "id" : "84",
+        "order" : "7",
+        "response" : false
+      }, {
+        "description" : "8. Sends validated and cleaned measurements",
+        "id" : "85",
+        "order" : "8",
+        "response" : false
+      }, {
+        "description" : "9. Stores track measurements",
+        "id" : "88",
+        "order" : "9",
+        "response" : false
+      }, {
+        "description" : "10. Updates cache with newest track data",
+        "id" : "90",
+        "order" : "10",
+        "response" : false
+      }, {
+        "description" : "11. Provides track data for comparison with configured limits",
+        "id" : "65",
+        "order" : "11",
+        "response" : false
+      }, {
+        "description" : "12. Sends analyzed track data and warnings",
+        "id" : "56",
+        "order" : "12",
+        "response" : false
+      }, {
+        "description" : "13. Displays track info, measurements, forecast and warnings",
+        "id" : "91",
+        "order" : "13",
+        "response" : false
+      }, {
+        "description" : "14. Reviews data and states track condition (dry, wet, ...)",
+        "id" : "38",
+        "order" : "14",
+        "response" : false
+      }, {
+        "description" : "15. Requests access to save track condition",
+        "id" : "50",
+        "order" : "15",
+        "response" : false
+      }, {
+        "description" : "16. Forwards track condition for the race",
+        "id" : "55",
+        "order" : "16",
+        "response" : false
+      }, {
+        "description" : "17. Sends result of saving track condition",
+        "id" : "56",
+        "order" : "17",
+        "response" : false
+      }, {
+        "description" : "18. Shows confirmation or error message",
+        "id" : "91",
+        "order" : "18",
+        "response" : false
+      } ]
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
       "description" : "Dynamic diagram for real time maintenance technician view",
       "elementId" : "20",
       "elements" : [ {
@@ -2520,7 +2674,7 @@
       "externalBoundariesVisible" : false,
       "key" : "RealTimeDataFoeMaintenanceTech",
       "name" : "Dynamic View: RCT Tracker - Maintenance Data Analyzer",
-      "order" : 10,
+      "order" : 11,
       "relationships" : [ {
         "description" : "1. Opens dashboard, selects race and car",
         "id" : "36",
