@@ -5,95 +5,133 @@
   "description" : "RCT System",
   "documentation" : { },
   "id" : 1,
-  "lastModifiedDate" : "2026-11-19T11:18:16Z",
+  "lastModifiedDate" : "2026-11-21T11:33:23Z",
   "model" : {
     "deploymentNodes" : [ {
       "children" : [ {
         "containerInstances" : [ {
           "containerId" : "11",
           "environment" : "Production",
-          "id" : "95",
+          "id" : "109",
           "instanceId" : 1,
           "properties" : {
-            "structurizr.dsl.identifier" : "adminAppInstance"
+            "structurizr.dsl.identifier" : "identityProviderInstance"
           },
           "relationships" : [ {
-            "description" : "Sends messages to",
-            "destinationId" : "99",
-            "id" : "101",
-            "linkedRelationshipId" : "47",
-            "sourceId" : "95"
-          }, {
-            "description" : "Writes to",
-            "destinationId" : "109",
-            "id" : "110",
-            "linkedRelationshipId" : "73",
-            "sourceId" : "95"
-          }, {
-            "description" : "Writes to",
-            "destinationId" : "111",
-            "id" : "112",
-            "linkedRelationshipId" : "80",
-            "sourceId" : "95"
-          }, {
-            "description" : "Makes calls to read data",
-            "destinationId" : "121",
-            "id" : "122",
-            "linkedRelationshipId" : "76",
-            "sourceId" : "95"
-          }, {
-            "description" : "Makes calls to read data",
-            "destinationId" : "123",
-            "id" : "124",
-            "linkedRelationshipId" : "68",
-            "sourceId" : "95"
+            "description" : "Reads from",
+            "destinationId" : "129",
+            "id" : "130",
+            "linkedRelationshipId" : "71",
+            "sourceId" : "109"
           } ],
           "tags" : "Container Instance"
         }, {
-          "containerId" : "20",
+          "containerId" : "15",
           "environment" : "Production",
-          "id" : "96",
+          "id" : "110",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "carRegistrationInstance"
+          },
+          "relationships" : [ {
+            "description" : "Verifies user permissions with",
+            "destinationId" : "109",
+            "id" : "111",
+            "linkedRelationshipId" : "59",
+            "sourceId" : "110"
+          }, {
+            "description" : "Reads from and writes to",
+            "destinationId" : "126",
+            "id" : "127",
+            "linkedRelationshipId" : "81",
+            "sourceId" : "110"
+          }, {
+            "description" : "Makes calls to read car data",
+            "destinationId" : "144",
+            "id" : "145",
+            "linkedRelationshipId" : "76",
+            "sourceId" : "110"
+          } ],
+          "tags" : "Container Instance"
+        }, {
+          "containerId" : "21",
+          "environment" : "Production",
+          "id" : "112",
+          "instanceId" : 1,
+          "properties" : {
+            "structurizr.dsl.identifier" : "techRegistrationInstance"
+          },
+          "relationships" : [ {
+            "description" : "Verifies user permissions with",
+            "destinationId" : "109",
+            "id" : "113",
+            "linkedRelationshipId" : "63",
+            "sourceId" : "112"
+          }, {
+            "description" : "Reads from and writes to",
+            "destinationId" : "129",
+            "id" : "131",
+            "linkedRelationshipId" : "89",
+            "sourceId" : "112"
+          }, {
+            "description" : "Makes calls to read technician data",
+            "destinationId" : "142",
+            "id" : "143",
+            "linkedRelationshipId" : "85",
+            "sourceId" : "112"
+          } ],
+          "tags" : "Container Instance"
+        }, {
+          "containerId" : "26",
+          "environment" : "Production",
+          "id" : "114",
           "instanceId" : 1,
           "properties" : {
             "structurizr.dsl.identifier" : "dataAnalyzerInstance"
           },
           "relationships" : [ {
-            "description" : "Loads sensor configuration",
-            "destinationId" : "95",
-            "id" : "97",
-            "linkedRelationshipId" : "60",
-            "sourceId" : "96"
+            "description" : "Verifies user permissions with",
+            "destinationId" : "109",
+            "id" : "115",
+            "linkedRelationshipId" : "67",
+            "sourceId" : "114"
           }, {
-            "description" : "Reports measurements and warnings",
-            "destinationId" : "99",
-            "id" : "103",
-            "linkedRelationshipId" : "92",
-            "sourceId" : "96"
+            "description" : "Reads sensor configurations from",
+            "destinationId" : "126",
+            "id" : "128",
+            "linkedRelationshipId" : "93",
+            "sourceId" : "114"
           }, {
-            "description" : "Retrieves measurements",
-            "destinationId" : "105",
-            "id" : "106",
-            "linkedRelationshipId" : "64",
-            "sourceId" : "96"
+            "description" : "Reads car telemetry measurements from",
+            "destinationId" : "133",
+            "id" : "134",
+            "linkedRelationshipId" : "95",
+            "sourceId" : "114"
+          }, {
+            "description" : "Reads track measurements from and stores track conditions in",
+            "destinationId" : "136",
+            "id" : "137",
+            "linkedRelationshipId" : "97",
+            "sourceId" : "114"
           } ],
           "tags" : "Container Instance"
         } ],
         "environment" : "Production",
-        "id" : "94",
+        "id" : "108",
         "instances" : "1",
         "name" : "Web server",
         "properties" : {
-          "structurizr.dsl.identifier" : "9fcc71c8-c36c-46da-b2fd-3794a298edcb"
+          "structurizr.dsl.identifier" : "ef309fe3-0f70-4596-99a6-bac5662dc713"
         },
         "tags" : "Element,Deployment Node",
         "technology" : "Apache Tomcat 11.0.29"
       } ],
       "environment" : "Production",
-      "id" : "93",
+      "id" : "107",
       "instances" : "1",
       "name" : "Application Server",
       "properties" : {
-        "structurizr.dsl.identifier" : "a5d63796-2306-40e8-8987-a87d2257b0e1"
+        "structurizr.dsl.identifier" : "ee3c0bbf-7ed9-4200-9173-5621c7a31b56"
       },
       "tags" : "Element,Deployment Node",
       "technology" : "Ubuntu 26.04 LTS"
@@ -101,111 +139,123 @@
       "containerInstances" : [ {
         "containerId" : "10",
         "environment" : "Production",
-        "id" : "99",
+        "id" : "117",
         "instanceId" : 1,
         "properties" : {
           "structurizr.dsl.identifier" : "webAppInstance"
         },
         "relationships" : [ {
-          "description" : "Requests access",
-          "destinationId" : "95",
-          "id" : "100",
-          "linkedRelationshipId" : "45",
-          "sourceId" : "99"
+          "description" : "Authenticates users with",
+          "destinationId" : "109",
+          "id" : "118",
+          "linkedRelationshipId" : "49",
+          "sourceId" : "117"
         }, {
-          "description" : "Requests access",
-          "destinationId" : "96",
-          "id" : "102",
+          "description" : "Sends car and sensor registration requests to",
+          "destinationId" : "110",
+          "id" : "119",
           "linkedRelationshipId" : "51",
-          "sourceId" : "99"
+          "sourceId" : "117"
+        }, {
+          "description" : "Sends technician registration and CV requests to",
+          "destinationId" : "112",
+          "id" : "120",
+          "linkedRelationshipId" : "53",
+          "sourceId" : "117"
+        }, {
+          "description" : "Requests telemetry analysis and submits track conditions",
+          "destinationId" : "114",
+          "id" : "121",
+          "linkedRelationshipId" : "55",
+          "sourceId" : "117"
         } ],
         "tags" : "Container Instance"
       } ],
       "environment" : "Production",
-      "id" : "98",
+      "id" : "116",
       "instances" : "1",
       "name" : "User's web browser",
       "properties" : {
-        "structurizr.dsl.identifier" : "16de1c16-8bbe-41f9-aa53-7254a4fc2f7e"
+        "structurizr.dsl.identifier" : "7115cb28-daaf-4e2b-b61e-c72daa8296a7"
       },
       "tags" : "Element,Deployment Node"
     }, {
       "containerInstances" : [ {
-        "containerId" : "25",
+        "containerId" : "30",
         "environment" : "Production",
-        "id" : "105",
+        "id" : "123",
         "instanceId" : 1,
         "properties" : {
           "structurizr.dsl.identifier" : "telemetryCapturerInstance"
         },
         "relationships" : [ {
           "description" : "Stores car telemetry data",
-          "destinationId" : "114",
-          "id" : "115",
-          "linkedRelationshipId" : "87",
-          "sourceId" : "105"
+          "destinationId" : "133",
+          "id" : "135",
+          "linkedRelationshipId" : "104",
+          "sourceId" : "123"
         }, {
           "description" : "Stores track telemetry data",
-          "destinationId" : "116",
-          "id" : "117",
-          "linkedRelationshipId" : "89",
-          "sourceId" : "105"
+          "destinationId" : "136",
+          "id" : "138",
+          "linkedRelationshipId" : "106",
+          "sourceId" : "123"
         } ],
         "tags" : "Container Instance"
       } ],
       "environment" : "Production",
-      "id" : "104",
+      "id" : "122",
       "instances" : "1",
       "name" : "Capture Server",
       "properties" : {
-        "structurizr.dsl.identifier" : "3d6d7e86-5d16-4f5c-bcba-f2f516805370"
+        "structurizr.dsl.identifier" : "dcf76091-86a8-47d0-9d27-e8f525d1004f"
       },
       "tags" : "Element,Deployment Node",
       "technology" : "Ubuntu 26.04 LTS"
     }, {
       "children" : [ {
         "containerInstances" : [ {
-          "containerId" : "30",
+          "containerId" : "34",
           "environment" : "Production",
-          "id" : "109",
+          "id" : "126",
           "instanceId" : 1,
           "properties" : {
             "structurizr.dsl.identifier" : "carDbInstance"
           },
           "tags" : "Container Instance"
         }, {
-          "containerId" : "31",
+          "containerId" : "35",
           "environment" : "Production",
-          "id" : "111",
+          "id" : "129",
           "instanceId" : 1,
           "properties" : {
-            "structurizr.dsl.identifier" : "techDbInstance"
+            "structurizr.dsl.identifier" : "userDbInstance"
           },
           "tags" : "Container Instance"
         } ],
         "environment" : "Production",
-        "id" : "108",
+        "id" : "125",
         "instances" : "1",
         "name" : "Relational DB server",
         "properties" : {
-          "structurizr.dsl.identifier" : "dfba5cdb-4046-4e63-a34d-987d19867404"
+          "structurizr.dsl.identifier" : "9617ae30-4010-479e-a71a-43a7b21f48a9"
         },
         "tags" : "Element,Deployment Node",
         "technology" : "PostgreSQL 18.7"
       }, {
         "containerInstances" : [ {
-          "containerId" : "32",
+          "containerId" : "36",
           "environment" : "Production",
-          "id" : "114",
+          "id" : "133",
           "instanceId" : 1,
           "properties" : {
             "structurizr.dsl.identifier" : "telemetryCarDbInstance"
           },
           "tags" : "Container Instance"
         }, {
-          "containerId" : "33",
+          "containerId" : "37",
           "environment" : "Production",
-          "id" : "116",
+          "id" : "136",
           "instanceId" : 1,
           "properties" : {
             "structurizr.dsl.identifier" : "telemetryTrackDbInstance"
@@ -213,63 +263,63 @@
           "tags" : "Container Instance"
         } ],
         "environment" : "Production",
-        "id" : "113",
+        "id" : "132",
         "instances" : "1",
         "name" : "Time-Series DB server",
         "properties" : {
-          "structurizr.dsl.identifier" : "124355b2-3238-4c88-a374-1ffaa50b669f"
+          "structurizr.dsl.identifier" : "f80e9e77-ead9-41f7-aa6b-897fedd9c208"
         },
         "tags" : "Element,Deployment Node",
         "technology" : "InfluxDB 3.12.2"
       } ],
       "environment" : "Production",
-      "id" : "107",
+      "id" : "124",
       "instances" : "1",
       "name" : "Database Server",
       "properties" : {
-        "structurizr.dsl.identifier" : "1c577129-06ef-451e-abd6-7ec973467894"
+        "structurizr.dsl.identifier" : "41e4569f-f3e0-436e-a6cb-4fb5196961ee"
       },
       "tags" : "Element,Deployment Node",
       "technology" : "Ubuntu 26.04 LTS"
     }, {
       "environment" : "Production",
-      "id" : "118",
+      "id" : "139",
       "instances" : "1",
       "name" : "External IoT Network",
       "properties" : {
-        "structurizr.dsl.identifier" : "467d89b1-fcf1-4067-b155-5c154bc35f85"
+        "structurizr.dsl.identifier" : "03fe2c9c-faf5-4e2c-a775-3ae2e9d54406"
       },
       "softwareSystemInstances" : [ {
         "environment" : "Production",
-        "id" : "119",
+        "id" : "140",
         "instanceId" : 1,
         "properties" : {
           "structurizr.dsl.identifier" : "telemetryGatewayInstance"
         },
         "relationships" : [ {
           "description" : "Sends new measurements",
-          "destinationId" : "105",
-          "id" : "120",
-          "linkedRelationshipId" : "82",
-          "sourceId" : "119"
+          "destinationId" : "123",
+          "id" : "141",
+          "linkedRelationshipId" : "99",
+          "sourceId" : "140"
         } ],
         "softwareSystemId" : "8",
         "tags" : "Software System Instance"
       }, {
         "environment" : "Production",
-        "id" : "121",
+        "id" : "142",
         "instanceId" : 1,
         "properties" : {
-          "structurizr.dsl.identifier" : "GovSystemInstance"
+          "structurizr.dsl.identifier" : "govSystemInstance"
         },
         "softwareSystemId" : "7",
         "tags" : "Software System Instance"
       }, {
         "environment" : "Production",
-        "id" : "123",
+        "id" : "144",
         "instanceId" : 1,
         "properties" : {
-          "structurizr.dsl.identifier" : "ManufacturerSystemInstance"
+          "structurizr.dsl.identifier" : "manufacturerSystemInstance"
         },
         "softwareSystemId" : "6",
         "tags" : "Software System Instance"
@@ -280,182 +330,232 @@
         "containerInstances" : [ {
           "containerId" : "10",
           "environment" : "Development",
-          "id" : "127",
+          "id" : "148",
           "instanceId" : 1,
           "properties" : {
             "structurizr.dsl.identifier" : "devWebAppInstance"
           },
           "relationships" : [ {
-            "description" : "Requests access",
-            "destinationId" : "130",
-            "id" : "132",
-            "linkedRelationshipId" : "45",
-            "sourceId" : "127"
+            "description" : "Authenticates users with",
+            "destinationId" : "151",
+            "id" : "152",
+            "linkedRelationshipId" : "49",
+            "sourceId" : "148"
           }, {
-            "description" : "Requests access",
-            "destinationId" : "133",
-            "id" : "135",
+            "description" : "Sends car and sensor registration requests to",
+            "destinationId" : "153",
+            "id" : "154",
             "linkedRelationshipId" : "51",
-            "sourceId" : "127"
+            "sourceId" : "148"
+          }, {
+            "description" : "Sends technician registration and CV requests to",
+            "destinationId" : "156",
+            "id" : "157",
+            "linkedRelationshipId" : "53",
+            "sourceId" : "148"
+          }, {
+            "description" : "Requests telemetry analysis and submits track conditions",
+            "destinationId" : "159",
+            "id" : "160",
+            "linkedRelationshipId" : "55",
+            "sourceId" : "148"
           } ],
           "tags" : "Container Instance"
         } ],
         "description" : "Local web browser",
         "environment" : "Development",
-        "id" : "126",
+        "id" : "147",
         "instances" : "1",
         "name" : "Developer's web browser",
         "properties" : {
-          "structurizr.dsl.identifier" : "82fbaaac-884b-403c-b9ba-8cbfa8ddae3d"
+          "structurizr.dsl.identifier" : "e6470cdd-afed-41e7-ae3e-5d833595b89a"
         },
         "tags" : "Element,Deployment Node",
-        "technology" : "Google Chrome / Mozila Firefox"
+        "technology" : "Google Chrome / Mozilla Firefox"
       }, {
         "children" : [ {
           "containerInstances" : [ {
             "containerId" : "11",
             "environment" : "Development",
-            "id" : "130",
+            "id" : "151",
             "instanceId" : 1,
             "properties" : {
-              "structurizr.dsl.identifier" : "devAdminAppInstance"
+              "structurizr.dsl.identifier" : "devIdentityProviderInstance"
             },
             "relationships" : [ {
-              "description" : "Sends messages to",
-              "destinationId" : "127",
-              "id" : "131",
-              "linkedRelationshipId" : "47",
-              "sourceId" : "130"
-            }, {
-              "description" : "Writes to",
-              "destinationId" : "140",
-              "id" : "141",
-              "linkedRelationshipId" : "73",
-              "sourceId" : "130"
-            }, {
-              "description" : "Writes to",
-              "destinationId" : "142",
-              "id" : "143",
-              "linkedRelationshipId" : "80",
-              "sourceId" : "130"
-            }, {
-              "description" : "Makes calls to read data",
-              "destinationId" : "153",
-              "id" : "154",
-              "linkedRelationshipId" : "76",
-              "sourceId" : "130"
-            }, {
-              "description" : "Makes calls to read data",
-              "destinationId" : "155",
-              "id" : "156",
-              "linkedRelationshipId" : "68",
-              "sourceId" : "130"
+              "description" : "Reads from",
+              "destinationId" : "167",
+              "id" : "168",
+              "linkedRelationshipId" : "71",
+              "sourceId" : "151"
             } ],
             "tags" : "Container Instance"
           }, {
-            "containerId" : "20",
+            "containerId" : "15",
             "environment" : "Development",
-            "id" : "133",
+            "id" : "153",
+            "instanceId" : 1,
+            "properties" : {
+              "structurizr.dsl.identifier" : "devCarRegistrationInstance"
+            },
+            "relationships" : [ {
+              "description" : "Verifies user permissions with",
+              "destinationId" : "151",
+              "id" : "155",
+              "linkedRelationshipId" : "59",
+              "sourceId" : "153"
+            }, {
+              "description" : "Reads from and writes to",
+              "destinationId" : "164",
+              "id" : "165",
+              "linkedRelationshipId" : "81",
+              "sourceId" : "153"
+            }, {
+              "description" : "Makes calls to read car data",
+              "destinationId" : "183",
+              "id" : "184",
+              "linkedRelationshipId" : "76",
+              "sourceId" : "153"
+            } ],
+            "tags" : "Container Instance"
+          }, {
+            "containerId" : "21",
+            "environment" : "Development",
+            "id" : "156",
+            "instanceId" : 1,
+            "properties" : {
+              "structurizr.dsl.identifier" : "devTechRegistrationInstance"
+            },
+            "relationships" : [ {
+              "description" : "Verifies user permissions with",
+              "destinationId" : "151",
+              "id" : "158",
+              "linkedRelationshipId" : "63",
+              "sourceId" : "156"
+            }, {
+              "description" : "Reads from and writes to",
+              "destinationId" : "167",
+              "id" : "169",
+              "linkedRelationshipId" : "89",
+              "sourceId" : "156"
+            }, {
+              "description" : "Makes calls to read technician data",
+              "destinationId" : "181",
+              "id" : "182",
+              "linkedRelationshipId" : "85",
+              "sourceId" : "156"
+            } ],
+            "tags" : "Container Instance"
+          }, {
+            "containerId" : "26",
+            "environment" : "Development",
+            "id" : "159",
             "instanceId" : 1,
             "properties" : {
               "structurizr.dsl.identifier" : "devDataAnalyzerInstance"
             },
             "relationships" : [ {
-              "description" : "Reports measurements and warnings",
-              "destinationId" : "127",
-              "id" : "134",
-              "linkedRelationshipId" : "92",
-              "sourceId" : "133"
+              "description" : "Verifies user permissions with",
+              "destinationId" : "151",
+              "id" : "161",
+              "linkedRelationshipId" : "67",
+              "sourceId" : "159"
             }, {
-              "description" : "Loads sensor configuration",
-              "destinationId" : "130",
-              "id" : "136",
-              "linkedRelationshipId" : "60",
-              "sourceId" : "133"
+              "description" : "Reads sensor configurations from",
+              "destinationId" : "164",
+              "id" : "166",
+              "linkedRelationshipId" : "93",
+              "sourceId" : "159"
             }, {
-              "description" : "Retrieves measurements",
-              "destinationId" : "137",
-              "id" : "138",
-              "linkedRelationshipId" : "64",
-              "sourceId" : "133"
+              "description" : "Reads car telemetry measurements from",
+              "destinationId" : "171",
+              "id" : "172",
+              "linkedRelationshipId" : "95",
+              "sourceId" : "159"
+            }, {
+              "description" : "Reads track measurements from and stores track conditions in",
+              "destinationId" : "174",
+              "id" : "175",
+              "linkedRelationshipId" : "97",
+              "sourceId" : "159"
             } ],
             "tags" : "Container Instance"
           }, {
-            "containerId" : "25",
+            "containerId" : "30",
             "environment" : "Development",
-            "id" : "137",
+            "id" : "162",
             "instanceId" : 1,
             "properties" : {
               "structurizr.dsl.identifier" : "devTelemetryCapturerInstance"
             },
             "relationships" : [ {
               "description" : "Stores car telemetry data",
-              "destinationId" : "145",
-              "id" : "146",
-              "linkedRelationshipId" : "87",
-              "sourceId" : "137"
+              "destinationId" : "171",
+              "id" : "173",
+              "linkedRelationshipId" : "104",
+              "sourceId" : "162"
             }, {
               "description" : "Stores track telemetry data",
-              "destinationId" : "147",
-              "id" : "148",
-              "linkedRelationshipId" : "89",
-              "sourceId" : "137"
+              "destinationId" : "174",
+              "id" : "176",
+              "linkedRelationshipId" : "106",
+              "sourceId" : "162"
             } ],
             "tags" : "Container Instance"
           } ],
           "description" : "IDE",
           "environment" : "Development",
-          "id" : "129",
+          "id" : "150",
           "instances" : "1",
           "name" : "Local Java Runtime",
           "properties" : {
-            "structurizr.dsl.identifier" : "9efab42f-32b1-4ebf-a0de-c00a7adfdae8"
+            "structurizr.dsl.identifier" : "2d5d0b86-06d5-47d8-aeba-923036eb32bb"
           },
           "tags" : "Element,Deployment Node"
         }, {
           "containerInstances" : [ {
-            "containerId" : "30",
+            "containerId" : "34",
             "environment" : "Development",
-            "id" : "140",
+            "id" : "164",
             "instanceId" : 1,
             "properties" : {
               "structurizr.dsl.identifier" : "devCarDbInstance"
             },
             "tags" : "Container Instance"
           }, {
-            "containerId" : "31",
+            "containerId" : "35",
             "environment" : "Development",
-            "id" : "142",
+            "id" : "167",
             "instanceId" : 1,
             "properties" : {
-              "structurizr.dsl.identifier" : "devTechDbInstance"
+              "structurizr.dsl.identifier" : "devUserDbInstance"
             },
             "tags" : "Container Instance"
           } ],
           "description" : "Local relational DB container",
           "environment" : "Development",
-          "id" : "139",
+          "id" : "163",
           "instances" : "1",
           "name" : "Relational DB server",
           "properties" : {
-            "structurizr.dsl.identifier" : "c843d126-38e6-428f-8c54-911420fa449b"
+            "structurizr.dsl.identifier" : "2aeabb47-dff8-4f0b-8b7d-b1beaf539354"
           },
           "tags" : "Element,Deployment Node",
           "technology" : "PostgreSQL 18.7"
         }, {
           "containerInstances" : [ {
-            "containerId" : "32",
+            "containerId" : "36",
             "environment" : "Development",
-            "id" : "145",
+            "id" : "171",
             "instanceId" : 1,
             "properties" : {
               "structurizr.dsl.identifier" : "devTelemetryCarDbInstance"
             },
             "tags" : "Container Instance"
           }, {
-            "containerId" : "33",
+            "containerId" : "37",
             "environment" : "Development",
-            "id" : "147",
+            "id" : "174",
             "instanceId" : 1,
             "properties" : {
               "structurizr.dsl.identifier" : "devTelemetryTrackDbInstance"
@@ -464,36 +564,36 @@
           } ],
           "description" : "Local time-series DB container",
           "environment" : "Development",
-          "id" : "144",
+          "id" : "170",
           "instances" : "1",
           "name" : "Time-Series DB server",
           "properties" : {
-            "structurizr.dsl.identifier" : "522a46e7-f049-4790-9cf9-0bb04bc53fee"
+            "structurizr.dsl.identifier" : "406b82c1-7dd2-4280-ac53-fc61d5110a42"
           },
           "tags" : "Element,Deployment Node",
           "technology" : "InfluxDB 3.12.2"
         }, {
           "description" : "Simulates race telemetry data",
           "environment" : "Development",
-          "id" : "149",
+          "id" : "177",
           "instances" : "1",
-          "name" : "Telemetry simualator",
+          "name" : "Telemetry simulator",
           "properties" : {
-            "structurizr.dsl.identifier" : "2ab282e7-2c8c-4109-9504-f0e5600a79e5"
+            "structurizr.dsl.identifier" : "107e6e70-b6e0-474f-a36f-3347bd1bf7bc"
           },
           "softwareSystemInstances" : [ {
             "environment" : "Development",
-            "id" : "150",
+            "id" : "178",
             "instanceId" : 1,
             "properties" : {
               "structurizr.dsl.identifier" : "devTelemetryGatewayInstance"
             },
             "relationships" : [ {
               "description" : "Sends new measurements",
-              "destinationId" : "137",
-              "id" : "151",
-              "linkedRelationshipId" : "82",
-              "sourceId" : "150"
+              "destinationId" : "162",
+              "id" : "179",
+              "linkedRelationshipId" : "99",
+              "sourceId" : "178"
             } ],
             "softwareSystemId" : "8",
             "tags" : "Software System Instance"
@@ -502,36 +602,36 @@
           "technology" : "Python Telemetry Simulator"
         } ],
         "environment" : "Development",
-        "id" : "128",
+        "id" : "149",
         "instances" : "1",
         "name" : "Docker Desktop",
         "properties" : {
-          "structurizr.dsl.identifier" : "bcc8e5b4-36a8-4496-9c02-d581195f81a3"
+          "structurizr.dsl.identifier" : "49bb4e41-af52-4151-a8e0-43eacec0306d"
         },
         "tags" : "Element,Deployment Node",
         "technology" : "Docker Engine"
       } ],
       "description" : "Local development machine",
       "environment" : "Development",
-      "id" : "125",
+      "id" : "146",
       "instances" : "1",
       "name" : "Developer Workstation",
       "properties" : {
-        "structurizr.dsl.identifier" : "7b1e49d8-c055-4ee7-9143-bbf7aaf99bbd"
+        "structurizr.dsl.identifier" : "a6c7a802-3c19-4249-8db1-27325933f2b2"
       },
       "tags" : "Element,Deployment Node",
       "technology" : "Windows 11 / macOS / Linux"
     }, {
       "environment" : "Development",
-      "id" : "152",
+      "id" : "180",
       "instances" : "1",
       "name" : "External IoT Network",
       "properties" : {
-        "structurizr.dsl.identifier" : "1d418eaa-93c9-453e-a822-d18501156d6b"
+        "structurizr.dsl.identifier" : "01321e22-4237-47c6-9b4c-54645133609b"
       },
       "softwareSystemInstances" : [ {
         "environment" : "Development",
-        "id" : "153",
+        "id" : "181",
         "instanceId" : 1,
         "properties" : {
           "structurizr.dsl.identifier" : "devGovSystemInstance"
@@ -540,7 +640,7 @@
         "tags" : "Software System Instance"
       }, {
         "environment" : "Development",
-        "id" : "155",
+        "id" : "183",
         "instanceId" : 1,
         "properties" : {
           "structurizr.dsl.identifier" : "devManufacturerSystemInstance"
@@ -551,7 +651,7 @@
       "tags" : "Element,Deployment Node"
     } ],
     "people" : [ {
-      "description" : "Registers cars and technicians, manage the race",
+      "description" : "Registers cars and technicians, manages the race",
       "id" : "1",
       "name" : "Race manager",
       "properties" : {
@@ -560,19 +660,19 @@
       "relationships" : [ {
         "description" : "Uses",
         "destinationId" : "10",
-        "id" : "34",
+        "id" : "38",
         "sourceId" : "1",
         "tags" : "Relationship"
       }, {
         "description" : "Uses",
         "destinationId" : "9",
-        "id" : "35",
-        "linkedRelationshipId" : "34",
+        "id" : "39",
+        "linkedRelationshipId" : "38",
         "sourceId" : "1"
       } ],
       "tags" : "Element,Person"
     }, {
-      "description" : "Monitors realtime data to prepare for pitstops",
+      "description" : "Monitors real-time car telemetry to prepare for pitstops",
       "id" : "2",
       "name" : "Maintenance technician",
       "properties" : {
@@ -581,19 +681,19 @@
       "relationships" : [ {
         "description" : "Uses",
         "destinationId" : "10",
-        "id" : "36",
+        "id" : "40",
         "sourceId" : "2",
         "tags" : "Relationship"
       }, {
         "description" : "Uses",
         "destinationId" : "9",
-        "id" : "37",
-        "linkedRelationshipId" : "36",
+        "id" : "41",
+        "linkedRelationshipId" : "40",
         "sourceId" : "2"
       } ],
       "tags" : "Element,Person"
     }, {
-      "description" : "Monitors track condition",
+      "description" : "Monitors track telemetry and states track condition",
       "id" : "3",
       "name" : "Track technician",
       "properties" : {
@@ -602,14 +702,14 @@
       "relationships" : [ {
         "description" : "Uses",
         "destinationId" : "10",
-        "id" : "38",
+        "id" : "42",
         "sourceId" : "3",
         "tags" : "Relationship"
       }, {
         "description" : "Uses",
         "destinationId" : "9",
-        "id" : "39",
-        "linkedRelationshipId" : "38",
+        "id" : "43",
+        "linkedRelationshipId" : "42",
         "sourceId" : "3"
       } ],
       "tags" : "Element,Person"
@@ -621,16 +721,16 @@
         "structurizr.dsl.identifier" : "driver"
       },
       "relationships" : [ {
-        "description" : "Views realtime data",
+        "description" : "Views real-time data",
         "destinationId" : "10",
-        "id" : "40",
+        "id" : "44",
         "sourceId" : "4",
         "tags" : "Relationship"
       }, {
-        "description" : "Views realtime data",
+        "description" : "Views real-time data",
         "destinationId" : "9",
-        "id" : "41",
-        "linkedRelationshipId" : "40",
+        "id" : "45",
+        "linkedRelationshipId" : "44",
         "sourceId" : "4"
       } ],
       "tags" : "Element,Person"
@@ -644,14 +744,14 @@
       "relationships" : [ {
         "description" : "Views race results",
         "destinationId" : "10",
-        "id" : "42",
+        "id" : "46",
         "sourceId" : "5",
         "tags" : "Relationship"
       }, {
         "description" : "Views race results",
         "destinationId" : "9",
-        "id" : "43",
-        "linkedRelationshipId" : "42",
+        "id" : "47",
+        "linkedRelationshipId" : "46",
         "sourceId" : "5"
       } ],
       "tags" : "Element,Person"
@@ -684,27 +784,27 @@
       },
       "relationships" : [ {
         "description" : "Sends new measurements",
-        "destinationId" : "26",
-        "id" : "81",
+        "destinationId" : "31",
+        "id" : "98",
         "sourceId" : "8",
         "tags" : "Relationship"
       }, {
         "description" : "Sends new measurements",
-        "destinationId" : "25",
-        "id" : "82",
-        "linkedRelationshipId" : "81",
+        "destinationId" : "30",
+        "id" : "99",
+        "linkedRelationshipId" : "98",
         "sourceId" : "8"
       }, {
         "description" : "Sends new measurements",
         "destinationId" : "9",
-        "id" : "83",
-        "linkedRelationshipId" : "81",
+        "id" : "100",
+        "linkedRelationshipId" : "98",
         "sourceId" : "8"
       } ],
       "tags" : "Element,Software System,External"
     }, {
       "containers" : [ {
-        "description" : "Dashboards for managers and technicians",
+        "description" : "Dashboards and forms for managers and technicians",
         "documentation" : { },
         "id" : "10",
         "name" : "Web Application",
@@ -712,165 +812,173 @@
           "structurizr.dsl.identifier" : "webApp"
         },
         "relationships" : [ {
-          "description" : "Requests access",
+          "description" : "Authenticates users with",
           "destinationId" : "12",
-          "id" : "44",
+          "id" : "48",
           "sourceId" : "10",
           "tags" : "Relationship"
         }, {
-          "description" : "Requests access",
+          "description" : "Authenticates users with",
           "destinationId" : "11",
-          "id" : "45",
-          "linkedRelationshipId" : "44",
+          "id" : "49",
+          "linkedRelationshipId" : "48",
           "sourceId" : "10"
         }, {
-          "description" : "Requests access",
-          "destinationId" : "21",
+          "description" : "Sends car and sensor registration requests to",
+          "destinationId" : "16",
           "id" : "50",
           "sourceId" : "10",
           "tags" : "Relationship"
         }, {
-          "description" : "Requests access",
-          "destinationId" : "20",
+          "description" : "Sends car and sensor registration requests to",
+          "destinationId" : "15",
           "id" : "51",
           "linkedRelationshipId" : "50",
+          "sourceId" : "10"
+        }, {
+          "description" : "Sends technician registration and CV requests to",
+          "destinationId" : "22",
+          "id" : "52",
+          "sourceId" : "10",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Sends technician registration and CV requests to",
+          "destinationId" : "21",
+          "id" : "53",
+          "linkedRelationshipId" : "52",
+          "sourceId" : "10"
+        }, {
+          "description" : "Requests telemetry analysis and submits track conditions",
+          "destinationId" : "27",
+          "id" : "54",
+          "sourceId" : "10",
+          "tags" : "Relationship"
+        }, {
+          "description" : "Requests telemetry analysis and submits track conditions",
+          "destinationId" : "26",
+          "id" : "55",
+          "linkedRelationshipId" : "54",
           "sourceId" : "10"
         } ],
         "tags" : "Element,Container,WebBrowserTag",
         "technology" : "React"
       }, {
         "components" : [ {
-          "description" : "Checks permissions",
+          "description" : "Exposes authentication and permission verification endpoints",
           "documentation" : { },
           "id" : "12",
-          "name" : "Access Control",
+          "name" : "Identity API",
           "properties" : {
-            "structurizr.dsl.identifier" : "accessControl"
+            "structurizr.dsl.identifier" : "authApi"
           },
           "relationships" : [ {
-            "description" : "Registers car",
+            "description" : "Delegates verification to",
             "destinationId" : "13",
-            "id" : "52",
-            "sourceId" : "12",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Manages sensors",
-            "destinationId" : "16",
-            "id" : "53",
-            "sourceId" : "12",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Registers technician",
-            "destinationId" : "17",
-            "id" : "54",
+            "id" : "68",
             "sourceId" : "12",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
-          "description" : "Validates car IDs",
+          "description" : "Verifies user identity, tokens, and access permissions",
           "documentation" : { },
           "id" : "13",
-          "name" : "Car data validation",
+          "name" : "Auth & Permission Service",
           "properties" : {
-            "structurizr.dsl.identifier" : "carValidator"
+            "structurizr.dsl.identifier" : "authService"
           },
           "relationships" : [ {
-            "description" : "Sends messages to",
-            "destinationId" : "10",
-            "id" : "46",
-            "sourceId" : "13",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Gets data from",
+            "description" : "Loads user credentials and roles from",
             "destinationId" : "14",
-            "id" : "66",
-            "sourceId" : "13",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Sends data to",
-            "destinationId" : "15",
-            "id" : "70",
+            "id" : "69",
             "sourceId" : "13",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
-          "description" : "Connects to manufacturer",
+          "description" : "Reads user credentials, roles, and permissions",
           "documentation" : { },
           "id" : "14",
-          "name" : "External car data provider",
+          "name" : "User Auth Repository",
           "properties" : {
-            "structurizr.dsl.identifier" : "carProvider"
+            "structurizr.dsl.identifier" : "userAuthRepo"
           },
           "relationships" : [ {
-            "description" : "Makes calls to read data",
-            "destinationId" : "6",
-            "id" : "67",
+            "description" : "Reads from",
+            "destinationId" : "35",
+            "id" : "70",
             "sourceId" : "14",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
-        }, {
-          "description" : "Persists car and sensor data",
-          "documentation" : { },
-          "id" : "15",
-          "name" : "Car and sensor repository",
-          "properties" : {
-            "structurizr.dsl.identifier" : "carRepo"
-          },
-          "relationships" : [ {
-            "description" : "Writes to",
-            "destinationId" : "30",
-            "id" : "72",
-            "sourceId" : "15",
-            "tags" : "Relationship"
-          } ],
-          "tags" : "Element,Component"
-        }, {
-          "description" : "Manages sensor settings",
+        } ],
+        "description" : "Authenticates users and verifies role-based permissions",
+        "documentation" : { },
+        "id" : "11",
+        "name" : "Identity Provider",
+        "properties" : {
+          "structurizr.dsl.identifier" : "identityProvider"
+        },
+        "relationships" : [ {
+          "description" : "Reads from",
+          "destinationId" : "35",
+          "id" : "71",
+          "linkedRelationshipId" : "70",
+          "sourceId" : "11"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Java"
+      }, {
+        "components" : [ {
+          "description" : "Handles car registration and sensor configuration requests; verifies permissions via Identity Provider",
           "documentation" : { },
           "id" : "16",
-          "name" : "Sensor Configuration Manager",
+          "name" : "Car & Sensor API",
           "properties" : {
-            "structurizr.dsl.identifier" : "sensorManager"
+            "structurizr.dsl.identifier" : "carApi"
           },
           "relationships" : [ {
-            "description" : "Sends messages to",
-            "destinationId" : "10",
-            "id" : "49",
+            "description" : "Verifies user permissions with",
+            "destinationId" : "12",
+            "id" : "56",
             "sourceId" : "16",
             "tags" : "Relationship"
           }, {
-            "description" : "Updates sensor config",
-            "destinationId" : "15",
-            "id" : "71",
+            "description" : "Verifies user permissions with",
+            "destinationId" : "11",
+            "id" : "57",
+            "linkedRelationshipId" : "56",
+            "sourceId" : "16"
+          }, {
+            "description" : "Forwards car registration requests to",
+            "destinationId" : "17",
+            "id" : "72",
+            "sourceId" : "16",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Forwards sensor configuration requests to",
+            "destinationId" : "20",
+            "id" : "73",
             "sourceId" : "16",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
-          "description" : "Validates technician IDs, extracts CV data using OCR and LLM",
+          "description" : "Validates car IDs and cleans downloaded manufacturer data",
           "documentation" : { },
           "id" : "17",
-          "name" : "Tech. data validation",
+          "name" : "Car Data Validator",
           "properties" : {
-            "structurizr.dsl.identifier" : "techValidator"
+            "structurizr.dsl.identifier" : "carValidator"
           },
           "relationships" : [ {
-            "description" : "Sends messages to",
-            "destinationId" : "10",
-            "id" : "48",
-            "sourceId" : "17",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Gets data from",
+            "description" : "Gets car data from",
             "destinationId" : "18",
             "id" : "74",
             "sourceId" : "17",
             "tags" : "Relationship"
           }, {
-            "description" : "Sends data to",
+            "description" : "Checks IDs and stores car data via",
             "destinationId" : "19",
             "id" : "78",
             "sourceId" : "17",
@@ -878,305 +986,402 @@
           } ],
           "tags" : "Element,Component"
         }, {
-          "description" : "Connects to government registry",
+          "description" : "Connects to the manufacturer system to download car data",
           "documentation" : { },
           "id" : "18",
-          "name" : "External Tech. data provider",
+          "name" : "External Car Data Provider",
           "properties" : {
-            "structurizr.dsl.identifier" : "techProvider"
+            "structurizr.dsl.identifier" : "carProvider"
           },
           "relationships" : [ {
-            "description" : "Makes calls to read data",
-            "destinationId" : "7",
+            "description" : "Makes calls to read car data",
+            "destinationId" : "6",
             "id" : "75",
             "sourceId" : "18",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
-          "description" : "Persists technician data",
+          "description" : "Persists and queries car and sensor data",
           "documentation" : { },
           "id" : "19",
-          "name" : "Tech. Repository",
+          "name" : "Car and Sensor Repository",
           "properties" : {
-            "structurizr.dsl.identifier" : "techRepo"
+            "structurizr.dsl.identifier" : "carRepo"
           },
           "relationships" : [ {
-            "description" : "Writes to",
-            "destinationId" : "31",
-            "id" : "79",
+            "description" : "Reads from and writes to",
+            "destinationId" : "34",
+            "id" : "80",
             "sourceId" : "19",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
+        }, {
+          "description" : "Manages sensor settings for registered cars",
+          "documentation" : { },
+          "id" : "20",
+          "name" : "Sensor Configuration Manager",
+          "properties" : {
+            "structurizr.dsl.identifier" : "sensorManager"
+          },
+          "relationships" : [ {
+            "description" : "Updates sensor configuration via",
+            "destinationId" : "19",
+            "id" : "79",
+            "sourceId" : "20",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
         } ],
-        "description" : "Validates data and stores them",
+        "description" : "Manages registration of race cars and sensor configurations",
         "documentation" : { },
-        "id" : "11",
-        "name" : "Administration Application",
+        "id" : "15",
+        "name" : "Car and Sensor Registration",
         "properties" : {
-          "structurizr.dsl.identifier" : "administrationApp"
+          "structurizr.dsl.identifier" : "carRegistration"
         },
         "relationships" : [ {
-          "description" : "Sends messages to",
-          "destinationId" : "10",
-          "id" : "47",
-          "linkedRelationshipId" : "46",
-          "sourceId" : "11"
+          "description" : "Verifies user permissions with",
+          "destinationId" : "12",
+          "id" : "58",
+          "linkedRelationshipId" : "56",
+          "sourceId" : "15"
         }, {
-          "description" : "Makes calls to read data",
+          "description" : "Verifies user permissions with",
+          "destinationId" : "11",
+          "id" : "59",
+          "linkedRelationshipId" : "56",
+          "sourceId" : "15"
+        }, {
+          "description" : "Makes calls to read car data",
           "destinationId" : "6",
-          "id" : "68",
-          "linkedRelationshipId" : "67",
-          "sourceId" : "11"
-        }, {
-          "description" : "Writes to",
-          "destinationId" : "30",
-          "id" : "73",
-          "linkedRelationshipId" : "72",
-          "sourceId" : "11"
-        }, {
-          "description" : "Makes calls to read data",
-          "destinationId" : "7",
           "id" : "76",
           "linkedRelationshipId" : "75",
-          "sourceId" : "11"
+          "sourceId" : "15"
         }, {
-          "description" : "Writes to",
-          "destinationId" : "31",
-          "id" : "80",
-          "linkedRelationshipId" : "79",
-          "sourceId" : "11"
+          "description" : "Reads from and writes to",
+          "destinationId" : "34",
+          "id" : "81",
+          "linkedRelationshipId" : "80",
+          "sourceId" : "15"
         } ],
         "tags" : "Element,Container",
         "technology" : "Java"
       }, {
         "components" : [ {
-          "description" : "Checks permissions",
-          "documentation" : { },
-          "id" : "21",
-          "name" : "Access Controll",
-          "properties" : {
-            "structurizr.dsl.identifier" : "analyzerAccessControl"
-          },
-          "relationships" : [ {
-            "description" : "Allows telemetry view",
-            "destinationId" : "22",
-            "id" : "55",
-            "sourceId" : "21",
-            "tags" : "Relationship"
-          } ],
-          "tags" : "Element,Component"
-        }, {
-          "description" : "Compares data with limits",
+          "description" : "Handles technician registration and CV uploads; verifies permissions via Identity Provider",
           "documentation" : { },
           "id" : "22",
-          "name" : "Maintenance Data Analyzer",
+          "name" : "Technician API",
           "properties" : {
-            "structurizr.dsl.identifier" : "maintenanceAnalyzer"
+            "structurizr.dsl.identifier" : "techApi"
           },
           "relationships" : [ {
-            "description" : "Sends results to",
-            "destinationId" : "24",
-            "id" : "56",
+            "description" : "Verifies user permissions with",
+            "destinationId" : "12",
+            "id" : "60",
+            "sourceId" : "22",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Verifies user permissions with",
+            "destinationId" : "11",
+            "id" : "61",
+            "linkedRelationshipId" : "60",
+            "sourceId" : "22"
+          }, {
+            "description" : "Forwards technician registration and CV requests to",
+            "destinationId" : "23",
+            "id" : "82",
             "sourceId" : "22",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
-          "description" : "Loads needed data from telemetry measurements and car/sensor repository",
+          "description" : "Validates technician IDs and extracts CV data using OCR and LLM",
           "documentation" : { },
           "id" : "23",
-          "name" : "Loader",
+          "name" : "Technician Data Validator",
           "properties" : {
-            "structurizr.dsl.identifier" : "dataLoader"
+            "structurizr.dsl.identifier" : "techValidator"
           },
           "relationships" : [ {
-            "description" : "Loads sensor configuration",
-            "destinationId" : "15",
-            "id" : "57",
+            "description" : "Gets government data from",
+            "destinationId" : "24",
+            "id" : "83",
             "sourceId" : "23",
             "tags" : "Relationship"
           }, {
-            "description" : "Loads sensor configuration",
-            "destinationId" : "11",
-            "id" : "58",
-            "linkedRelationshipId" : "57",
-            "sourceId" : "23"
-          }, {
-            "description" : "Retrieves measurements",
-            "destinationId" : "28",
-            "id" : "61",
-            "sourceId" : "23",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Retrieves measurements",
+            "description" : "Checks IDs and stores technician data via",
             "destinationId" : "25",
-            "id" : "62",
-            "linkedRelationshipId" : "61",
-            "sourceId" : "23"
-          }, {
-            "description" : "Provides data to",
-            "destinationId" : "22",
-            "id" : "65",
+            "id" : "87",
             "sourceId" : "23",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
-          "description" : "Reports results of analysis to",
+          "description" : "Connects to the government registry API",
           "documentation" : { },
           "id" : "24",
-          "name" : "Result Reporter",
+          "name" : "External Technician Data Provider",
           "properties" : {
-            "structurizr.dsl.identifier" : "resultReporter"
+            "structurizr.dsl.identifier" : "techProvider"
           },
           "relationships" : [ {
-            "description" : "Reports measurements and warnings",
-            "destinationId" : "10",
-            "id" : "91",
+            "description" : "Makes calls to read technician data",
+            "destinationId" : "7",
+            "id" : "84",
             "sourceId" : "24",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
+        }, {
+          "description" : "Persists technician profiles, specializations, groups, and roles",
+          "documentation" : { },
+          "id" : "25",
+          "name" : "Technician Repository",
+          "properties" : {
+            "structurizr.dsl.identifier" : "techRepo"
+          },
+          "relationships" : [ {
+            "description" : "Reads from and writes to",
+            "destinationId" : "35",
+            "id" : "88",
+            "sourceId" : "25",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
         } ],
-        "description" : "Loads and analyzes data",
+        "description" : "Manages registration of technicians, CV extraction, groups, and roles",
         "documentation" : { },
-        "id" : "20",
-        "name" : "Maintenance Data Analyzer",
+        "id" : "21",
+        "name" : "Technician Registration",
         "properties" : {
-          "structurizr.dsl.identifier" : "dataAnalyzer"
+          "structurizr.dsl.identifier" : "techRegistration"
         },
         "relationships" : [ {
-          "description" : "Loads sensor configuration",
-          "destinationId" : "15",
-          "id" : "59",
-          "linkedRelationshipId" : "57",
-          "sourceId" : "20"
+          "description" : "Verifies user permissions with",
+          "destinationId" : "12",
+          "id" : "62",
+          "linkedRelationshipId" : "60",
+          "sourceId" : "21"
         }, {
-          "description" : "Loads sensor configuration",
+          "description" : "Verifies user permissions with",
           "destinationId" : "11",
-          "id" : "60",
-          "linkedRelationshipId" : "57",
-          "sourceId" : "20"
-        }, {
-          "description" : "Retrieves measurements",
-          "destinationId" : "28",
           "id" : "63",
-          "linkedRelationshipId" : "61",
-          "sourceId" : "20"
+          "linkedRelationshipId" : "60",
+          "sourceId" : "21"
         }, {
-          "description" : "Retrieves measurements",
-          "destinationId" : "25",
-          "id" : "64",
-          "linkedRelationshipId" : "61",
-          "sourceId" : "20"
+          "description" : "Makes calls to read technician data",
+          "destinationId" : "7",
+          "id" : "85",
+          "linkedRelationshipId" : "84",
+          "sourceId" : "21"
         }, {
-          "description" : "Reports measurements and warnings",
-          "destinationId" : "10",
-          "id" : "92",
-          "linkedRelationshipId" : "91",
-          "sourceId" : "20"
+          "description" : "Reads from and writes to",
+          "destinationId" : "35",
+          "id" : "89",
+          "linkedRelationshipId" : "88",
+          "sourceId" : "21"
         } ],
         "tags" : "Element,Container",
         "technology" : "Java"
       }, {
         "components" : [ {
-          "description" : "Receives measurements",
+          "description" : "External entry point; verifies permissions via Identity Provider and routes requests by domain (track, engine, tires, etc.)",
           "documentation" : { },
-          "id" : "26",
+          "id" : "27",
+          "name" : "Analyzer API / Facade",
+          "properties" : {
+            "structurizr.dsl.identifier" : "analyzerApi"
+          },
+          "relationships" : [ {
+            "description" : "Verifies user permissions with",
+            "destinationId" : "12",
+            "id" : "64",
+            "sourceId" : "27",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Verifies user permissions with",
+            "destinationId" : "11",
+            "id" : "65",
+            "linkedRelationshipId" : "64",
+            "sourceId" : "27"
+          }, {
+            "description" : "Routes domain-specific requests (track, engine, tires) to",
+            "destinationId" : "28",
+            "id" : "90",
+            "sourceId" : "27",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Compares telemetry data with configured limits and processes track conditions",
+          "documentation" : { },
+          "id" : "28",
+          "name" : "Maintenance Data Analyzer",
+          "properties" : {
+            "structurizr.dsl.identifier" : "maintenanceAnalyzer"
+          },
+          "relationships" : [ {
+            "description" : "Requests data from and saves track conditions via",
+            "destinationId" : "29",
+            "id" : "91",
+            "sourceId" : "28",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        }, {
+          "description" : "Loads telemetry measurements and sensor configurations directly from databases",
+          "documentation" : { },
+          "id" : "29",
+          "name" : "Loader",
+          "properties" : {
+            "structurizr.dsl.identifier" : "dataLoader"
+          },
+          "relationships" : [ {
+            "description" : "Reads sensor configurations from",
+            "destinationId" : "34",
+            "id" : "92",
+            "sourceId" : "29",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Reads car telemetry measurements from",
+            "destinationId" : "36",
+            "id" : "94",
+            "sourceId" : "29",
+            "tags" : "Relationship"
+          }, {
+            "description" : "Reads track measurements from and stores track conditions in",
+            "destinationId" : "37",
+            "id" : "96",
+            "sourceId" : "29",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Analyzes car and track telemetry data against configured limits",
+        "documentation" : { },
+        "id" : "26",
+        "name" : "Maintenance Data Analyzer",
+        "properties" : {
+          "structurizr.dsl.identifier" : "dataAnalyzer"
+        },
+        "relationships" : [ {
+          "description" : "Verifies user permissions with",
+          "destinationId" : "12",
+          "id" : "66",
+          "linkedRelationshipId" : "64",
+          "sourceId" : "26"
+        }, {
+          "description" : "Verifies user permissions with",
+          "destinationId" : "11",
+          "id" : "67",
+          "linkedRelationshipId" : "64",
+          "sourceId" : "26"
+        }, {
+          "description" : "Reads sensor configurations from",
+          "destinationId" : "34",
+          "id" : "93",
+          "linkedRelationshipId" : "92",
+          "sourceId" : "26"
+        }, {
+          "description" : "Reads car telemetry measurements from",
+          "destinationId" : "36",
+          "id" : "95",
+          "linkedRelationshipId" : "94",
+          "sourceId" : "26"
+        }, {
+          "description" : "Reads track measurements from and stores track conditions in",
+          "destinationId" : "37",
+          "id" : "97",
+          "linkedRelationshipId" : "96",
+          "sourceId" : "26"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Java"
+      }, {
+        "components" : [ {
+          "description" : "Receives incoming telemetry streams",
+          "documentation" : { },
+          "id" : "31",
           "name" : "Telemetry Collector",
           "properties" : {
             "structurizr.dsl.identifier" : "telemetryCollector"
           },
           "relationships" : [ {
             "description" : "Sends measurements to",
-            "destinationId" : "27",
-            "id" : "84",
-            "sourceId" : "26",
+            "destinationId" : "32",
+            "id" : "101",
+            "sourceId" : "31",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
-          "description" : "Checks data validity",
+          "description" : "Checks measurement validity and recency",
           "documentation" : { },
-          "id" : "27",
+          "id" : "32",
           "name" : "Telemetry Validator",
           "properties" : {
             "structurizr.dsl.identifier" : "telemetryValidator"
           },
           "relationships" : [ {
             "description" : "Sends validated measurements to",
-            "destinationId" : "28",
-            "id" : "85",
-            "sourceId" : "27",
+            "destinationId" : "33",
+            "id" : "102",
+            "sourceId" : "32",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
         }, {
-          "description" : "Stores measured data to database",
+          "description" : "Stores validated telemetry measurements to time-series databases",
           "documentation" : { },
-          "id" : "28",
+          "id" : "33",
           "name" : "Telemetry Repository",
           "properties" : {
             "structurizr.dsl.identifier" : "telemetryRepository"
           },
           "relationships" : [ {
             "description" : "Stores car telemetry data",
-            "destinationId" : "32",
-            "id" : "86",
-            "sourceId" : "28",
+            "destinationId" : "36",
+            "id" : "103",
+            "sourceId" : "33",
             "tags" : "Relationship"
           }, {
             "description" : "Stores track telemetry data",
-            "destinationId" : "33",
-            "id" : "88",
-            "sourceId" : "28",
-            "tags" : "Relationship"
-          }, {
-            "description" : "Stores newest telemetry data",
-            "destinationId" : "29",
-            "id" : "90",
-            "sourceId" : "28",
+            "destinationId" : "37",
+            "id" : "105",
+            "sourceId" : "33",
             "tags" : "Relationship"
           } ],
           "tags" : "Element,Component"
-        }, {
-          "description" : "Stores newest telemetry data for quicker access for analyzer",
-          "documentation" : { },
-          "id" : "29",
-          "name" : "Cache",
-          "properties" : {
-            "structurizr.dsl.identifier" : "telemetryCache"
-          },
-          "tags" : "Element,Component"
         } ],
-        "description" : "Collects real-time data from sensors",
+        "description" : "Collects, validates, and stores real-time data from sensors",
         "documentation" : { },
-        "id" : "25",
+        "id" : "30",
         "name" : "Telemetry Data Capturer",
         "properties" : {
           "structurizr.dsl.identifier" : "telemetryCapturer"
         },
         "relationships" : [ {
           "description" : "Stores car telemetry data",
-          "destinationId" : "32",
-          "id" : "87",
-          "linkedRelationshipId" : "86",
-          "sourceId" : "25"
+          "destinationId" : "36",
+          "id" : "104",
+          "linkedRelationshipId" : "103",
+          "sourceId" : "30"
         }, {
           "description" : "Stores track telemetry data",
-          "destinationId" : "33",
-          "id" : "89",
-          "linkedRelationshipId" : "88",
-          "sourceId" : "25"
+          "destinationId" : "37",
+          "id" : "106",
+          "linkedRelationshipId" : "105",
+          "sourceId" : "30"
         } ],
         "tags" : "Element,Container",
         "technology" : "Java"
       }, {
-        "description" : "Stores car and sensor data",
+        "description" : "Stores registered cars and sensor configurations",
         "documentation" : { },
-        "id" : "30",
+        "id" : "34",
         "name" : "Car and sensor database",
         "properties" : {
           "structurizr.dsl.identifier" : "carDb"
@@ -1184,19 +1389,19 @@
         "tags" : "Element,Container,Database",
         "technology" : "PostgreSQL"
       }, {
-        "description" : "Stores technician data",
+        "description" : "Stores users (managers, technicians, drivers), credentials, roles, and specializations",
         "documentation" : { },
-        "id" : "31",
-        "name" : "Technician database",
+        "id" : "35",
+        "name" : "User database",
         "properties" : {
-          "structurizr.dsl.identifier" : "techDb"
+          "structurizr.dsl.identifier" : "userDb"
         },
         "tags" : "Element,Container,Database",
         "technology" : "PostgreSQL"
       }, {
-        "description" : "Stores time-series data",
+        "description" : "Stores car time-series telemetry data",
         "documentation" : { },
-        "id" : "32",
+        "id" : "36",
         "name" : "Telemetry Car database",
         "properties" : {
           "structurizr.dsl.identifier" : "telemetryCarDb"
@@ -1204,9 +1409,9 @@
         "tags" : "Element,Container,Database",
         "technology" : "InfluxDB"
       }, {
-        "description" : "Stores time-series data",
+        "description" : "Stores track time-series telemetry and track condition data",
         "documentation" : { },
-        "id" : "33",
+        "id" : "37",
         "name" : "Telemetry Track database",
         "properties" : {
           "structurizr.dsl.identifier" : "telemetryTrackDb"
@@ -1217,7 +1422,7 @@
       "description" : "Tracks cars and track conditions",
       "documentation" : {
         "sections" : [ {
-          "content" : "# Assignment of Responsibilities to Containers and Components\n\n## Context\n\nRCT Tracker continuously collects data from remote sensors placed on cars and around the track. These captured data are then processed to assess car status and conditions on the track. Real-time car and track status is available to authorized team members. To support this, the system also allows registering new cars, sensors and technicians.\n\n![](embed:SoftwareSystem)\n\nThis document maps the functional responsibilities identified in the feature analysis [feature.md](../../features.md) to specific **Level 2 Containers** and **Level 3 Components** of the **RCT Tracker** C4 architecture model.\n\n---\n\n## 1. Overview of Level 2 Containers\n\n| Container | Technology | High-Level Responsibility |\n| :--- | :--- | :--- |\n| **Web Application** (`webApp`) | React | Presentation layer; renders dashboards, forms, warnings, and handles user redirection. |\n| **Administration Application** (`administartionApp`) | Java | Business logic for registering and managing cars, sensors, and technicians. |\n| **Maintenance Data Analyzer** (`dataAnalyzer`) | Java | Business logic for loading telemetry and sensor configurations, evaluating limits, and reporting results/warnings. |\n| **Telemetry Data Capturer** (`telemetryCapturer`) | Java | Real-time ingestion, validation, caching, and persistence of car and track sensor measurements. |\n| **Car and sensor database** (`carDb`) | PostgreSQL | Persistent storage of registered cars and their sensor configurations. |\n| **Technician database** (`techDb`) | PostgreSQL | Persistent storage of technician profiles, specializations, groups, and roles. |\n| **Telemetry Car database** (`telemetryCarDb`) | InfluxDB | Time-series storage of real-time and historical car sensor measurements. |\n| **Telemetry Track database** (`telemetryTrackDb`) | InfluxDB | Time-series storage of real-time and historical track measurements. |\n\n---\n\n## 2. Detailed Responsibility Mapping by Feature\n\n### Feature 1: Register New Car (and Manage Sensors)\n\n* **Web Application (`webApp` – Container)**\n  * Serves the web application to the Race Manager.\n  * Displays the form for entering the unique manufacturer car identifier.\n  * Displays the form for adding and updating sensor configurations (monitored part, unit, frequency).\n  * Displays success confirmations or validation/processing error messages.\n  * Handles user redirection to the newly created car information page.\n* **Administration Application (`administartionApp` – Container)**\n  * **Access Control (`accessControl` – Component):** Verifies that the user (Race Manager) has permissions to register cars and manage sensors.\n  * **Car data validation (`carValidator` – Component):**\n    * Validates the format of the provided unique car identifier.\n    * Verifies (via `carRepo`) that the car ID does not already exist in the system.\n    * Cleans the raw car data downloaded from the manufacturer into the internal system format.\n  * **External car data provider (`carProvider` – Component):**\n    * Connects to the external manufacturer system (`manufacturerSystem`).\n    * Downloads basic car information (brand, model, motor info, weight) based on the unique identifier.\n  * **Sensor Configuration Manager (`sensorManager` – Component):**\n    * Validates and processes sensor settings (part, unit, frequency) linked to a specific car.\n  * **Car and sensor repository (`carRepo` – Component):**\n    * Persists the new car record into `carDb`.\n    * Persists and updates sensor configurations linked to the car in `carDb`.\n    * Queries `carDb` to check for existing car records and provides sensor configurations to the analyzer.\n\n---\n\n### Feature 2: Register New Technician\n\n* **Web Application (`webApp` – Container)**\n  * Serves the web application and displays the form for technician identification (ID, bank account).\n  * Provides a file picker for uploading the technician's CV.\n  * Displays extracted CV data for the Race Manager's review.\n  * Displays forms for assigning the technician to specialized groups and roles.\n  * Displays success confirmations or error messages.\n* **Administration Application (`administartionApp` – Container)**\n  * **Access Control (`accessControl` – Component):** Verifies that the Race Manager has permission to register technicians.\n  * **Tech. data validation (`techValidator` – Component):**\n    * Validates the provided technician identification.\n    * Verifies (via `techRepo`) that the technician does not already exist in the system.\n    * Cleans downloaded government registry data and extracted CV data into the internal format.\n  * **External Tech. data provider (`techProvider` – Component):**\n    * Connects to the external Government registry API (`govSystem`) and downloads personal information using the technician ID.\n    * *(Note: Also responsible for interfacing with OCR/LLM services to extract contact and specialization data from uploaded CVs).*\n  * **Tech. Repository (`techRepo` – Component):**\n    * Stores technician data (ID, personal data, CV data, specialization) into `techDb`.\n    * Stores technician group and role assignments into `techDb`.\n\n---\n\n### Feature 3 & 4: Real-Time Data for Maintenance Technician & Track Technician\n\n* **Web Application (`webApp` – Container)**\n  * Displays available races, cars, and basic track information.\n  * Displays real-time sensor measurements, units, timestamps, and weather/track data on the dashboard.\n  * Highlights warnings when values exceed configured limits and identifies the affected car part.\n  * Displays error messages when sensor or track data is missing or outdated.\n  * Provides a form for the Track Technician to state and submit the current track condition (e.g., dry, wet).\n* **Telemetry Data Capturer (`telemetryCapturer` – Container)**\n  * **Telemetry Collector (`telemetryCollector` – Component):**\n    * Receives incoming streams of real-time car and track measurements from the External Telemetry Gateway (`telemetryGateway`).\n  * **Telemetry Validator (`telemetryValidator` – Component):**\n    * Checks whether incoming measurements contain valid values and recent timestamps.\n    * Links measurements to the corresponding registered car, sensor, or track.\n  * **Telemetry Repository (`telemetryRepository` – Component):**\n    * Stores validated car telemetry data into `telemetryCarDb` and track telemetry data into `telemetryTrackDb`.\n    * Updates the in-memory `telemetryCache` with the newest measurements for low-latency retrieval.\n    * Retrieves the latest stored measurements for the analyzer.\n  * **Cache (`telemetryCache` – Component):**\n    * Holds the most recent telemetry measurements for fast access by `dataAnalyzer`.\n* **Maintenance Data Analyzer (`dataAnalyzer` – Container)**\n  * **Access Control (`analyzerAccessControl` – Component):**\n    * Checks if the Maintenance Technician or Track Technician has permission to view data for the selected race/car.\n  * **Loader (`dataLoader` – Component):**\n    * Loads registered sensors and their limits for the selected car from `carRepo`.\n    * Retrieves the latest car and track measurements from `telemetryRepository` (and `telemetryCache`).\n  * **Maintenance Data Analyzer (`maintenanceAnalyzer` – Component):**\n    * Filters measurements relevant to car maintenance and track condition assessment.\n    * Compares incoming measurements against configured sensor limits.\n    * Detects out-of-limit values, identifies the related car part, and flags missing or stale data.\n  * **Result Reporter (`resultReporter` – Component):**\n    * Sends processed measurements, limit warnings, and missing-data alerts back to `webApp`.",
+          "content" : "# Assignment of Responsibilities to Containers and Components\n\n## Context\n\nRCT Tracker continuously collects data from remote sensors placed on cars and around the track. These captured data are then processed to assess car status and conditions on the track. Real-time car and track status is available to authorized team members. To support this, the system also allows registering new cars, sensors and technicians.\n\n![](embed:SoftwareSystem)\n\nThis document maps the functional responsibilities identified in the feature analysis [feature.md](../../features.md) to specific **Level 2 Containers** and **Level 3 Components** of the **RCT Tracker** C4 architecture model.\n\n---\n\n## 1. Level 2 Architecture and Architectural Styles\n\n![](embed:Containers)\n\n### Applied Architectural Styles\n\n#### Level 2 (Container Level): Service-Based Architecture Style\nAt the container level, RCT Tracker follows the **Service-Based Architecture** style (a distributed architecture style). The backend is decomposed into five main services (`Identity Provider`, `Car and Sensor Registration`, `Technician Registration`, `Maintenance Data Analyzer`, and `Telemetry Data Capturer`) behind a single-page `Web Application` frontend.\n\n* **Why Service-Based instead of Monolithic:** Separating the system into independently deployable services allows isolating high-load parts of the system. Specifically, `Telemetry Data Capturer` can be deployed on a dedicated capture server to handle continuous real-time sensor streams without bigger delays.\nHowever, unlike strict microservices, our services share databases where it simplifies data access and avoids unnecessary network hops:\n  * `User database` (`userDb`) is shared between `Technician Registration` (writes technician accounts and roles) and `Identity Provider` (reads credentials and roles for verification).\n  * `Car and sensor database` (`carDb`) is shared between `Car and Sensor Registration` (writes car and sensor configurations) and `Maintenance Data Analyzer` (reads sensor limits).\n  * `Telemetry Car database` (`telemetryCarDb`) and `Telemetry Track database` (`telemetryTrackDb`) are shared between `Telemetry Data Capturer` (write-only) and `Maintenance Data Analyzer` (read-heavy analysis), separating write and read workloads.\n* **Centralized Authentication and Authorization:** Instead of duplicating access control logic inside every service, a dedicated `Identity Provider` container authenticates users from `Web Application` and verifies role-based permissions for all domain services.\n\n---\n\n## 2. Overview of Level 2 Containers\n\n| Container | Technology | High-Level Responsibility |\n| :--- | :--- | :--- |\n| **Web Application** (`webApp`) | React | Presentation layer; renders dashboards, forms, warnings, and handles user redirection. |\n| **Identity Provider** (`identityProvider`) | Java | Centralized authentication of users and verification of role-based permissions across all services. |\n| **Car and Sensor Registration** (`carRegistration`) | Java | Business logic for validating, registering, and managing race cars and their sensor configurations. |\n| **Technician Registration** (`techRegistration`) | Java | Business logic for registering technicians, extracting CV data (OCR/LLM), and assigning groups and roles. |\n| **Maintenance Data Analyzer** (`dataAnalyzer`) | Java | Routes domain-specific analysis requests, loads telemetry and sensor configurations directly from databases, evaluates limits, and returns results/warnings. |\n| **Telemetry Data Capturer** (`telemetryCapturer`) | Java | Real-time pipeline for ingestion, validation, and persistence of car and track sensor measurements. |\n| **Car and sensor database** (`carDb`) | PostgreSQL | Persistent storage of registered cars and their sensor configurations. |\n| **User database** (`userDb`) | PostgreSQL | Persistent storage of system users (managers, technicians, drivers), credentials, specializations, groups, and roles. |\n| **Telemetry Car database** (`telemetryCarDb`) | InfluxDB | Time-series storage of real-time and historical car sensor measurements. |\n| **Telemetry Track database** (`telemetryTrackDb`) | InfluxDB | Time-series storage of real-time and historical track measurements and stated track conditions. |\n\n---\n\n## 3. Detailed Responsibility Mapping by Feature\n\n### Cross-Cutting: Authentication & Access Control\n\n* **Identity Provider (`identityProvider` – Container)**\n  * **Identity API (`authApi` – Component):** Exposes endpoints for user login (from `webApp`) and permission verification (from `carApi`, `techApi`, and `analyzerApi`).\n  * **Auth & Permission Service (`authService` – Component):** Authenticates user credentials/tokens and verifies whether a user has the required role to perform a requested action or view a specific race/car.\n  * **User Auth Repository (`userAuthRepo` – Component):** Reads user credentials, roles, and permissions from `userDb`.\n\n---\n\n### Feature 1: Register New Car (and Manage Sensors)\n\n* **Web Application (`webApp` – Container)**\n  * Serves the web application to the Race Manager.\n  * Displays the form for entering the unique manufacturer car identifier.\n  * Displays the form for adding and updating sensor configurations (monitored part, unit, frequency).\n  * Displays success confirmations or validation/processing error messages.\n  * Handles user redirection to the newly created car information page.\n* **Car and Sensor Registration (`carRegistration` – Container)**\n  * **Car & Sensor API (`carApi` – Component):**\n    * Receives car registration and sensor configuration requests from `webApp`.\n    * Verifies that the user (Race Manager) has permissions via `Identity Provider` (`authApi`).\n    * Returns registration results, confirmation, or error messages back to `webApp`.\n  * **Car Data Validator (`carValidator` – Component):**\n    * Validates the format of the provided unique car identifier.\n    * Verifies (via `carRepo`) that the car ID does not already exist in the system.\n    * Cleans the raw car data downloaded from the manufacturer into the internal system format.\n  * **External Car Data Provider (`carProvider` – Component):**\n    * Connects to the external manufacturer system (`manufacturerSystem`).\n    * Downloads basic car information (brand, model, motor info, weight) based on the unique identifier.\n  * **Sensor Configuration Manager (`sensorManager` – Component):**\n    * Validates and processes sensor settings (part, unit, frequency) linked to a specific car.\n  * **Car and Sensor Repository (`carRepo` – Component):**\n    * Persists the new car record into `carDb`.\n    * Persists and updates sensor configurations linked to the car in `carDb`.\n    * Queries `carDb` to check for existing car records.\n\n---\n\n### Feature 2: Register New Technician\n\n* **Web Application (`webApp` – Container)**\n  * Serves the web application and displays the form for technician identification (ID, bank account).\n  * Provides a file picker for uploading the technician's CV.\n  * Displays extracted CV data for the Race Manager's review.\n  * Displays forms for assigning the technician to specialized groups and roles.\n  * Displays success confirmations or error messages.\n* **Technician Registration (`techRegistration` – Container)**\n  * **Technician API (`techApi` – Component):**\n    * Receives technician registration, CV upload, and final assignment requests from `webApp`.\n    * Verifies that the Race Manager has permission via `Identity Provider` (`authApi`).\n    * Returns processed government data, extracted CV data, and confirmation/error messages back to `webApp`.\n  * **Technician Data Validator (`techValidator` – Component):**\n    * Validates the provided technician identification.\n    * Verifies (via `techRepo`) that the technician does not already exist in the system.\n    * Cleans downloaded government registry data and extracts/cleans CV data (using OCR and LLM) into the internal format.\n  * **External Technician Data Provider (`techProvider` – Component):**\n    * Connects to the external Government registry API (`govSystem`) and downloads personal information using the technician ID.\n  * **Technician Repository (`techRepo` – Component):**\n    * Stores technician data (ID, personal data, CV data, specialization) into `userDb`.\n    * Stores technician group and role assignments into `userDb`.\n\n---\n\n### Feature 3 & 4: Real-Time Data for Maintenance Technician & Track Technician\n\n* **Web Application (`webApp` – Container)**\n  * Displays available races, cars, and basic track information.\n  * Displays real-time sensor measurements, units, timestamps, and weather/track data on the dashboard.\n  * Highlights warnings when values exceed configured limits and identifies the affected car part.\n  * Displays error messages when sensor or track data is missing or outdated.\n  * Provides a form for the Track Technician to state and submit the current track condition (e.g., dry, wet).\n* **Telemetry Data Capturer (`telemetryCapturer` – Container)**\n  * **Telemetry Collector (`telemetryCollector` – Component):**\n    * Receives incoming streams of real-time car and track measurements from the External Telemetry Gateway (`telemetryGateway`).\n  * **Telemetry Validator (`telemetryValidator` – Component):**\n    * Checks whether incoming measurements contain valid values and recent timestamps.\n    * Links measurements to the corresponding registered car, sensor, or track.\n  * **Telemetry Repository (`telemetryRepository` – Component):**\n    * Stores validated car telemetry data into `telemetryCarDb` and track telemetry data into `telemetryTrackDb`.\n* **Maintenance Data Analyzer (`dataAnalyzer` – Container)**\n  * **Analyzer API / Facade (`analyzerApi` – Component):**\n    * Acts as the external entry point for dashboard requests from `webApp`.\n    * Verifies via `Identity Provider` (`authApi`) whether the Maintenance Technician or Track Technician has permission to view data for the selected race/car or update track conditions.\n    * Identifies the request domain (e.g., track, engine, tires) and routes it to `maintenanceAnalyzer`.\n    * Returns analyzed measurements, warnings, and confirmation/error messages directly in the request response to `webApp`.\n  * **Loader (`dataLoader` – Component):**\n    * Loads registered sensors and their configured limits directly from `carDb`.\n    * Retrieves the latest car telemetry measurements directly from `telemetryCarDb` and track measurements from `telemetryTrackDb`.\n    * Stores the track condition stated by the Track Technician into `telemetryTrackDb`.\n  * **Maintenance Data Analyzer (`maintenanceAnalyzer` – Component):**\n    * Filters measurements relevant to car maintenance and track condition assessment.\n    * Compares incoming measurements against configured sensor limits.\n    * Detects out-of-limit values, identifies the related car part, and flags missing or stale data.\n\n---\n\n## 4. Deployment Architecture\n\n### Production Environment\n\n![](embed:ProductionDeployment)\n\nThe production deployment distributes the system across dedicated physical or virtual servers running **Ubuntu 26.04 LTS** to ensure performance isolation and reliability during live races:\n\n* **Capture Server (`Telemetry Data Capturer`):** Deployed on a standalone server to handle the high amount of incoming real-time sensor streams from the `External Telemetry Gateway` (measured values by track and car sensors). Isolating this prevents telemetry spikes from overloading user-facing services or slowing down dashboard responsiveness.\n* **Application Server (`Apache Tomcat 11.0.29`):** Hosts the four request-response backend services (`Identity Provider`, `Car and Sensor Registration`, `Technician Registration`, and `Maintenance Data Analyzer`). Because these services handle lower, user-driven requests, putting them together simplifies operations while keeping logical service boundaries intact.\n* **Database Server:** Hosts both the relational database engine (**PostgreSQL 18.7** for `Car and sensor database` and `User database`) and the time-series database engine (**InfluxDB 3.12.2** for `Telemetry Car database` and `Telemetry Track database`).\n* **Client & External Nodes:** `Web Application` runs in the `User's web browser`, while external dependencies (`External Telemetry Gateway`, `Government registry API`, and `External manufacturer web/database`) are outside the system boundary.\n\n### Development Environment\n\n![](embed:DevelopmentDeployment)\n\nThe development deployment puts the entire stack onto a single **Developer Workstation** (`Windows 11 / macOS / Linux`) to enable fast, cost-free local development and debugging:\n\n* **Local Execution & Debugging (`Local Java Runtime`):** Without live race traffic, there is no need for a separate Capture Server. All five Java backend services run locally so developers can step through code and test changes immediately.\n* **Databases via Docker (`Docker Desktop`):** The relational (**PostgreSQL 18.7**) and time-series (**InfluxDB 3.12.2**) databases run as local containers using the exact same engine versions as Production.\n* **Telemetry Simulation (`Python Telemetry Simulator`):** Since developers do not have access to live race cars and track sensors locally, `External Telemetry Gateway` is replaced by a simulator generating telemetry streams, while `Government registry API` and `External manufacturer web/database` remain external endpoints.\n",
           "filename" : "responsibilities.md",
           "format" : "Markdown",
           "order" : 1,
@@ -1230,16 +1435,16 @@
         "structurizr.dsl.identifier" : "rctTracker"
       },
       "relationships" : [ {
-        "description" : "Makes calls to read data",
+        "description" : "Makes calls to read car data",
         "destinationId" : "6",
-        "id" : "69",
-        "linkedRelationshipId" : "67",
-        "sourceId" : "9"
-      }, {
-        "description" : "Makes calls to read data",
-        "destinationId" : "7",
         "id" : "77",
         "linkedRelationshipId" : "75",
+        "sourceId" : "9"
+      }, {
+        "description" : "Makes calls to read technician data",
+        "destinationId" : "7",
+        "id" : "86",
+        "linkedRelationshipId" : "84",
         "sourceId" : "9"
       } ],
       "tags" : "Element,Software System"
@@ -1247,7 +1452,7 @@
   },
   "name" : "RCT",
   "properties" : {
-    "structurizr.inspection.error" : "100",
+    "structurizr.inspection.error" : "120",
     "structurizr.inspection.info" : "0",
     "structurizr.inspection.ignore" : "0",
     "structurizr.inspection.warning" : "0"
@@ -1255,200 +1460,28 @@
   "views" : {
     "componentViews" : [ {
       "containerId" : "11",
-      "dimensions" : {
-        "height" : 3398,
-        "width" : 4210
-      },
       "elements" : [ {
-        "id" : "6",
-        "x" : 3605,
-        "y" : 25
-      }, {
-        "id" : "7",
-        "x" : 3015,
-        "y" : 35
-      }, {
         "id" : "10",
-        "x" : 249,
-        "y" : 1772
-      }, {
-        "id" : "12",
-        "x" : 1089,
-        "y" : 1484
-      }, {
-        "id" : "13",
-        "x" : 1870,
-        "y" : 1515
-      }, {
-        "id" : "14",
-        "x" : 2685,
-        "y" : 1715
-      }, {
-        "id" : "15",
-        "x" : 2705,
-        "y" : 2270
-      }, {
-        "id" : "16",
-        "x" : 1870,
-        "y" : 2000
-      }, {
-        "id" : "17",
-        "x" : 1865,
-        "y" : 1010
-      }, {
-        "id" : "18",
-        "x" : 2665,
-        "y" : 1290
-      }, {
-        "id" : "19",
-        "x" : 2570,
-        "y" : 875
-      }, {
-        "id" : "20",
-        "x" : 1089,
-        "y" : 2728
-      }, {
-        "id" : "30",
-        "x" : 3465,
-        "y" : 1950
-      }, {
-        "id" : "31",
-        "x" : 2535,
-        "y" : 430
-      } ],
-      "externalContainerBoundariesVisible" : false,
-      "key" : "Components",
-      "name" : "Component View: RCT Tracker - Administration Application",
-      "order" : 3,
-      "relationships" : [ {
-        "id" : "44",
-        "vertices" : [ {
-          "x" : 869,
-          "y" : 1634
-        } ]
-      }, {
-        "id" : "46",
-        "vertices" : [ {
-          "x" : 1660,
-          "y" : 1940
-        }, {
-          "x" : 1205,
-          "y" : 1985
-        }, {
-          "x" : 950,
-          "y" : 1960
-        } ]
-      }, {
-        "id" : "48",
-        "vertices" : [ {
-          "x" : 1335,
-          "y" : 1330
-        }, {
-          "x" : 845,
-          "y" : 1495
-        } ]
-      }, {
-        "id" : "49"
-      }, {
-        "id" : "51",
-        "vertices" : [ {
-          "x" : 869,
-          "y" : 2947
-        }, {
-          "x" : 1039,
-          "y" : 2947
-        } ]
-      }, {
-        "id" : "52",
-        "vertices" : [ {
-          "x" : 1705,
-          "y" : 1634
-        } ]
-      }, {
-        "id" : "53",
-        "vertices" : [ {
-          "x" : 1695,
-          "y" : 1820
-        } ]
-      }, {
-        "id" : "54",
-        "vertices" : [ {
-          "x" : 1655,
-          "y" : 1455
-        } ]
-      }, {
-        "id" : "59",
-        "vertices" : [ {
-          "x" : 1705,
-          "y" : 2650
-        }, {
-          "x" : 2290,
-          "y" : 2560
-        } ]
-      }, {
-        "id" : "66",
-        "vertices" : [ {
-          "x" : 2365,
-          "y" : 1720
-        } ]
-      }, {
-        "id" : "67",
-        "vertices" : [ {
-          "x" : 3520,
-          "y" : 1185
-        } ]
-      }, {
-        "id" : "70",
-        "vertices" : [ {
-          "x" : 2499,
-          "y" : 2072
-        } ]
-      }, {
-        "id" : "71",
-        "vertices" : [ {
-          "x" : 2500,
-          "y" : 2325
-        } ]
-      }, {
-        "id" : "72"
-      }, {
-        "id" : "74",
-        "vertices" : [ {
-          "x" : 2500,
-          "y" : 1330
-        } ]
-      }, {
-        "id" : "75",
-        "vertices" : [ {
-          "x" : 3340,
-          "y" : 990
-        } ]
-      }, {
-        "id" : "78",
-        "vertices" : [ {
-          "x" : 2420,
-          "y" : 1025
-        } ]
-      }, {
-        "id" : "79"
-      }, {
-        "id" : "92",
-        "vertices" : [ {
-          "x" : 1039,
-          "y" : 2803
-        }, {
-          "x" : 869,
-          "y" : 2803
-        } ]
-      } ]
-    }, {
-      "containerId" : "25",
-      "elements" : [ {
-        "id" : "8",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "20",
+        "id" : "12",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "13",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "14",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "15",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "21",
         "x" : 0,
         "y" : 0
       }, {
@@ -1456,15 +1489,167 @@
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "27",
+        "id" : "35",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "IdentityProviderComponents",
+      "name" : "Component View: RCT Tracker - Identity Provider",
+      "order" : 3,
+      "relationships" : [ {
+        "id" : "48"
+      }, {
+        "id" : "51"
+      }, {
+        "id" : "53"
+      }, {
+        "id" : "55"
+      }, {
+        "id" : "58"
+      }, {
+        "id" : "62"
+      }, {
+        "id" : "66"
+      }, {
+        "id" : "68"
+      }, {
+        "id" : "69"
+      }, {
+        "id" : "70"
+      }, {
+        "id" : "89"
+      } ]
+    }, {
+      "containerId" : "15",
+      "elements" : [ {
+        "id" : "6",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "28",
+        "id" : "10",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "29",
+        "id" : "11",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "16",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "17",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "18",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "19",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "20",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "34",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "CarRegistrationComponents",
+      "name" : "Component View: RCT Tracker - Car and Sensor Registration",
+      "order" : 4,
+      "relationships" : [ {
+        "id" : "49"
+      }, {
+        "id" : "50"
+      }, {
+        "id" : "57"
+      }, {
+        "id" : "72"
+      }, {
+        "id" : "73"
+      }, {
+        "id" : "74"
+      }, {
+        "id" : "75"
+      }, {
+        "id" : "78"
+      }, {
+        "id" : "79"
+      }, {
+        "id" : "80"
+      } ]
+    }, {
+      "containerId" : "21",
+      "elements" : [ {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "10",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "11",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "22",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "23",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "24",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "25",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "35",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalContainerBoundariesVisible" : false,
+      "key" : "TechRegistrationComponents",
+      "name" : "Component View: RCT Tracker - Technician Registration",
+      "order" : 5,
+      "relationships" : [ {
+        "id" : "49"
+      }, {
+        "id" : "52"
+      }, {
+        "id" : "61"
+      }, {
+        "id" : "71"
+      }, {
+        "id" : "82"
+      }, {
+        "id" : "83"
+      }, {
+        "id" : "84"
+      }, {
+        "id" : "87"
+      }, {
+        "id" : "88"
+      } ]
+    }, {
+      "containerId" : "30",
+      "elements" : [ {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "31",
         "x" : 0,
         "y" : 0
       }, {
@@ -1475,132 +1660,113 @@
         "id" : "33",
         "x" : 0,
         "y" : 0
+      }, {
+        "id" : "36",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "37",
+        "x" : 0,
+        "y" : 0
       } ],
       "externalContainerBoundariesVisible" : false,
       "key" : "CollectorComponents",
       "name" : "Component View: RCT Tracker - Telemetry Data Capturer",
-      "order" : 4,
+      "order" : 6,
       "relationships" : [ {
-        "id" : "63"
+        "id" : "101"
       }, {
-        "id" : "81"
+        "id" : "102"
       }, {
-        "id" : "84"
+        "id" : "103"
       }, {
-        "id" : "85"
+        "id" : "105"
       }, {
-        "id" : "86"
-      }, {
-        "id" : "88"
-      }, {
-        "id" : "90"
+        "id" : "98"
       } ]
     }, {
-      "containerId" : "20",
+      "containerId" : "26",
       "dimensions" : {
-        "height" : 2226,
-        "width" : 3420
+        "height" : 1879,
+        "width" : 4210
       },
       "elements" : [ {
         "id" : "10",
         "x" : 249,
-        "y" : 471
+        "y" : 535
       }, {
         "id" : "11",
-        "x" : 1879,
-        "y" : 210
+        "x" : 1075,
+        "y" : 265
       }, {
-        "id" : "21",
+        "id" : "27",
         "x" : 1089,
-        "y" : 610
+        "y" : 794
       }, {
-        "id" : "22",
-        "x" : 1755,
-        "y" : 940
-      }, {
-        "id" : "23",
-        "x" : 2520,
-        "y" : 665
-      }, {
-        "id" : "24",
-        "x" : 2635,
-        "y" : 1210
-      }, {
-        "id" : "25",
+        "id" : "28",
         "x" : 1879,
-        "y" : 1556
+        "y" : 860
+      }, {
+        "id" : "29",
+        "x" : 2669,
+        "y" : 860
+      }, {
+        "id" : "34",
+        "x" : 3490,
+        "y" : 510
+      }, {
+        "id" : "36",
+        "x" : 3509,
+        "y" : 860
+      }, {
+        "id" : "37",
+        "x" : 3509,
+        "y" : 1210
       } ],
       "externalContainerBoundariesVisible" : false,
       "key" : "AnalyzerComponents",
       "name" : "Component View: RCT Tracker - Maintenance Data Analyzer",
-      "order" : 5,
+      "order" : 7,
       "relationships" : [ {
-        "id" : "45",
+        "id" : "49"
+      }, {
+        "id" : "54",
         "vertices" : [ {
           "x" : 869,
-          "y" : 291
-        }, {
-          "x" : 1709,
-          "y" : 291
-        } ]
-      }, {
-        "id" : "47",
-        "vertices" : [ {
-          "x" : 1709,
-          "y" : 404
-        }, {
-          "x" : 869,
-          "y" : 404
-        } ]
-      }, {
-        "id" : "50",
-        "vertices" : [ {
-          "x" : 869,
-          "y" : 760
-        } ]
-      }, {
-        "id" : "55",
-        "vertices" : [ {
-          "x" : 1709,
-          "y" : 760
-        } ]
-      }, {
-        "id" : "56",
-        "vertices" : [ {
-          "x" : 2499,
-          "y" : 1106
-        } ]
-      }, {
-        "id" : "58",
-        "vertices" : [ {
-          "x" : 2309,
-          "y" : 706
-        } ]
-      }, {
-        "id" : "62",
-        "vertices" : [ {
-          "x" : 2400,
-          "y" : 1685
+          "y" : 944
         } ]
       }, {
         "id" : "65",
         "vertices" : [ {
-          "x" : 2220,
-          "y" : 860
+          "x" : 1314,
+          "y" : 670
         } ]
       }, {
-        "id" : "91",
+        "id" : "90",
         "vertices" : [ {
-          "x" : 2499,
-          "y" : 1310
-        }, {
-          "x" : 869,
-          "y" : 1310
+          "x" : 1709,
+          "y" : 1010
+        } ]
+      }, {
+        "id" : "91"
+      }, {
+        "id" : "92",
+        "vertices" : [ {
+          "x" : 3169,
+          "y" : 660
+        } ]
+      }, {
+        "id" : "94"
+      }, {
+        "id" : "96",
+        "vertices" : [ {
+          "x" : 3169,
+          "y" : 1360
         } ]
       } ]
     } ],
     "configuration" : {
-      "lastSavedView" : "DevelopmentDeployment",
+      "lastSavedView" : "Containers",
       "styles" : {
         "elements" : [ {
           "background" : "#85bbf0",
@@ -1637,233 +1803,248 @@
     },
     "containerViews" : [ {
       "dimensions" : {
-        "height" : 3556,
-        "width" : 4060
+        "height" : 3165,
+        "width" : 4210
       },
       "elements" : [ {
         "id" : "1",
         "x" : 200,
-        "y" : 759
+        "y" : 2499
       }, {
         "id" : "2",
-        "x" : 200,
-        "y" : 1209
+        "x" : 210,
+        "y" : 2004
       }, {
         "id" : "3",
-        "x" : 200,
-        "y" : 1659
+        "x" : 214,
+        "y" : 1497
       }, {
         "id" : "4",
-        "x" : 200,
-        "y" : 2265
+        "x" : 214,
+        "y" : 1047
       }, {
         "id" : "5",
-        "x" : 200,
-        "y" : 2715
+        "x" : 214,
+        "y" : 597
       }, {
         "id" : "6",
-        "x" : 2580,
-        "y" : 885
+        "x" : 3745,
+        "y" : 1395
       }, {
         "id" : "7",
-        "x" : 3195,
-        "y" : 1050
+        "x" : 2115,
+        "y" : 2625
       }, {
         "id" : "8",
-        "x" : 1940,
-        "y" : 3090
+        "x" : 1075,
+        "y" : 195
       }, {
         "id" : "10",
-        "x" : 975,
-        "y" : 1930
+        "x" : 1004,
+        "y" : 1683
       }, {
         "id" : "11",
-        "x" : 1730,
-        "y" : 1630
+        "x" : 2640,
+        "y" : 1755
       }, {
-        "id" : "20",
-        "x" : 1740,
-        "y" : 2325
+        "id" : "15",
+        "x" : 1760,
+        "y" : 1634
       }, {
-        "id" : "25",
-        "x" : 2570,
-        "y" : 2440
+        "id" : "21",
+        "x" : 1750,
+        "y" : 2074
+      }, {
+        "id" : "26",
+        "x" : 1794,
+        "y" : 1193
       }, {
         "id" : "30",
-        "x" : 3360,
-        "y" : 1565
+        "x" : 1665,
+        "y" : 639
       }, {
-        "id" : "31",
-        "x" : 3360,
-        "y" : 1915
+        "id" : "34",
+        "x" : 3150,
+        "y" : 1285
       }, {
-        "id" : "32",
-        "x" : 3360,
-        "y" : 2265
+        "id" : "35",
+        "x" : 3145,
+        "y" : 2155
       }, {
-        "id" : "33",
-        "x" : 3360,
-        "y" : 2615
+        "id" : "36",
+        "x" : 3125,
+        "y" : 960
+      }, {
+        "id" : "37",
+        "x" : 3115,
+        "y" : 590
       } ],
       "externalSoftwareSystemBoundariesVisible" : false,
       "key" : "Containers",
       "name" : "Container View: RCT Tracker",
       "order" : 2,
       "relationships" : [ {
-        "id" : "34",
+        "id" : "104",
         "vertices" : [ {
-          "x" : 940,
-          "y" : 959
+          "x" : 2230,
+          "y" : 835
+        }, {
+          "x" : 2570,
+          "y" : 835
         } ]
       }, {
-        "id" : "36",
+        "id" : "106",
         "vertices" : [ {
-          "x" : 940,
-          "y" : 1409
+          "x" : 2440,
+          "y" : 675
         } ]
       }, {
         "id" : "38",
         "vertices" : [ {
-          "x" : 940,
-          "y" : 1859
+          "x" : 840,
+          "y" : 2544
         } ]
       }, {
         "id" : "40",
         "vertices" : [ {
-          "x" : 940,
-          "y" : 2465
+          "x" : 895,
+          "y" : 2184
         } ]
       }, {
         "id" : "42",
         "vertices" : [ {
-          "x" : 940,
-          "y" : 2915
+          "x" : 954,
+          "y" : 1697
         } ]
       }, {
-        "id" : "45",
+        "id" : "44",
         "vertices" : [ {
-          "x" : 1360,
-          "y" : 1855
-        }, {
-          "x" : 1625,
-          "y" : 1745
+          "x" : 954,
+          "y" : 1247
         } ]
       }, {
-        "id" : "47",
+        "id" : "46",
         "vertices" : [ {
-          "x" : 1670,
-          "y" : 1825
-        }, {
-          "x" : 1490,
-          "y" : 1990
+          "x" : 954,
+          "y" : 797
+        } ]
+      }, {
+        "id" : "49",
+        "vertices" : [ {
+          "x" : 1555,
+          "y" : 2025
         } ]
       }, {
         "id" : "51",
         "vertices" : [ {
+          "x" : 1590,
+          "y" : 1814
+        } ]
+      }, {
+        "id" : "53",
+        "vertices" : [ {
           "x" : 1545,
-          "y" : 2210
+          "y" : 2149
         } ]
       }, {
-        "id" : "60",
+        "id" : "55",
         "vertices" : [ {
-          "x" : 1953,
-          "y" : 2150
+          "x" : 1624,
+          "y" : 1343
         } ]
       }, {
-        "id" : "64",
+        "id" : "59",
         "vertices" : [ {
-          "x" : 2265,
-          "y" : 2510
+          "x" : 2435,
+          "y" : 1879
         } ]
       }, {
-        "id" : "68",
+        "id" : "63",
         "vertices" : [ {
-          "x" : 2350,
-          "y" : 1360
+          "x" : 2380,
+          "y" : 2064
         } ]
       }, {
-        "id" : "73",
+        "id" : "67",
         "vertices" : [ {
-          "x" : 3190,
-          "y" : 1715
+          "x" : 2285,
+          "y" : 1479
+        }, {
+          "x" : 2335,
+          "y" : 1510
+        }, {
+          "x" : 2405,
+          "y" : 1534
+        }, {
+          "x" : 2565,
+          "y" : 1534
+        } ]
+      }, {
+        "id" : "71",
+        "vertices" : [ {
+          "x" : 3065,
+          "y" : 2064
         } ]
       }, {
         "id" : "76",
         "vertices" : [ {
-          "x" : 2910,
-          "y" : 1410
+          "x" : 3100,
+          "y" : 1675
         } ]
       }, {
-        "id" : "80",
+        "id" : "81",
         "vertices" : [ {
-          "x" : 3190,
-          "y" : 2065
+          "x" : 2275,
+          "y" : 1729
+        }, {
+          "x" : 2395,
+          "y" : 1695
         } ]
       }, {
-        "id" : "82",
+        "id" : "85",
         "vertices" : [ {
-          "x" : 2400,
-          "y" : 2826
-        } ]
-      }, {
-        "id" : "87",
-        "vertices" : [ {
-          "x" : 3190,
-          "y" : 2415
+          "x" : 2175,
+          "y" : 2479
         } ]
       }, {
         "id" : "89",
         "vertices" : [ {
-          "x" : 3190,
-          "y" : 2765
+          "x" : 2365,
+          "y" : 2224
         } ]
       }, {
-        "id" : "92",
+        "id" : "93",
         "vertices" : [ {
-          "x" : 1445,
-          "y" : 2510
+          "x" : 2414,
+          "y" : 1416
+        } ]
+      }, {
+        "id" : "95",
+        "vertices" : [ {
+          "x" : 2414,
+          "y" : 1270
+        } ]
+      }, {
+        "id" : "97",
+        "vertices" : [ {
+          "x" : 2490,
+          "y" : 1109
+        } ]
+      }, {
+        "id" : "99",
+        "vertices" : [ {
+          "x" : 1624,
+          "y" : 709
         } ]
       } ],
       "softwareSystemId" : "9"
     } ],
     "deploymentViews" : [ {
       "dimensions" : {
-        "height" : 3108,
-        "width" : 3820
+        "height" : 2950,
+        "width" : 4660
       },
       "elements" : [ {
-        "id" : "93",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "94",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "95",
-        "x" : 2080,
-        "y" : 909
-      }, {
-        "id" : "96",
-        "x" : 1190,
-        "y" : 901
-      }, {
-        "id" : "98",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "99",
-        "x" : 250,
-        "y" : 901
-      }, {
-        "id" : "104",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "105",
-        "x" : 2080,
-        "y" : 2240
-      }, {
         "id" : "107",
         "x" : 0,
         "y" : 0
@@ -1873,313 +2054,471 @@
         "y" : 0
       }, {
         "id" : "109",
-        "x" : 3065,
-        "y" : 1015
-      }, {
-        "id" : "111",
-        "x" : 3070,
-        "y" : 1390
-      }, {
-        "id" : "113",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "114",
-        "x" : 3070,
-        "y" : 1959
-      }, {
-        "id" : "116",
-        "x" : 3070,
-        "y" : 2309
-      }, {
-        "id" : "118",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "119",
-        "x" : 815,
-        "y" : 2250
-      }, {
-        "id" : "121",
-        "x" : 575,
-        "y" : 1830
-      }, {
-        "id" : "123",
-        "x" : 1110,
-        "y" : 1825
-      } ],
-      "environment" : "Production",
-      "key" : "ProductionDeployment",
-      "name" : "Deployment View: RCT Tracker - Production",
-      "order" : 6,
-      "relationships" : [ {
-        "id" : "100",
-        "vertices" : [ {
-          "x" : 750,
-          "y" : 839
-        }, {
-          "x" : 2030,
-          "y" : 839
-        } ]
-      }, {
-        "id" : "101",
-        "vertices" : [ {
-          "x" : 2030,
-          "y" : 1278
-        }, {
-          "x" : 750,
-          "y" : 1278
-        } ]
-      }, {
-        "id" : "102",
-        "vertices" : [ {
-          "x" : 750,
-          "y" : 976
-        }, {
-          "x" : 1140,
-          "y" : 976
-        } ]
-      }, {
-        "id" : "103",
-        "vertices" : [ {
-          "x" : 1140,
-          "y" : 1119
-        }, {
-          "x" : 750,
-          "y" : 1119
-        } ]
-      }, {
-        "id" : "106",
-        "vertices" : [ {
-          "x" : 1785,
-          "y" : 1732
-        }, {
-          "x" : 2110,
-          "y" : 1732
-        } ]
+        "x" : 2030,
+        "y" : 655
       }, {
         "id" : "110",
-        "vertices" : [ {
-          "x" : 2580,
-          "y" : 1309
-        } ]
+        "x" : 1190,
+        "y" : 480
       }, {
         "id" : "112",
-        "vertices" : [ {
-          "x" : 2580,
-          "y" : 1659
-        } ]
+        "x" : 1190,
+        "y" : 1180
       }, {
-        "id" : "115",
-        "vertices" : [ {
-          "x" : 2580,
-          "y" : 2109
-        } ]
+        "id" : "114",
+        "x" : 1190,
+        "y" : 830
+      }, {
+        "id" : "116",
+        "x" : 0,
+        "y" : 0
       }, {
         "id" : "117",
-        "vertices" : [ {
-          "x" : 2580,
-          "y" : 2459
-        } ]
-      }, {
-        "id" : "120"
+        "x" : 250,
+        "y" : 830
       }, {
         "id" : "122",
-        "vertices" : [ {
-          "x" : 1225,
-          "y" : 1710
-        } ]
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "123",
+        "x" : 2966,
+        "y" : 1865
       }, {
         "id" : "124",
-        "vertices" : [ {
-          "x" : 1575,
-          "y" : 1775
-        } ]
+        "x" : 0,
+        "y" : 0
       }, {
-        "id" : "97",
-        "vertices" : [ {
-          "x" : 2030,
-          "y" : 1051
-        } ]
-      } ],
-      "softwareSystemId" : "9"
-    }, {
-      "dimensions" : {
-        "height" : 3122,
-        "width" : 3900
-      },
-      "elements" : [ {
         "id" : "125",
         "x" : 0,
         "y" : 0
       }, {
         "id" : "126",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "127",
-        "x" : 300,
-        "y" : 945
-      }, {
-        "id" : "128",
-        "x" : 0,
-        "y" : 0
+        "x" : 3910,
+        "y" : 259
       }, {
         "id" : "129",
+        "x" : 3910,
+        "y" : 784
+      }, {
+        "id" : "132",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "130",
-        "x" : 2085,
-        "y" : 1039
-      }, {
         "id" : "133",
-        "x" : 1240,
-        "y" : 965
+        "x" : 3910,
+        "y" : 1534
       }, {
-        "id" : "137",
-        "x" : 2080,
-        "y" : 1659
+        "id" : "136",
+        "x" : 3910,
+        "y" : 2151
       }, {
         "id" : "139",
         "x" : 0,
         "y" : 0
       }, {
         "id" : "140",
-        "x" : 3100,
-        "y" : 849
+        "x" : 2046,
+        "y" : 1840
       }, {
         "id" : "142",
-        "x" : 3100,
-        "y" : 1199
+        "x" : 1056,
+        "y" : 1895
       }, {
         "id" : "144",
+        "x" : 1551,
+        "y" : 1910
+      } ],
+      "environment" : "Production",
+      "key" : "ProductionDeployment",
+      "name" : "Deployment View: RCT Tracker - Production",
+      "order" : 8,
+      "relationships" : [ {
+        "id" : "111",
+        "vertices" : [ {
+          "x" : 1980,
+          "y" : 630
+        } ]
+      }, {
+        "id" : "113",
+        "vertices" : [ {
+          "x" : 2200,
+          "y" : 1025
+        } ]
+      }, {
+        "id" : "115",
+        "vertices" : [ {
+          "x" : 1980,
+          "y" : 980
+        } ]
+      }, {
+        "id" : "118"
+      }, {
+        "id" : "119",
+        "vertices" : [ {
+          "x" : 750,
+          "y" : 630
+        } ]
+      }, {
+        "id" : "120",
+        "vertices" : [ {
+          "x" : 750,
+          "y" : 1330
+        } ]
+      }, {
+        "id" : "121"
+      }, {
+        "id" : "127",
+        "vertices" : [ {
+          "x" : 1810,
+          "y" : 359
+        }, {
+          "x" : 3860,
+          "y" : 359
+        } ]
+      }, {
+        "id" : "128",
+        "vertices" : [ {
+          "x" : 1810,
+          "y" : 492
+        }, {
+          "x" : 3860,
+          "y" : 492
+        } ]
+      }, {
+        "id" : "130",
+        "vertices" : [ {
+          "x" : 3860,
+          "y" : 805
+        } ]
+      }, {
+        "id" : "131",
+        "vertices" : [ {
+          "x" : 1810,
+          "y" : 1255
+        }, {
+          "x" : 3860,
+          "y" : 1255
+        } ]
+      }, {
+        "id" : "134",
+        "vertices" : [ {
+          "x" : 1786,
+          "y" : 1545
+        }, {
+          "x" : 3860,
+          "y" : 1580
+        } ]
+      }, {
+        "id" : "135",
+        "vertices" : [ {
+          "x" : 3470,
+          "y" : 2059
+        }, {
+          "x" : 3860,
+          "y" : 2059
+        } ]
+      }, {
+        "id" : "137",
+        "vertices" : [ {
+          "x" : 1786,
+          "y" : 1585
+        }, {
+          "x" : 2580,
+          "y" : 1630
+        }, {
+          "x" : 2750,
+          "y" : 2361
+        }, {
+          "x" : 3470,
+          "y" : 2361
+        }, {
+          "x" : 3640,
+          "y" : 2273
+        }, {
+          "x" : 3860,
+          "y" : 2273
+        } ]
+      }, {
+        "id" : "138",
+        "vertices" : [ {
+          "x" : 3470,
+          "y" : 2186
+        }, {
+          "x" : 3640,
+          "y" : 2349
+        }, {
+          "x" : 3860,
+          "y" : 2349
+        } ]
+      }, {
+        "id" : "141",
+        "vertices" : [ {
+          "x" : 2696,
+          "y" : 2025
+        }, {
+          "x" : 2781,
+          "y" : 2025
+        } ]
+      }, {
+        "id" : "143",
+        "vertices" : [ {
+          "x" : 1591,
+          "y" : 1490
+        }, {
+          "x" : 1591,
+          "y" : 1870
+        }, {
+          "x" : 1396,
+          "y" : 1870
+        } ]
+      }, {
+        "id" : "145",
+        "vertices" : [ {
+          "x" : 1701,
+          "y" : 920
+        }, {
+          "x" : 1886,
+          "y" : 1870
+        } ]
+      } ],
+      "softwareSystemId" : "9"
+    }, {
+      "dimensions" : {
+        "height" : 4106,
+        "width" : 3870
+      },
+      "elements" : [ {
+        "id" : "146",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "145",
-        "x" : 3100,
-        "y" : 1681
-      }, {
         "id" : "147",
-        "x" : 3100,
-        "y" : 2031
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "148",
+        "x" : 300,
+        "y" : 1580
       }, {
         "id" : "149",
         "x" : 0,
         "y" : 0
       }, {
         "id" : "150",
-        "x" : 1365,
-        "y" : 2194
-      }, {
-        "id" : "152",
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "153",
-        "x" : 2125,
-        "y" : 259
+        "id" : "151",
+        "x" : 2130,
+        "y" : 1580
       }, {
-        "id" : "155",
-        "x" : 1595,
-        "y" : 289
+        "id" : "153",
+        "x" : 1240,
+        "y" : 1174
+      }, {
+        "id" : "156",
+        "x" : 1240,
+        "y" : 1580
+      }, {
+        "id" : "159",
+        "x" : 1240,
+        "y" : 2094
+      }, {
+        "id" : "162",
+        "x" : 2130,
+        "y" : 2538
+      }, {
+        "id" : "163",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "164",
+        "x" : 3070,
+        "y" : 1291
+      }, {
+        "id" : "167",
+        "x" : 3070,
+        "y" : 1806
+      }, {
+        "id" : "170",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "171",
+        "x" : 3070,
+        "y" : 2411
+      }, {
+        "id" : "174",
+        "x" : 3070,
+        "y" : 2840
+      }, {
+        "id" : "177",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "178",
+        "x" : 1240,
+        "y" : 3178
+      }, {
+        "id" : "180",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "181",
+        "x" : 2130,
+        "y" : 210
+      }, {
+        "id" : "183",
+        "x" : 2130,
+        "y" : 560
       } ],
       "environment" : "Development",
       "key" : "DevelopmentDeployment",
       "name" : "Deployment View: RCT Tracker - Development",
-      "order" : 7,
+      "order" : 9,
       "relationships" : [ {
-        "id" : "131",
+        "id" : "152",
         "vertices" : [ {
-          "x" : 1910,
-          "y" : 1341
-        }, {
-          "x" : 800,
-          "y" : 1341
-        } ]
-      }, {
-        "id" : "132",
-        "vertices" : [ {
-          "x" : 800,
-          "y" : 903
-        }, {
-          "x" : 1910,
-          "y" : 903
-        } ]
-      }, {
-        "id" : "134",
-        "vertices" : [ {
-          "x" : 1190,
-          "y" : 1250
-        }, {
-          "x" : 800,
-          "y" : 1250
-        } ]
-      }, {
-        "id" : "135",
-        "vertices" : [ {
-          "x" : 800,
-          "y" : 1115
-        } ]
-      }, {
-        "id" : "136",
-        "vertices" : [ {
-          "x" : 1910,
-          "y" : 1115
-        } ]
-      }, {
-        "id" : "138",
-        "vertices" : [ {
-          "x" : 1740,
-          "y" : 1666
-        }, {
-          "x" : 1910,
-          "y" : 1666
-        } ]
-      }, {
-        "id" : "141",
-        "vertices" : [ {
-          "x" : 2765,
-          "y" : 1049
-        } ]
-      }, {
-        "id" : "143"
-      }, {
-        "id" : "146",
-        "vertices" : [ {
-          "x" : 2580,
-          "y" : 1585
-        } ]
-      }, {
-        "id" : "148",
-        "vertices" : [ {
-          "x" : 2580,
+          "x" : 1040,
           "y" : 1935
-        } ]
-      }, {
-        "id" : "151",
-        "vertices" : [ {
-          "x" : 1910,
-          "y" : 2200
+        }, {
+          "x" : 1930,
+          "y" : 1935
         } ]
       }, {
         "id" : "154",
         "vertices" : [ {
-          "x" : 2395,
-          "y" : 789
-        }, {
-          "x" : 2395,
-          "y" : 659
+          "x" : 800,
+          "y" : 1324
         } ]
       }, {
-        "id" : "156",
+        "id" : "155",
         "vertices" : [ {
-          "x" : 2085,
-          "y" : 819
+          "x" : 1740,
+          "y" : 1640
         }, {
-          "x" : 1985,
-          "y" : 664
+          "x" : 2080,
+          "y" : 1640
+        } ]
+      }, {
+        "id" : "157"
+      }, {
+        "id" : "158",
+        "vertices" : [ {
+          "x" : 1740,
+          "y" : 1753
+        }, {
+          "x" : 2080,
+          "y" : 1753
+        } ]
+      }, {
+        "id" : "160",
+        "vertices" : [ {
+          "x" : 800,
+          "y" : 2244
+        } ]
+      }, {
+        "id" : "161",
+        "vertices" : [ {
+          "x" : 1740,
+          "y" : 1980
+        }, {
+          "x" : 2080,
+          "y" : 1980
+        } ]
+      }, {
+        "id" : "165",
+        "vertices" : [ {
+          "x" : 1740,
+          "y" : 1344
+        }, {
+          "x" : 3020,
+          "y" : 1344
+        } ]
+      }, {
+        "id" : "166",
+        "vertices" : [ {
+          "x" : 1740,
+          "y" : 1461
+        }, {
+          "x" : 3020,
+          "y" : 1461
+        } ]
+      }, {
+        "id" : "168",
+        "vertices" : [ {
+          "x" : 3020,
+          "y" : 1730
+        } ]
+      }, {
+        "id" : "169",
+        "vertices" : [ {
+          "x" : 1740,
+          "y" : 2107
+        }, {
+          "x" : 3020,
+          "y" : 2107
+        } ]
+      }, {
+        "id" : "172",
+        "vertices" : [ {
+          "x" : 1740,
+          "y" : 2432
+        }, {
+          "x" : 3020,
+          "y" : 2432
+        } ]
+      }, {
+        "id" : "173",
+        "vertices" : [ {
+          "x" : 3020,
+          "y" : 2688
+        } ]
+      }, {
+        "id" : "175",
+        "vertices" : [ {
+          "x" : 1740,
+          "y" : 2943
+        }, {
+          "x" : 3020,
+          "y" : 2943
+        } ]
+      }, {
+        "id" : "176",
+        "vertices" : [ {
+          "x" : 2630,
+          "y" : 3028
+        }, {
+          "x" : 3020,
+          "y" : 3028
+        } ]
+      }, {
+        "id" : "179",
+        "vertices" : [ {
+          "x" : 1785,
+          "y" : 3125
+        }, {
+          "x" : 1890,
+          "y" : 2770
+        } ]
+      }, {
+        "id" : "182",
+        "vertices" : [ {
+          "x" : 1740,
+          "y" : 1150
+        }, {
+          "x" : 2080,
+          "y" : 1150
+        } ]
+      }, {
+        "id" : "184",
+        "vertices" : [ {
+          "x" : 1740,
+          "y" : 1268
+        }, {
+          "x" : 2080,
+          "y" : 1268
         } ]
       } ],
       "softwareSystemId" : "9"
@@ -2193,7 +2532,7 @@
         "vertices" : true
       },
       "description" : "Dynamic diagram for registering a new car and its sensors",
-      "elementId" : "11",
+      "elementId" : "15",
       "elements" : [ {
         "id" : "1",
         "x" : 0,
@@ -2207,139 +2546,11 @@
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "12",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "13",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "14",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "15",
+        "id" : "11",
         "x" : 0,
         "y" : 0
       }, {
         "id" : "16",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "30",
-        "x" : 0,
-        "y" : 0
-      } ],
-      "externalBoundariesVisible" : false,
-      "key" : "RegisterNewCar",
-      "name" : "Dynamic View: RCT Tracker - Administration Application",
-      "order" : 8,
-      "relationships" : [ {
-        "description" : "1. Opens dashboard and submits unique car ID",
-        "id" : "34",
-        "order" : "1",
-        "response" : false
-      }, {
-        "description" : "2. Requests access to register a car",
-        "id" : "44",
-        "order" : "2",
-        "response" : false
-      }, {
-        "description" : "3. Forwards car registration request",
-        "id" : "52",
-        "order" : "3",
-        "response" : false
-      }, {
-        "description" : "4. Checks if car ID already exists",
-        "id" : "70",
-        "order" : "4",
-        "response" : false
-      }, {
-        "description" : "5. Queries existing car IDs",
-        "id" : "72",
-        "order" : "5",
-        "response" : false
-      }, {
-        "description" : "6. Requests basic car data by ID",
-        "id" : "66",
-        "order" : "6",
-        "response" : false
-      }, {
-        "description" : "7. Downloads car info (brand, model, motor, weight)",
-        "id" : "67",
-        "order" : "7",
-        "response" : false
-      }, {
-        "description" : "8. Sends cleaned car data for storage",
-        "id" : "70",
-        "order" : "8",
-        "response" : false
-      }, {
-        "description" : "9. Writes new car record",
-        "id" : "72",
-        "order" : "9",
-        "response" : false
-      }, {
-        "description" : "10. Confirms registration and redirects to car info page",
-        "id" : "46",
-        "order" : "10",
-        "response" : false
-      }, {
-        "description" : "11. Fills and submits new sensor configuration (part, unit, frequency)",
-        "id" : "34",
-        "order" : "11",
-        "response" : false
-      }, {
-        "description" : "12. Requests access to add sensor configuration",
-        "id" : "44",
-        "order" : "12",
-        "response" : false
-      }, {
-        "description" : "13. Forwards sensor configuration request",
-        "id" : "53",
-        "order" : "13",
-        "response" : false
-      }, {
-        "description" : "14. Updates sensor configuration for the car",
-        "id" : "71",
-        "order" : "14",
-        "response" : false
-      }, {
-        "description" : "15. Writes sensor configuration to database",
-        "id" : "72",
-        "order" : "15",
-        "response" : false
-      }, {
-        "description" : "16. Sends confirmation (or error message) to user",
-        "id" : "49",
-        "order" : "16",
-        "response" : false
-      } ]
-    }, {
-      "automaticLayout" : {
-        "edgeSeparation" : 50,
-        "nodeSeparation" : 50,
-        "rankDirection" : "LeftRight",
-        "rankSeparation" : 100,
-        "vertices" : true
-      },
-      "description" : "Dynamic diagram for registering a new technician with specialisation and roles",
-      "elementId" : "11",
-      "elements" : [ {
-        "id" : "1",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "7",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "10",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "12",
         "x" : 0,
         "y" : 0
       }, {
@@ -2355,104 +2566,118 @@
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "31",
+        "id" : "20",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "34",
         "x" : 0,
         "y" : 0
       } ],
       "externalBoundariesVisible" : false,
-      "key" : "RegisterNewTechnician",
-      "name" : "Dynamic View: RCT Tracker - Administration Application",
-      "order" : 9,
+      "key" : "RegisterNewCar",
+      "name" : "Dynamic View: RCT Tracker - Car and Sensor Registration",
+      "order" : 10,
       "relationships" : [ {
-        "description" : "1. Opens technician registration and enters ID and bank account",
-        "id" : "34",
+        "description" : "1. Opens dashboard and submits unique car ID",
+        "id" : "38",
         "order" : "1",
         "response" : false
       }, {
-        "description" : "2. Requests access to register a technician",
-        "id" : "44",
+        "description" : "2. Sends car registration request",
+        "id" : "50",
         "order" : "2",
         "response" : false
       }, {
-        "description" : "3. Forwards registration request for ID validation",
-        "id" : "54",
+        "description" : "3. Verifies manager permissions",
+        "id" : "57",
         "order" : "3",
         "response" : false
       }, {
-        "description" : "4. Checks if technician ID already exists",
-        "id" : "78",
+        "description" : "4. Forwards car registration request",
+        "id" : "72",
         "order" : "4",
         "response" : false
       }, {
-        "description" : "5. Queries existing technician IDs",
-        "id" : "79",
+        "description" : "5. Checks if car ID already exists",
+        "id" : "78",
         "order" : "5",
         "response" : false
       }, {
-        "description" : "6. Requests government data by technician ID",
-        "id" : "74",
+        "description" : "6. Queries existing car IDs",
+        "id" : "80",
         "order" : "6",
         "response" : false
       }, {
-        "description" : "7. Downloads technician identification data",
-        "id" : "75",
+        "description" : "7. Requests basic car data by ID",
+        "id" : "74",
         "order" : "7",
         "response" : false
       }, {
-        "description" : "8. Presents processed government data and requests CV upload",
-        "id" : "48",
+        "description" : "8. Downloads car info (brand, model, motor, weight)",
+        "id" : "75",
         "order" : "8",
         "response" : false
       }, {
-        "description" : "9. Uploads technician CV",
-        "id" : "34",
+        "description" : "9. Sends cleaned car data for storage",
+        "id" : "78",
         "order" : "9",
         "response" : false
       }, {
-        "description" : "10. Requests access to process technician CV",
-        "id" : "44",
+        "description" : "10. Writes new car record",
+        "id" : "80",
         "order" : "10",
         "response" : false
       }, {
-        "description" : "11. Forwards CV for OCR and LLM extraction by the validator",
-        "id" : "54",
+        "description" : "11. Returns registration result",
+        "id" : "72",
         "order" : "11",
-        "response" : false
+        "response" : true
       }, {
-        "description" : "12. Presents extracted data for manager review",
-        "id" : "48",
+        "description" : "12. Returns confirmation and redirects to car info page",
+        "id" : "50",
         "order" : "12",
-        "response" : false
+        "response" : true
       }, {
-        "description" : "13. Reviews and corrects data, assigns specialised group and roles",
-        "id" : "34",
+        "description" : "13. Fills and submits new sensor configuration (part, unit, frequency)",
+        "id" : "38",
         "order" : "13",
         "response" : false
       }, {
-        "description" : "14. Requests access to save technician registration",
-        "id" : "44",
+        "description" : "14. Sends sensor configuration request",
+        "id" : "50",
         "order" : "14",
         "response" : false
       }, {
-        "description" : "15. Forwards reviewed data for final validation",
-        "id" : "54",
+        "description" : "15. Verifies manager permissions",
+        "id" : "57",
         "order" : "15",
         "response" : false
       }, {
-        "description" : "16. Sends validated identification, CV data, group and roles for storage",
-        "id" : "78",
+        "description" : "16. Forwards sensor configuration request",
+        "id" : "73",
         "order" : "16",
         "response" : false
       }, {
-        "description" : "17. Stores technician, group membership and roles",
+        "description" : "17. Updates sensor configuration for the car",
         "id" : "79",
         "order" : "17",
         "response" : false
       }, {
-        "description" : "18. Shows registration confirmation or validation errors",
-        "id" : "48",
+        "description" : "18. Writes sensor configuration to database",
+        "id" : "80",
         "order" : "18",
         "response" : false
+      }, {
+        "description" : "19. Returns save result",
+        "id" : "73",
+        "order" : "19",
+        "response" : true
+      }, {
+        "description" : "20. Returns confirmation or error message",
+        "id" : "50",
+        "order" : "20",
+        "response" : true
       } ]
     }, {
       "automaticLayout" : {
@@ -2462,8 +2687,180 @@
         "rankSeparation" : 100,
         "vertices" : true
       },
-      "description" : "Dynamic diagram for real time track technician view",
-      "elementId" : "20",
+      "description" : "Dynamic diagram for registering a new technician with specialization and roles",
+      "elementId" : "21",
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "10",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "11",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "22",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "23",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "24",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "25",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "35",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "key" : "RegisterNewTechnician",
+      "name" : "Dynamic View: RCT Tracker - Technician Registration",
+      "order" : 11,
+      "relationships" : [ {
+        "description" : "1. Opens technician registration and enters ID and bank account",
+        "id" : "38",
+        "order" : "1",
+        "response" : false
+      }, {
+        "description" : "2. Sends technician identification request",
+        "id" : "52",
+        "order" : "2",
+        "response" : false
+      }, {
+        "description" : "3. Verifies manager permissions",
+        "id" : "61",
+        "order" : "3",
+        "response" : false
+      }, {
+        "description" : "4. Forwards request for ID validation",
+        "id" : "82",
+        "order" : "4",
+        "response" : false
+      }, {
+        "description" : "5. Checks if technician ID already exists",
+        "id" : "87",
+        "order" : "5",
+        "response" : false
+      }, {
+        "description" : "6. Queries existing technician IDs",
+        "id" : "88",
+        "order" : "6",
+        "response" : false
+      }, {
+        "description" : "7. Requests government data by technician ID",
+        "id" : "83",
+        "order" : "7",
+        "response" : false
+      }, {
+        "description" : "8. Downloads technician identification data",
+        "id" : "84",
+        "order" : "8",
+        "response" : false
+      }, {
+        "description" : "9. Returns processed government data",
+        "id" : "82",
+        "order" : "9",
+        "response" : true
+      }, {
+        "description" : "10. Presents government data and requests CV upload",
+        "id" : "52",
+        "order" : "10",
+        "response" : true
+      }, {
+        "description" : "11. Uploads technician CV",
+        "id" : "38",
+        "order" : "11",
+        "response" : false
+      }, {
+        "description" : "12. Sends CV for extraction",
+        "id" : "52",
+        "order" : "12",
+        "response" : false
+      }, {
+        "description" : "13. Verifies manager permissions",
+        "id" : "61",
+        "order" : "13",
+        "response" : false
+      }, {
+        "description" : "14. Extracts CV data using OCR and LLM",
+        "id" : "82",
+        "order" : "14",
+        "response" : false
+      }, {
+        "description" : "15. Returns extracted CV data",
+        "id" : "82",
+        "order" : "15",
+        "response" : true
+      }, {
+        "description" : "16. Presents extracted data for manager review",
+        "id" : "52",
+        "order" : "16",
+        "response" : true
+      }, {
+        "description" : "17. Reviews data and assigns specialized group and roles",
+        "id" : "38",
+        "order" : "17",
+        "response" : false
+      }, {
+        "description" : "18. Sends final technician registration request",
+        "id" : "52",
+        "order" : "18",
+        "response" : false
+      }, {
+        "description" : "19. Verifies manager permissions",
+        "id" : "61",
+        "order" : "19",
+        "response" : false
+      }, {
+        "description" : "20. Validates final registration data",
+        "id" : "82",
+        "order" : "20",
+        "response" : false
+      }, {
+        "description" : "21. Sends validated profile, CV data, group, and roles",
+        "id" : "87",
+        "order" : "21",
+        "response" : false
+      }, {
+        "description" : "22. Stores technician user, group, and roles",
+        "id" : "88",
+        "order" : "22",
+        "response" : false
+      }, {
+        "description" : "23. Returns registration result",
+        "id" : "82",
+        "order" : "23",
+        "response" : true
+      }, {
+        "description" : "24. Returns confirmation or validation errors",
+        "id" : "52",
+        "order" : "24",
+        "response" : true
+      } ]
+    }, {
+      "automaticLayout" : {
+        "edgeSeparation" : 50,
+        "nodeSeparation" : 50,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 100,
+        "vertices" : true
+      },
+      "description" : "Dynamic diagram for real-time track technician view",
+      "elementId" : "26",
       "elements" : [ {
         "id" : "3",
         "x" : 0,
@@ -2477,23 +2874,7 @@
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "21",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "22",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "23",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "24",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "26",
+        "id" : "11",
         "x" : 0,
         "y" : 0
       }, {
@@ -2509,104 +2890,113 @@
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "33",
+        "id" : "30",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "37",
         "x" : 0,
         "y" : 0
       } ],
       "externalBoundariesVisible" : false,
       "key" : "RealTimeDataForTrackTech",
       "name" : "Dynamic View: RCT Tracker - Maintenance Data Analyzer",
-      "order" : 10,
+      "order" : 12,
       "relationships" : [ {
-        "description" : "1. Opens dashboard and selects an upcoming race",
-        "id" : "38",
+        "description" : "1. Streams new track measurements and weather data",
+        "id" : "99",
         "order" : "1",
         "response" : false
       }, {
-        "description" : "2. Requests access to view race track data",
-        "id" : "50",
+        "description" : "2. Validates and stores track telemetry",
+        "id" : "106",
         "order" : "2",
         "response" : false
       }, {
-        "description" : "3. Validates access to the selected race",
-        "id" : "55",
+        "description" : "3. Opens dashboard and selects an upcoming race",
+        "id" : "42",
         "order" : "3",
         "response" : false
       }, {
-        "description" : "4. Requests basic track info and latest track measurements",
-        "id" : "61",
+        "description" : "4. Requests track measurements and forecast",
+        "id" : "54",
         "order" : "4",
         "response" : false
       }, {
-        "description" : "5. Queries track time-series database",
-        "id" : "88",
+        "description" : "5. Verifies technician permissions for selected race",
+        "id" : "65",
         "order" : "5",
         "response" : false
       }, {
-        "description" : "6. Sends new track measurements and weather forecast",
-        "id" : "81",
+        "description" : "6. Routes track telemetry request",
+        "id" : "90",
         "order" : "6",
         "response" : false
       }, {
-        "description" : "7. Sends data for validity and recency check",
-        "id" : "84",
+        "description" : "7. Requests latest track measurements and limits",
+        "id" : "91",
         "order" : "7",
         "response" : false
       }, {
-        "description" : "8. Sends validated and cleaned measurements",
-        "id" : "85",
+        "description" : "8. Queries track time-series database",
+        "id" : "96",
         "order" : "8",
         "response" : false
       }, {
-        "description" : "9. Stores track measurements",
-        "id" : "88",
+        "description" : "9. Returns track measurements",
+        "id" : "91",
         "order" : "9",
-        "response" : false
+        "response" : true
       }, {
-        "description" : "10. Updates cache with newest track data",
+        "description" : "10. Returns evaluated track data and warnings",
         "id" : "90",
         "order" : "10",
-        "response" : false
+        "response" : true
       }, {
-        "description" : "11. Provides track data for comparison with configured limits",
-        "id" : "65",
+        "description" : "11. Returns track info, measurements, forecast, and warnings",
+        "id" : "54",
         "order" : "11",
-        "response" : false
+        "response" : true
       }, {
-        "description" : "12. Sends analyzed track data and warnings",
-        "id" : "56",
+        "description" : "12. Reviews data and submits track condition (dry, wet, ...)",
+        "id" : "42",
         "order" : "12",
         "response" : false
       }, {
-        "description" : "13. Displays track info, measurements, forecast and warnings",
-        "id" : "91",
+        "description" : "13. Sends track condition update",
+        "id" : "54",
         "order" : "13",
         "response" : false
       }, {
-        "description" : "14. Reviews data and states track condition (dry, wet, ...)",
-        "id" : "38",
+        "description" : "14. Verifies technician permissions",
+        "id" : "65",
         "order" : "14",
         "response" : false
       }, {
-        "description" : "15. Requests access to save track condition",
-        "id" : "50",
+        "description" : "15. Routes track condition save request",
+        "id" : "90",
         "order" : "15",
         "response" : false
       }, {
-        "description" : "16. Forwards track condition for the race",
-        "id" : "55",
+        "description" : "16. Stores track condition for the race",
+        "id" : "91",
         "order" : "16",
         "response" : false
       }, {
-        "description" : "17. Sends result of saving track condition",
-        "id" : "56",
+        "description" : "17. Writes track condition",
+        "id" : "96",
         "order" : "17",
         "response" : false
       }, {
-        "description" : "18. Shows confirmation or error message",
-        "id" : "91",
+        "description" : "18. Returns save result",
+        "id" : "90",
         "order" : "18",
-        "response" : false
+        "response" : true
+      }, {
+        "description" : "19. Returns confirmation or error message",
+        "id" : "54",
+        "order" : "19",
+        "response" : true
       } ]
     }, {
       "automaticLayout" : {
@@ -2616,8 +3006,8 @@
         "rankSeparation" : 100,
         "vertices" : true
       },
-      "description" : "Dynamic diagram for real time maintenance technician view",
-      "elementId" : "20",
+      "description" : "Dynamic diagram for real-time maintenance technician view",
+      "elementId" : "26",
       "elements" : [ {
         "id" : "2",
         "x" : 0,
@@ -2631,27 +3021,7 @@
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "15",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "21",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "22",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "23",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "24",
-        "x" : 0,
-        "y" : 0
-      }, {
-        "id" : "26",
+        "id" : "11",
         "x" : 0,
         "y" : 0
       }, {
@@ -2667,84 +3037,82 @@
         "x" : 0,
         "y" : 0
       }, {
-        "id" : "32",
+        "id" : "30",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "34",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "36",
         "x" : 0,
         "y" : 0
       } ],
       "externalBoundariesVisible" : false,
-      "key" : "RealTimeDataFoeMaintenanceTech",
+      "key" : "RealTimeDataForMaintenanceTech",
       "name" : "Dynamic View: RCT Tracker - Maintenance Data Analyzer",
-      "order" : 11,
+      "order" : 13,
       "relationships" : [ {
-        "description" : "1. Opens dashboard, selects race and car",
-        "id" : "36",
+        "description" : "1. Streams real-time car sensor measurements",
+        "id" : "99",
         "order" : "1",
         "response" : false
       }, {
-        "description" : "2. Requests access to view car telemetry",
-        "id" : "50",
+        "description" : "2. Validates and stores car telemetry",
+        "id" : "104",
         "order" : "2",
         "response" : false
       }, {
-        "description" : "3. Validates access",
-        "id" : "55",
+        "description" : "3. Opens dashboard, selects active race and car",
+        "id" : "40",
         "order" : "3",
         "response" : false
       }, {
-        "description" : "4. Loads sensor configuration",
-        "id" : "57",
+        "description" : "4. Requests real-time car maintenance data",
+        "id" : "54",
         "order" : "4",
         "response" : false
       }, {
-        "description" : "5. Requests latest stored measurements",
-        "id" : "61",
+        "description" : "5. Verifies technician permissions for selected car",
+        "id" : "65",
         "order" : "5",
         "response" : false
       }, {
-        "description" : "6. Queries time-series database",
-        "id" : "86",
+        "description" : "6. Routes car maintenance request (engine, tires, etc.)",
+        "id" : "90",
         "order" : "6",
         "response" : false
       }, {
-        "description" : "7. Sends data to analyzer",
-        "id" : "65",
+        "description" : "7. Requests sensor configuration and latest measurements",
+        "id" : "91",
         "order" : "7",
         "response" : false
       }, {
-        "description" : "8. Sends new real time measurements",
-        "id" : "81",
+        "description" : "8. Reads sensor configuration and limits",
+        "id" : "92",
         "order" : "8",
         "response" : false
       }, {
-        "description" : "9. Sends data for validation",
-        "id" : "84",
+        "description" : "9. Queries latest car telemetry measurements",
+        "id" : "94",
         "order" : "9",
         "response" : false
       }, {
-        "description" : "10. Sends validated measurements",
-        "id" : "85",
+        "description" : "10. Returns configuration and telemetry data",
+        "id" : "91",
         "order" : "10",
-        "response" : false
+        "response" : true
       }, {
-        "description" : "11. Updates cache",
+        "description" : "11. Returns analyzed values, timestamps, and limit warnings",
         "id" : "90",
         "order" : "11",
-        "response" : false
+        "response" : true
       }, {
-        "description" : "12. Sends analyzed data and warnings",
-        "id" : "56",
+        "description" : "12. Returns data and warnings for dashboard display",
+        "id" : "54",
         "order" : "12",
-        "response" : false
-      }, {
-        "description" : "13. Displays data, timestamps, and warnings",
-        "id" : "91",
-        "order" : "13",
-        "response" : false
-      }, {
-        "description" : "14. Reviews displayed data to plan pitstop maintenance",
-        "id" : "36",
-        "order" : "14",
-        "response" : false
+        "response" : true
       } ]
     } ],
     "systemContextViews" : [ {
@@ -2790,9 +3158,7 @@
       "name" : "System Context View: RCT Tracker",
       "order" : 1,
       "relationships" : [ {
-        "id" : "35"
-      }, {
-        "id" : "37"
+        "id" : "100"
       }, {
         "id" : "39"
       }, {
@@ -2800,11 +3166,13 @@
       }, {
         "id" : "43"
       }, {
-        "id" : "69"
+        "id" : "45"
+      }, {
+        "id" : "47"
       }, {
         "id" : "77"
       }, {
-        "id" : "83"
+        "id" : "86"
       } ],
       "softwareSystemId" : "9"
     } ]
