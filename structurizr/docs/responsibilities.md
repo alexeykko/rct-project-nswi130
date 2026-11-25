@@ -6,7 +6,7 @@ RCT Tracker continuously collects data from remote sensors placed on cars and ar
 
 ![](embed:SoftwareSystem)
 
-This document maps the functional responsibilities identified in the feature analysis [feature.md](../../features.md) to specific **Level 2 Containers** and **Level 3 Components** of the **RCT Tracker** C4 architecture model.
+This document maps the functional responsibilities identified in the feature analysis [features.md](../../features.md) to specific **Level 2 Containers** and **Level 3 Components** of the **RCT Tracker** C4 architecture model.
 
 ---
 
@@ -23,7 +23,7 @@ At the container level, RCT Tracker follows the **Service-Based Architecture** s
 However, unlike strict microservices, our services share databases where it simplifies data access and avoids unnecessary network hops:
   * `User database` (`userDb`) is shared between `Technician Registration` (writes technician accounts and roles) and `Identity Provider` (reads credentials and roles for verification).
   * `Car and sensor database` (`carDb`) is shared between `Car and Sensor Registration` (writes car and sensor configurations) and `Maintenance Data Analyzer` (reads sensor limits).
-  * `Telemetry Car database` (`telemetryCarDb`) and `Telemetry Track database` (`telemetryTrackDb`) are shared between `Telemetry Data Capturer` (write-only) and `Maintenance Data Analyzer` (read-heavy analysis), separating write and read workloads.
+  * `Telemetry Car database` (`telemetryCarDb`) and `Telemetry Track database` (`telemetryTrackDb`) are shared between `Telemetry Data Capturer` (writes measurements) and `Maintenance Data Analyzer` (read-heavy analysis; additionally writes track conditions stated by the Track Technician into `telemetryTrackDb`), separating the high-volume write workload from the read workload.
 * **Centralized Authentication and Authorization:** Instead of duplicating access control logic inside every service, a dedicated `Identity Provider` container authenticates users from `Web Application` and verifies role-based permissions for all domain services.
 
 ---
@@ -110,7 +110,7 @@ However, unlike strict microservices, our services share databases where it simp
 
 ---
 
-### Feature 3 & 4: Real-Time Data for Maintenance Technician & Track Technician
+### Feature 3 & 4: Real-Time Data for Track Technician & Maintenance Technician
 
 * **Web Application (`webApp` – Container)**
   * Displays available races, cars, and basic track information.

@@ -16,6 +16,15 @@ The C4 architecture model (L1–L3 diagrams, dynamic views, deployment views, an
 docker run -it --rm -p 8080:8080 --mount type=bind,source="$(pwd)/structurizr",target=/usr/local/structurizr structurizr/structurizr local
 ```
 
+Run the command from the repository root (the folder containing `structurizr/`).
+Once the container is running, open http://localhost:8080 in your browser to view the interactive C4 diagrams and documentation.
+
+### Windows (PowerShell)
+```powershell
+docker run -it --rm -p 8080:8080 --mount "type=bind,source=${PWD}\structurizr,target=/usr/local/structurizr" structurizr/structurizr local
+```
+
+Run the command from the repository root (the folder containing `structurizr/`).
 Once the container is running, open http://localhost:8080 in your browser to view the interactive C4 diagrams and documentation.
 
 ### Documentation
